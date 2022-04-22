@@ -7,8 +7,26 @@
 Scenario: Make sure all links/buttons are clickable
 	Given I go to Openlearn Home Page
 	Then I can see all items as the attached picture
-	When I clicked links or button and see new page
+	When I clicked links or button and see new page 
+	
 
+Scenario: Click logo element
+	Given I go to Openlearn Home Page
+	When I Clicked logo element
+	#When I clicked open learn
+	Then navigate to other page
+
+Scenario: Click scroll button
+	Given I go to Openlearn Home Page
+	When I clicked scroll button
+	Then Sticky menu showing
+
+
+#Examples: 
+#	| title                         |
+#	| a[@class='hslogo logo-image'] |
+#	| div[@class='main-logo']       |
+#	|
 
 
 #@AC3_1

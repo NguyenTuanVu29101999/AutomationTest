@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using OpenQA.Selenium;
 using SpecFlow.TestOpenLearn.Drivers;
 using SpecFlow.TestOpenLearn.PageObjects;
 using System;
@@ -45,8 +46,41 @@ namespace SpecFlow.TestOpenLearn.Steps
         public void WhenIClickedLinksOrButton()
         {
             _homePageObject.ClickMenuButton();
-            Thread.Sleep(5000);
         }
+
+        [When(@"I Clicked logo element")]
+        public void WhenIClickedLogoElementAndChangeNewPage()
+        {
+            _homePageObject.ClickLogo();
+        }
+
+        [When(@"I clicked open learn")]
+        public void WhenIClickedOpenLearn()
+        {
+            _homePageObject.ClickOpenLearn();
+        }
+
+        [Then(@"navigate to other page")]
+        public void ThenNavigateToOtherPage()
+        {
+            var a = _browserDriver.Current.Url;
+            a.Should().Be("https://www.open.ac.uk/");
+        }
+
+        [When(@"I clicked scroll button")]
+        public void WhenIClickedScrollButton()
+        {
+            _homePageObject.ClickScroll();
+           
+        }
+
+        [Then(@"Sticky menu showing")]
+        public void ThenScrollToTheNextSectionAndTheStickyMenuIsShowing()
+        {
+            _homePageObject.NextSection(); 
+        }
+
+
 
         //[Then(@"I see new page")]
         //public void ThenISeeNewPage()

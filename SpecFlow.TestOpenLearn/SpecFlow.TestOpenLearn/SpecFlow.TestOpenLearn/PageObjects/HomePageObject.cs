@@ -1,9 +1,11 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using SpecFlow.TestOpenLearn.Drivers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SpecFlow.TestOpenLearn.PageObjects
@@ -18,6 +20,10 @@ namespace SpecFlow.TestOpenLearn.PageObjects
         void ClickBannerButtonSearch();
         void ClickMenuButton();
         bool VisibleAllElement();
+        void ClickLogo();
+        void ClickOpenLearn();
+        void ClickScroll();
+        void NextSection();
     }
 
     public class HomePageObject : IHomePageObject
@@ -31,11 +37,14 @@ namespace SpecFlow.TestOpenLearn.PageObjects
 
         public string HomeUrl => "https://www.open.edu/openlearn/";
 
+        //
+        private IWebElement Element(string title) => _browserDriver.Current.FindElement(By.XPath($"//div[@id='main_header']//{title}//img"));
+
         // Finding elements
         private IWebElement LogoElement => _browserDriver.Current.FindElement(By.XPath("//div[@id='main_header']//a[@class='hslogo logo-image']//img"));
         private IWebElement OpenLearnLogoElement => _browserDriver.Current.FindElement(By.XPath("//div[@id='main_header']//div[@class='main-logo']//img"));
         private IWebElement TagLineElement => _browserDriver.Current.FindElement(By.XPath("//div[@id='main_wrapper']//div[@class='tagline']//a[1]"));
-        private IWebElement TheOpenUniversityElement => _browserDriver.Current.FindElement(By.XPath("//ul[@id='sbhsnavigation']//li[@class='first']//a[contains(text(),'The Open University')]"));
+        private IWebElement TheOpenUniversityElement => _browserDriver.Current.FindElement(By.XPath("//body/div[@id='wrapper']/div[@id='main_wrapper']/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/a[1]"));
         private IWebElement StudyWithTheOpenUniversityElement => _browserDriver.Current.FindElement(By.XPath("//ul[@id='sbhsnavigation']//a[contains(text(),'Study with The Open University')]"));
         private IWebElement SearchForElement => _browserDriver.Current.FindElement(By.XPath("//div[@id='main_header']//label[@class='main_search_label'][contains(text(),'Search for')]"));
         private IWebElement SearchInputElement => _browserDriver.Current.FindElement(By.XPath("//input[@id='main_search_text_header_sticky']"));
@@ -54,10 +63,17 @@ namespace SpecFlow.TestOpenLearn.PageObjects
         private IWebElement BannerButtonSearchElement => _browserDriver.Current.FindElement(By.XPath("//a[@class='search']"));
         private IWebElement ButtonScrollElement => _browserDriver.Current.FindElement(By.XPath("//a[@id='scroll-content']"));
 
+        private IWebElement MainContentScrollElement => _browserDriver.Current.FindElement(By.XPath("//body/div[@id='wrapper']/div[@id='main_wrapper']/div[@id='content_wrapper']/div[@id='yui_3_17_2_1_1650596791358_29']/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"));
+
 
         //Find Element Button/Links
-
-
+        //private IWebElement LinkHomeElement => _browserDriver.Current.FindElement(By.LinkText("Home"));
+        //private IWebElement LinkFreeCoursesElement => _browserDriver.Current.FindElement(By.LinkText("Free courses"));
+        //private IWebElement LinkSubjectsElement => _browserDriver.Current.FindElement(By.LinkText("Subjects"));
+        //private IWebElement LinkForStudyElement => _browserDriver.Current.FindElement(By.LinkText("For Study"));
+        //private IWebElement LinkForLifeElement => _browserDriver.Current.FindElement(By.LinkText("For Life"));
+        //private IWebElement LinkHelpElement => _browserDriver.Current.FindElement(By.LinkText("Help"));
+        //private IWebElement LinkSignInElement => _browserDriver.Current.FindElement(By.LinkText("Create account / Sign in"));
         public bool VisibleAllElement()
         {
             return LogoElement.Displayed
@@ -107,10 +123,47 @@ namespace SpecFlow.TestOpenLearn.PageObjects
 
         public void ClickMenuButton()
         {
-            //LogoElement.Click();
-            //OpenLearnLogoElement.Click();
-            TagLineElement.Click();
+           // LogoElement.Click();
+            TheOpenUniversityElement.Click();
+            StudyWithTheOpenUniversityElement.Click();
+            LinkHomeElement.Click();
+            LinkFreeCoursesElement.Click();
+            LinkSubjectsElement.Click();
+            LinkForStudyElement.Click();
+            LinkForLifeElement.Click();
+            LinkHelpElement.Click();
+            LinkSignInElement.Click();
+
         }
+        public void ClickLogo()
+        {
+            LogoElement.Click();
+        }
+
+        public void ClickOpenLearn()
+        {
+            OpenLearnLogoElement.Click();
+        }
+
+        public void ClickScroll()
+        {
+            ButtonScrollElement.Click();
+            Thread.Sleep(3000);
+        }
+
+        public void NextSection()
+        {
+            var element = _browserDriver.Current.FindElement(By.XPath("//div[@id='main_content_wrapper']"));
+            Actions actions = new Actions((IWebDriver)element);
+            actions.MoveToElement(element);
+            actions.Perform();
+        }
+
+
+        //public string ElementName(string name)
+        //{
+
+        //}
 
         //public bool VisibleLogoElement()
         //{
