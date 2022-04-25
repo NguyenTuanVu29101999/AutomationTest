@@ -31,6 +31,13 @@ namespace SpecFlow.TestOpenLearn.Steps
             _browserDriver.Current.Navigate().GoToUrl(_homePageObject.HomeUrl);
         }
 
+        [Then(@"I check all text")]
+        public void ThenICheckAllText()
+        {
+            _homePageObject.CheckAllText();          
+        }
+
+
         [Then(@"I can see all items as the attached picture")]
         public void ThenICanSeeAllItemsAsTheAttachedPicture()
         {
@@ -48,7 +55,7 @@ namespace SpecFlow.TestOpenLearn.Steps
             _homePageObject.ClickMenuButton();
         }
 
-        [When(@"I Clicked logo element")]
+        [When(@"I Clicked logo element and navigate to other page")]
         public void WhenIClickedLogoElementAndChangeNewPage()
         {
             _homePageObject.ClickLogo();

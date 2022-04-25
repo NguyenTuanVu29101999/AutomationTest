@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using FluentAssertions;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using SpecFlow.TestOpenLearn.Drivers;
 using System;
@@ -24,6 +25,7 @@ namespace SpecFlow.TestOpenLearn.PageObjects
         void ClickOpenLearn();
         void ClickScroll();
         void NextSection();
+        void CheckAllText();
     }
 
     public class HomePageObject : IHomePageObject
@@ -137,7 +139,50 @@ namespace SpecFlow.TestOpenLearn.PageObjects
         }
         public void ClickLogo()
         {
+            //Click LogoElement
             LogoElement.Click();
+
+            //navigate to other page
+            var a = _browserDriver.Current.Url;
+            a.Should().Be("https://www.open.ac.uk/");
+
+        }
+
+        public void CheckAllText()
+        {
+            ////TagLineElement
+            //var a = TagLineElement.Text;
+            //Console.WriteLine($"TagLineElement:{a}");
+            //a.Should().Be("Free learning from\r\nThe Open University");
+
+            ////TheOpenUniversityElement
+            //var b = TheOpenUniversityElement.Text;
+            //Console.WriteLine($"TheOpenUniversityElement:{b}");
+            //b.Should().Be("The Open University");
+
+            ////TheOpenUniversityElement
+            //var c = StudyWithTheOpenUniversityElement.Text;
+            //Console.WriteLine($"StudyWithTheOpenUniversityElement:{c}");
+            //c.Should().Be("Study with The Open University");
+
+            //NavHome
+            var navList = new List<string>();
+            navList.Add("Home");
+            navList.Add("Free courses");
+            //navList.Add("Subjects");
+            //navList.Add("For Study");
+            //navList.Add("For Life");
+            //navList.Add("Help");
+            foreach (var item in navList)
+            {
+                var a = LinkHomeElement.Text;
+                a.Should().Be(item);
+                Console.WriteLine($"NavHome:{a}");
+
+            }
+            //var navHome = LinkHomeElement.Text;
+            //Console.WriteLine($"StudyWithTheOpenUniversityElement:{navHome}");
+            //navHome.Should().Be("Study with The Open University");
         }
 
         public void ClickOpenLearn()
@@ -158,6 +203,8 @@ namespace SpecFlow.TestOpenLearn.PageObjects
             actions.MoveToElement(element);
             actions.Perform();
         }
+
+       
 
 
         //public string ElementName(string name)

@@ -12,9 +12,10 @@ Scenario: Make sure all links/buttons are clickable
 
 Scenario: Click logo element
 	Given I go to Openlearn Home Page
-	When I Clicked logo element
+	Then I check all text
+	#When I Clicked logo element and navigate to other page
 	#When I clicked open learn
-	Then navigate to other page
+	#Then navigate to other page
 
 Scenario: Click scroll button
 	Given I go to Openlearn Home Page
