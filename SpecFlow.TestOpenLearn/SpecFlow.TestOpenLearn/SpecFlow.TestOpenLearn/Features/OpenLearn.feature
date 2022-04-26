@@ -4,15 +4,15 @@
 
 
 @AC2
-Scenario: Make sure all links/buttons are clickable
-	Given I go to Openlearn Home Page
-	Then I can see all items as the attached picture
-	When I clicked links or button and see new page 
+#Scenario: Make sure all links/buttons are clickable
+#	Given I go to Openlearn Home Page
+#	Then I can see all items as the attached picture
+#	When I clicked links or button and see new page 
 	
 
 Scenario: Click logo element
 	Given I go to Openlearn Home Page
-	Then I check all text
+	Then I check all text and click all links or buttons
 	#When I Clicked logo element and navigate to other page
 	#When I clicked open learn
 	#Then navigate to other page

@@ -24,8 +24,9 @@ namespace SpecFlow.TestOpenLearn.PageObjects
         void ClickLogo();
         void ClickOpenLearn();
         void ClickScroll();
-        void NextSection();
-        void CheckAllText();
+        void StickyMenu();
+        void CheckAndClick();
+        void CheckText();
     }
 
     public class HomePageObject : IHomePageObject
@@ -64,8 +65,7 @@ namespace SpecFlow.TestOpenLearn.PageObjects
         private IWebElement BannerSearchInputElement => _browserDriver.Current.FindElement(By.XPath("//input[@id='banner_search_text']"));
         private IWebElement BannerButtonSearchElement => _browserDriver.Current.FindElement(By.XPath("//a[@class='search']"));
         private IWebElement ButtonScrollElement => _browserDriver.Current.FindElement(By.XPath("//a[@id='scroll-content']"));
-
-        private IWebElement MainContentScrollElement => _browserDriver.Current.FindElement(By.XPath("//body/div[@id='wrapper']/div[@id='main_wrapper']/div[@id='content_wrapper']/div[@id='yui_3_17_2_1_1650596791358_29']/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"));
+        private IWebElement StickyMenuElement => _browserDriver.Current.FindElement(By.XPath("//div[@class='main_sticky']"));
 
 
         //Find Element Button/Links
@@ -148,7 +148,7 @@ namespace SpecFlow.TestOpenLearn.PageObjects
 
         }
 
-        public void CheckAllText()
+        public void CheckAndClick()
         {
             ////TagLineElement
             //var a = TagLineElement.Text;
@@ -165,24 +165,75 @@ namespace SpecFlow.TestOpenLearn.PageObjects
             //Console.WriteLine($"StudyWithTheOpenUniversityElement:{c}");
             //c.Should().Be("Study with The Open University");
 
-            //NavHome
             var navList = new List<string>();
             navList.Add("Home");
             navList.Add("Free courses");
-            //navList.Add("Subjects");
-            //navList.Add("For Study");
-            //navList.Add("For Life");
-            //navList.Add("Help");
+            navList.Add("Subjects");
+            navList.Add("For Study");
+            navList.Add("For Life");
+            navList.Add("Help");
+            navList.Add("Create account / Sign in");
+
+            //var navHome = LinkHomeElement.Text;
+            //var FreeCourse = LinkFreeCoursesElement.Text;
+            //var Subjects = LinkSubjectsElement.Text;
+            //var ForStudy = LinkForStudyElement.Text;
+            //var ForLife = LinkForLifeElement.Text;
+            //var Help = LinkHelpElement.Text;
+
             foreach (var item in navList)
             {
-                var a = LinkHomeElement.Text;
-                a.Should().Be(item);
-                Console.WriteLine($"NavHome:{a}");
-
-            }
-            //var navHome = LinkHomeElement.Text;
-            //Console.WriteLine($"StudyWithTheOpenUniversityElement:{navHome}");
-            //navHome.Should().Be("Study with The Open University");
+                if (LinkHomeElement.Text == item)
+                {
+                    LinkHomeElement.Text.Should().Be("Home");
+                    Console.WriteLine($"navHome: {LinkHomeElement.Text}");
+                    //click link home
+                    LinkHomeElement.Click();
+                    Thread.Sleep(3000);
+                }
+                if (LinkFreeCoursesElement.Text == item)
+                {
+                    LinkFreeCoursesElement.Text.Should().Be("Free courses");
+                    Console.WriteLine($"FreeCourse: {LinkFreeCoursesElement.Text}");
+                    LinkFreeCoursesElement.Click();
+                    Thread.Sleep(3000);
+                }
+                if (LinkSubjectsElement.Text == item)
+                {
+                    LinkSubjectsElement.Text.Should().Be("Subjects");
+                    Console.WriteLine($"Subjects: {LinkSubjectsElement.Text}");
+                    LinkSubjectsElement.Click();
+                    Thread.Sleep(3000);
+                }
+                if (LinkForStudyElement.Text == item)
+                {
+                    LinkForStudyElement.Text.Should().Be("For Study");
+                    Console.WriteLine($"ForStudy: {LinkForStudyElement.Text}");
+                    LinkForStudyElement.Click();
+                    Thread.Sleep(3000);
+                }
+                if (LinkForLifeElement.Text == item)
+                {
+                    LinkForLifeElement.Text.Should().Be("For Life");
+                    Console.WriteLine($"ForLife: {LinkForLifeElement.Text}");
+                    LinkForLifeElement.Click();
+                    Thread.Sleep(3000);
+                }
+                if (LinkHelpElement.Text == item)
+                {
+                    LinkHelpElement.Text.Should().Be("Help");
+                    Console.WriteLine($"HelpElement: {LinkHelpElement.Text}");
+                    LinkHelpElement.Click();
+                    Thread.Sleep(3000);
+                }
+                if (LinkSignInElement.Text == item)
+                {
+                    LinkSignInElement.Text.Should().Be("Create account / Sign in");
+                    Console.WriteLine($"LinkSignInElement: {LinkSignInElement.Text}");
+                    LinkSignInElement.Click();
+                    Thread.Sleep(3000);
+                }
+            }          
         }
 
         public void ClickOpenLearn()
@@ -196,15 +247,72 @@ namespace SpecFlow.TestOpenLearn.PageObjects
             Thread.Sleep(3000);
         }
 
-        public void NextSection()
+        public void StickyMenu()
         {
-            var element = _browserDriver.Current.FindElement(By.XPath("//div[@id='main_content_wrapper']"));
-            Actions actions = new Actions((IWebDriver)element);
-            actions.MoveToElement(element);
-            actions.Perform();
+            bool rslt = StickyMenuElement.Displayed;
+            Console.WriteLine($"sticky menu: {rslt}");
+            rslt.Should().Be(true);
         }
 
-       
+        public void CheckText()
+        {
+
+            var navList = new List<string>();
+            navList.Add("Home");
+            navList.Add("Free courses");
+            navList.Add("Subjects");
+            navList.Add("For Study");
+            navList.Add("For Life");
+            navList.Add("Help");
+            navList.Add("Create account / Sign in");
+
+            //var navHome = LinkHomeElement.Text;
+            //var FreeCourse = LinkFreeCoursesElement.Text;
+            //var Subjects = LinkSubjectsElement.Text;
+            //var ForStudy = LinkForStudyElement.Text;
+            //var ForLife = LinkForLifeElement.Text;
+            //var Help = LinkHelpElement.Text;
+
+            foreach (var item in navList)
+            {
+                if (LinkHomeElement.Text == item)
+                {
+                    LinkHomeElement.Text.Should().Be("Home");
+                    Console.WriteLine($"navHome: {LinkHomeElement.Text}");                 
+                }
+                if (LinkFreeCoursesElement.Text == item)
+                {
+                    LinkFreeCoursesElement.Text.Should().Be("Free courses");
+                    Console.WriteLine($"FreeCourse: {LinkFreeCoursesElement.Text}");                    
+                }
+                if (LinkSubjectsElement.Text == item)
+                {
+                    LinkSubjectsElement.Text.Should().Be("Subjects");
+                    Console.WriteLine($"Subjects: {LinkSubjectsElement.Text}");
+                }
+                if (LinkForStudyElement.Text == item)
+                {
+                    LinkForStudyElement.Text.Should().Be("For Study");
+                    Console.WriteLine($"ForStudy: {LinkForStudyElement.Text}");                 
+                }
+                if (LinkForLifeElement.Text == item)
+                {
+                    LinkForLifeElement.Text.Should().Be("For Life");
+                    Console.WriteLine($"ForLife: {LinkForLifeElement.Text}");                  
+                }
+                if (LinkHelpElement.Text == item)
+                {
+                    LinkHelpElement.Text.Should().Be("Help");
+                    Console.WriteLine($"HelpElement: {LinkHelpElement.Text}");                    
+                }
+                if (LinkSignInElement.Text == item)
+                {
+                    LinkSignInElement.Text.Should().Be("Create account / Sign in");
+                    Console.WriteLine($"LinkSignInElement: {LinkSignInElement.Text}");                  
+                }
+            }
+
+
 
 
         //public string ElementName(string name)

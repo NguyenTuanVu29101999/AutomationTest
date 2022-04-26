@@ -31,11 +31,12 @@ namespace SpecFlow.TestOpenLearn.Steps
             _browserDriver.Current.Navigate().GoToUrl(_homePageObject.HomeUrl);
         }
 
-        [Then(@"I check all text")]
+        [Then(@"I check all text and click all links or buttons")]
         public void ThenICheckAllText()
         {
-            _homePageObject.CheckAllText();          
+            _homePageObject.CheckAndClick();          
         }
+
 
 
         [Then(@"I can see all items as the attached picture")]
@@ -84,7 +85,8 @@ namespace SpecFlow.TestOpenLearn.Steps
         [Then(@"Sticky menu showing")]
         public void ThenScrollToTheNextSectionAndTheStickyMenuIsShowing()
         {
-            _homePageObject.NextSection(); 
+            _homePageObject.StickyMenu();
+            _homePageObject.CheckText();
         }
 
 
