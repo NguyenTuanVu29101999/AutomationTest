@@ -1,0 +1,41 @@
+What do you think are some advantages of automation testing?
+
+What kinds of frameworks have you worked with?
+	 => I used to use robot framework in old project
+
+How do you write test cases?
+ => I would read user stories to determine what features it includes and what it does.
+	Then I will base on the user story to list the suitable test cases for the feature
+
+How familiar are you with Selenium?
+	=> Selenium is the auto test the tool check for the web application
+		Selenium is used to automate tasks with the browser, or easier to understand, it helps the author to reset the browser tasks like a real person.
+		For example: I can program it to automatically launch the browser, open a link, input data, or get info page, upload or download data from a web page.
+
+How would you select a test case for automation?
+
+How do you decide which tools to use for automation testing?
+
+What types of tests would you not automate?
+
+What is your the most challenges in previous project?  how do you solve it?
+
+When do you create bug report ? 	
+
+How do you write test case for API ?
+ => First, I need to define what kind of API it is, what its function is, and evaluate the complexity.Then I will list the full test cases for the API
+Finally I will apply to test automation, when I get expected results from test automation, I take the returned result to compare with request in user story.
+
+
+How many test cases have you automated in a day?
+ => i think it depends on the Test Scenario. if the situation is complex i can do about 2-3 test cases and simple i can do more.
+
+Bug lifecycle
+	+ When tester detects a bug, it's status is NEW
+
+ 	+ Testers have to report Bug to project manager for review and give bug to developers
+
+	+ The developer will analyze and fix the bug, the bug will have IN-PROGRESS status. When the bug is fixed, it will notify the tester and the bug has a FIXED status
+
+	+ Tester will check the bug again, if the bug is still present, it will report it to the developer and the bug has RE-OPENED status 
+		otherwise the tester will report to the developer and project manager and the bug status is CLOSED
