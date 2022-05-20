@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220519 11:42:16.750" rpa="false" schemaversion="3">
+<suite id="s1" name="OpenLearnTC1" source="D:\AutomationTest\RobotFramework\TestCases\OpenLearnTC1.robot">
+<test id="s1-t1" name="TC3: Test" line="23">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.globalsqa.com/demo-site/datepicker/#Simple%20Date%20Picker</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220519 11:42:17.135" level="INFO">Opening browser 'edge' to base url 'https://www.globalsqa.com/demo-site/datepicker/#Simple%20Date%20Picker'.</msg>
+<status status="PASS" starttime="20220519 11:42:17.135" endtime="20220519 11:42:35.479"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220519 11:42:35.479" endtime="20220519 11:42:35.610"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220519 11:42:40.624" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220519 11:42:35.611" endtime="20220519 11:42:40.624"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>css:[data-src="../../demoSite/practice/datepicker/default.html"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220519 11:42:40.624" level="INFO">Selecting frame 'css:[data-src="../../demoSite/practice/datepicker/default.html"]'.</msg>
+<status status="PASS" starttime="20220519 11:42:40.624" endtime="20220519 11:42:40.655"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://input[@id='datepicker']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220519 11:42:40.655" endtime="20220519 11:42:40.679"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://input[@id='datepicker']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220519 11:42:40.680" level="INFO">Clicking element 'xpath://input[@id='datepicker']'.</msg>
+<status status="PASS" starttime="20220519 11:42:40.679" endtime="20220519 11:42:40.773"/>
+</kw>
+<kw name="Select Date">
+<arg>2023</arg>
+<arg>4</arg>
+<arg>15</arg>
+<kw name="Get Current Date" library="DateTime">
+<var>${currentDate}</var>
+<arg>result_format=datetime</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20220519 11:42:40.775" level="INFO">${currentDate} = 2022-05-19 11:42:40.775119</msg>
+<status status="PASS" starttime="20220519 11:42:40.774" endtime="20220519 11:42:40.775"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${currentDate}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220519 11:42:40.775" level="INFO">2022-05-19 11:42:40.775119</msg>
+<status status="PASS" starttime="20220519 11:42:40.775" endtime="20220519 11:42:40.775"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<arg>${year}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" starttime="20220519 11:42:40.775" endtime="20220519 11:42:40.775"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" starttime="20220519 11:42:40.775" endtime="20220519 11:42:40.776"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" starttime="20220519 11:42:40.776" endtime="20220519 11:42:40.776"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${month-diff}</var>
+<arg>${month} - ${currentDate.month}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220519 11:42:40.777" level="INFO">${month-diff} = -1</msg>
+<status status="PASS" starttime="20220519 11:42:40.776" endtime="20220519 11:42:40.777"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${year-diff}</var>
+<arg>${year} - ${currentDate.year}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220519 11:42:40.778" level="INFO">${year-diff} = 1</msg>
+<status status="PASS" starttime="20220519 11:42:40.777" endtime="20220519 11:42:40.778"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${move}</var>
+<arg>${year-diff}*12 + ${month-diff}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220519 11:42:40.778" level="INFO">${move} = 11</msg>
+<status status="PASS" starttime="20220519 11:42:40.778" endtime="20220519 11:42:40.778"/>
+</kw>
+<if>
+<branch type="IF" condition="${move} &gt; 0">
+<kw>
+<var>${shiftForward} =</var>
+<var>${1}</var>
+<msg timestamp="20220519 11:42:40.779" level="FAIL">Keyword name cannot be empty.</msg>
+<status status="FAIL" starttime="20220519 11:42:40.779" endtime="20220519 11:42:40.779"/>
+</kw>
+<status status="FAIL" starttime="20220519 11:42:40.778" endtime="20220519 11:42:40.779"/>
+</branch>
+<branch type="ELSE IF" condition="${move} &lt; 0">
+<kw>
+<var>${shiftForward} =</var>
+<var>${0}</var>
+<status status="NOT RUN" starttime="20220519 11:42:40.779" endtime="20220519 11:42:40.779"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${move}</var>
+<arg>${move}*${-1}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220519 11:42:40.779" endtime="20220519 11:42:40.779"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 11:42:40.779" endtime="20220519 11:42:40.779"/>
+</branch>
+<status status="FAIL" starttime="20220519 11:42:40.778" endtime="20220519 11:42:40.779"/>
+</if>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220519 11:42:40.779" endtime="20220519 11:42:40.779"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${var}</var>
+<value>${move}</value>
+<iter>
+<var name="${var}"/>
+<if>
+<branch type="IF" condition="${shiftForward} == 0">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://span[@class='ui-icon ui-icon-circle-triangle-w']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 11:42:40.780" endtime="20220519 11:42:40.780"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 11:42:40.779" endtime="20220519 11:42:40.780"/>
+</branch>
+<branch type="ELSE IF" condition="${shiftForward} == 1">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://span[@class='ui-icon ui-icon-circle-triangle-e']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 11:42:40.780" endtime="20220519 11:42:40.780"/>
+</kw>
+<status status="NOT RUN" starttime="20220519 11:42:40.780" endtime="20220519 11:42:40.780"/>
+</branch>
+<status status="NOT RUN" starttime="20220519 11:42:40.779" endtime="20220519 11:42:40.780"/>
+</if>
+<status status="NOT RUN" starttime="20220519 11:42:40.779" endtime="20220519 11:42:40.780"/>
+</iter>
+<status status="NOT RUN" starttime="20220519 11:42:40.779" endtime="20220519 11:42:40.780"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220519 11:42:40.780" endtime="20220519 11:42:40.780"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'${day}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220519 11:42:40.780" endtime="20220519 11:42:40.780"/>
+</kw>
+<status status="FAIL" starttime="20220519 11:42:40.774" endtime="20220519 11:42:40.780"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="NOT RUN" starttime="20220519 11:42:40.781" endtime="20220519 11:42:40.781"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220519 11:42:40.781" endtime="20220519 11:42:40.781"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" starttime="20220519 11:42:40.782" endtime="20220519 11:42:40.782"/>
+</kw>
+<status status="FAIL" starttime="20220519 11:42:17.134" endtime="20220519 11:42:40.783">Keyword name cannot be empty.</status>
+</test>
+<status status="FAIL" starttime="20220519 11:42:16.752" endtime="20220519 11:42:40.784"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="OpenLearnTC1">OpenLearnTC1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
