@@ -1,5 +1,6 @@
 What do you think are some advantages of automation testing?
 	=> In my opinion, before testing a certain feature or UI I have to define what to do and list test cases.
+	=> Automated testing will detect small or large defects and respond quickly, execute simple or complex test cases, shorten test case execution time
 
 What kinds of frameworks have you worked with?
 	 => I used to use robot framework in old project
@@ -43,3 +44,39 @@ Bug lifecycle
 
 	+ Tester will check the bug again, if the bug is still present, it will report it to the developer and the bug has RE-OPENED status 
 		otherwise the tester will report to the developer and project manager and the bug status is CLOSED
+
+
+How do you log the Bug ? 
+	 => I will check if the error really happened, then I will write the error on jira with a title that summarizes the error, in which environment the bug occurred, 
+		the content will describe in detail the process of the error and I Will attach photos or videos for devs to easily fix bugs.
+
+what do you do if developer said that it's not a bug ? 
+	 => I will double check the error is really happening then i will ask the BA to see if that BUG happened
+
+Some activites 
+ => In previous project, i enjoyed some activites such as sprint planning sprint review, sprint respective and daily meeting
+	Sprint Planning
+        - During sprint planning, the entire scrum team collaborates and discusses the desired high-priority work for the sprint and defines the sprint goal.
+       	- Purpose describes the product goal and also answers questions from the development team about execution and acceptance criteria
+	- After rin planing, we create manual test case for defined story
+	Daily Scrum
+	- The development team meets for 15 minutes (or less) every day of the sprint to inspect progress toward the sprint goal.
+	- They describe for each other how their own work is going
+	Sprint Review
+	- Sprint reviews focus on the product being developed, specifically on the potentially shippable product increment created during the sprint
+	- During a sprint review, the scrum team invites stakeholders to discuss what was completed during the sprint
+	- The product owner has the option to release any of the completed functionality. 
+	Sprint Retrospective
+	- Sprint retrospectives focus on the process
+	- During a sprint retrospective, the scrum team discusses what start doing, keep doing, stop doing
+	- They make tangible plan for how to improve their own process, tool, relationship
+
+What are the benefits of using the Robot Framework ?
+
+What do you understand about test setup and teardown in the context of the robot framework?
+
+
+
+
+
+
