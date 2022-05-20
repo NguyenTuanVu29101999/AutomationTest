@@ -1,0 +1,82 @@
+1. Introduce yourself
+=> My name is Nam, I graduated from HCMC University of Technology and Education with a major in information technology. Currently I am working at TMA company, and I have about 1 year of experience with automation testing using robot framework for API testing and functional testing. I am also familiar with some tools like Jira, Confluence. In previous project, I create, manage test cases and test scripts, perform functional testing following requirements, perform API testing, Web automation testing and communicate with developers on requirements and defects.
+
+2. Describe about previous project
+=> It is a web application which manages assets, departments, employees in organizations of finance, bank, and service
+
+3. What do you think are some advantages of automation testing?
+=> There are some advantages like time-saving, the test cases with automation testing run faster than the manual testing, regression testing time is reduced, test cases can be run anytime, we can reuse test scripts, improves accuracy, repetitive tests can be performed with the same accuracy.
+
+4. What kinds of frameworks have you worked with?
+=> I worked with robot framework in previous project
+
+5. How many test cases have you automated in a day?
+
+6. How familiar are you with Selenium?
+=> Selenium is the auto test the tool check for the web application
+Selenium is used to automate tasks with the browser, or easier to understand, it helps the author to reset the browser tasks like a real person.
+For example: I can program it to automatically launch the browser, open a link, input data, or get info page, upload or download data from a web page.
+
+7. How do you write test cases?
+=> I will base on the user story or requirements to list the suitable test cases that cover all acceptance criterias in the user story. I can use boundary values and equalavence class technique to write some test cases
+
+8. How would you select a test case for automation?
+
+9. How do you decide which tools to use for automation testing?
+
+10. What types of tests would you not automate?
+I think User experience tests for usability (tests that require a user to respond as to how easy the app is to use). Tests that you will only run one time. Tests without predictable results. For automation validation, it needs to have predictable results in order to know that it pass or fail.
+
+11. What are the 2 main types of testing?
+=> manual test and automation test
+
+12. What is Boundary Value Analysis?
+=> Boundary Value Analysis (BVA) is used to check the errors at the boundaries of an input domain. It mainly focuses on testing both valid and invalid input parameters for a given range of a software component.
+
+13. What is the Severity and Priority of a bug?
+=> Bug severity is the measure of impact a defect (or bug) can have on the development or functioning of an application feature when it is being used.
+	+ Low: Bug won’t result in any noticeable breakdown of the system
+	+ Minor: Results in some unexpected or undesired behavior, but not enough to disrupt system function
+	+ Major: Bug capable of collapsing large parts of the system
+	+ Critical: Bug capable of triggering complete system shutdown
+Bug priority refers to how urgently a bug needs to be fixed and eliminated from the website or app in question.
+	+ Low: Bug can be fixed at a later date. Other, more serious bugs take priority
+	+ Medium: Bug can be fixed in the normal course of development and testing.
+	+ High: Bug must be resolved at the earliest as it affects the system adversely and renders it unusable until it is resolved.
+
+14. What are the different levels of testing?
+
+15. What is a test plan?
+=> Test plan is a document describing the scope, approach, resources and schedule of intended test activities.
+
+16. What is the difference between regression and retesting?
+
+17. What is a defect?
+
+18. What would you do if you find a defect?
+
+19. What are the different parts of a defect report?
+
+20. What are the test cases you can create for a simple login screen with username, password, and login buttons?
+
+21. When do you create bug report?
+=> When I find difference between user story and the test result, I will create bug report.
+Bug report has title, description, precondition, steps, and attachment	
+
+22. How do you write test case for API?
+=> First, I need to know which API it is.Then I will list the possible test cases for that API. Finally I will write test script to get response result and compare status code or response body to expected result from user story to know that it pass or fail.
+
+23. What is robot framework?
+=> Robot Framework is an open-source acceptance testing and acceptance test-driven development framework. For writing test cases, it uses three test case styles: keyword-driven, behaviour-driven, and data-driven. So it really simple to understand
+- Data Driven Testing is a software testing method in which test data is stored in table or spreadsheet format. Data driven testing allows testers to input a single test script that can execute tests for all test data from a table and expect the test output in the same table
+- Keyword Driven Testing is a scripting technique that uses data files to contain the keywords related to the application being tested. These keywords describe the set of actions that is required to perform a specific step.
+- In BDD, test cases are written in a natural language that even non-programmers can read.
+
+24. What are the benefits of using the Robot Framework?
+=> It's easy to set up and use, and it allows you to create and run test cases. Any beginner may get started with the robot framework because it is simple and does not require much testing knowledge. All reports are generated automatically as well when we run test script without any further commands
+
+25. Scrum proccess
+=> In previous project I join some activities like sprint planning, daily meeting, sprint review, sprint retrosppective
+
+26. Bug lifecycle
+=> When tester detects a bug, its status is NEW, then tester report bug and developers agree to fix then switched to IN PROGRESS. When the bug is fixed, it will be switched to READY FOR TEST. After that, tester will check the bug again, if test fail, tester will report it again and its status will be REOPEN, else test pass its status will be DONE. In case developers don't agree that bug, its status will be NEED MORE INFORMATION. In case both tester and developer consider that it doesn't a bug, its status will be CLOSED.
