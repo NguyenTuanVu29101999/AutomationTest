@@ -1,0 +1,3 @@
+TestCase
+Given the web page is opened
+Then I will check all item for this page : text, button,
