@@ -1,13 +1,12 @@
 What do you think are some advantages of automation testing?
 	=> In my opinion, before testing a certain feature or UI I have to define what to do and list test cases.
-	=> Automated testing will detect small or large defects and respond quickly, execute simple or complex test cases, shorten test case execution time
+	=> Automated testing will detect small or large defects and respond quickly,it can execute simple or complex test cases and shorten test case execution time
 
 What kinds of frameworks have you worked with?
 	 => I used to use robot framework in old project
 
 How do you write test cases?
- => I would read user stories to determine what features it includes and what it does.
-	Then I will base on the user story to list the suitable test cases for the feature
+ =>I will base on the user story to list the suitable test cases for the feature
 
 How familiar are you with Selenium?
 	=> Selenium is the auto test the tool check for the web application
@@ -27,31 +26,42 @@ What is your the most challenges in previous project?  how do you solve it?
 When do you create bug report ? 	
 	=> I think the return result of the test case it is different from the request in the user story
 
-How do you write test case for API ?
- => First, I need to define what kind of API it is, what its function is, and evaluate the complexity.Then I will list the full test cases for the API
-Finally I will apply to test automation, when I get expected results from test automation, I take the returned result to compare with request in user story.
+
+How do you log the Bug ? 
+	 =>I will check if the error really occurs, then I will write the error on jira with the error summary title, in which environment the error occurs,
+		The content will describe in detail the error process and I will attach a photo or video for developers to easily fix it.
+
+what do you do if developer said that it's not a bug ? 
+	=> I will replicate again to make sure that it is a bug, if it is really a bug, I will disucuss with BA about that bug and follow BA's instructions
+
+
+What Is the API testing ?
+	=> API testing is a type of software that involves direct testing of applications that establish interfaces 
+		and is part of integration testing to determine if the software meets expectations in terms of functionality, 
+		reliability, performance, and performance. performance and security or not.
+
+
+
+What are testing type do u know ?
+ 	=> Test types I know:
+		Functional testing, Non functional 
+		Smoke, Intergation
+		System, Regression, Unit test
+
+How do you write test case for API ? ~ How do you Performance the API testing ?
+ => I will be base on user story to list full test cases for API and I will apply it to test automation, when I get expected results from test automation I will take it to compare with the request in the user story.
 
 
 How many test cases have you automated in a day?
  => I think it depends on the Test Scenario. if the situation is complex i can do about 2-3 test cases and otherwise simple i can do more.
 
 Bug lifecycle
-	+ When tester detects a bug, it's status is NEW
-
- 	+ Testers have to report Bug to project manager for review and give bug to developers
-
-	+ The developer will analyze and fix the bug, the bug will have IN-PROGRESS status. When the bug is fixed, it will notify the tester and the bug has a FIXED status
-
-	+ Tester will check the bug again, if the bug is still present, it will report it to the developer and the bug has RE-OPENED status 
-		otherwise the tester will report to the developer and project manager and the bug status is CLOSED
+ 	+ When tester detects a bug, its status is NEW, then tester report bug and developers agree to fix then switched to IN PROGRESS.
+	+ When the bug is fixed, it will be switched to READY FOR TEST. After that, tester will check the bug again, if test fail, tester will report it again and its status will be REOPEN, 
+	+ else test pass its status will be DONE. In case developers don't agree that bug, its status will be NEED MORE INFORMATION. 
+	+ In case both tester and developer consider that it doesn't a bug, its status will be CLOSED.
 
 
-How do you log the Bug ? 
-	 => I will check if the error really happened, then I will write the error on jira with a title that summarizes the error, in which environment the bug occurred, 
-		the content will describe in detail the process of the error and I Will attach photos or videos for devs to easily fix bugs.
-
-what do you do if developer said that it's not a bug ? 
-	 => I will double check the error is really happening then i will ask the BA to see if that BUG happened
 
 Some activites 
  => In previous project, i enjoyed some activites such as sprint planning sprint review, sprint respective and daily meeting
@@ -72,8 +82,14 @@ Some activites
 	- They make tangible plan for how to improve their own process, tool, relationship
 
 What are the benefits of using the Robot Framework ?
+ => It's easy to set up and use, and it allows you to create and run test cases. Any beginner may get started with the robot framework because it is simple and does not require much testing knowledge.
+	 All reports are generated automatically as well when we run test script without any further commands
+
 
 What do you understand about test setup and teardown in the context of the robot framework?
+
+What is the robot framework ?
+	 => Robot Framework is an extensible testing framework to use for acceptance testing phase (AT), acceptance test driven development phase (ATDD) and can be used for automated testing
 
 
 
