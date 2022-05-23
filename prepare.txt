@@ -30,7 +30,24 @@ I think User experience tests for usability (tests that require a user to respon
 
 11. What are the 2 main types of testing?
 => manual test and automation test
-
+- Functional testing is a type of testing which verifies that each function of the software application works in conformance with the requirement and specification. This testing focuses on checking of user interface, APIs, database, security, and functionality of the Application Under Test.
+ + Unit Testing is a type of software testing where individual units or components of a software are tested to validate that each unit of the software code performs as expected. A unit may be an individual function, method, procedure, module, or object.
+ + Integration Testing is the process of testing the interface between two software units or module to determine the correctness of the interface. Integration testing is performed after all modules have been unit tested.
+ + Smoke Testing is a software testing technique to verify that the important features of software are working fine. It is executed before any functional or regression tests are executed.
+ + Acceptance Testing is a method of software testing where a system is tested to evaluate the compliance of the system with the business requirements and evaluate whether it is acceptable for delivery or not.
+ + Usability Testing is a type of testing, that is done from an end user’s perspective to determine if the system is easily usable
+ + System Testing  is a type of software testing that is performed on a complete integrated system to evaluate the compliance of the system with the corresponding requirements.
+ + Regression Testing is a type of software testing to make sure that the old code still works once the latest code changes are done.
+- Non-functional testing is a type of software testing to check non-functional aspects of a software application. It is designed to test the readiness of a system as per nonfunctional parameters which are never addressed by functional testing.
+ + Compatibility testing
+ + Compliance testing
+ + Endurance testing
+ + Load testing is a type of Performance Testing which determines the behavior of the application when multiple users use it at the same time. It is the response of the system measured under varying load conditions. The load testing is carried out for normal and extreme load conditions.
+ + Performance testing is a type of software testing that is carried out to test the speed, scalability, stability and reliability of the software product or application.
+ + Recovery testing
+ + Security testing
+ + Scalability testing
+ + Stress testing is a type of software testing that verifies the stability and reliability of the system. This test particularly determines the system on its robustness and error handling under extremely heavy load conditions. It even tests beyond the normal operating point and analyses how the system works under the extreme conditions.
 
 12. What is Boundary Value Analysis?
 => Boundary Value Analysis (BVA) is used to check the errors at the boundaries of an input domain. It mainly focuses on testing both valid and invalid input parameters for a given range of a software component.
@@ -63,7 +80,7 @@ Bug priority refers to how urgently a bug needs to be fixed and eliminated from 
 
 21. When do you create bug report?
 => When I find difference between user story and the test result, I will create bug report.
-Bug report has title, description, precondition, steps to reproduce, actual result, and attachment document for the bug like pictures, videos	
+Bug report has a summary title of the bug, severity and priority, description - this is an overview of the bug and how and when it happened, test environment, precondition, steps to reproduce, actual result, expected result, and attachment document for the bug like pictures, videos for developers to identify the issue faster
 
 22. How do you write test case for API?
 => First, I need to know which API it is.Then I will list the possible test cases for that API. Finally I will write test script to get response result and compare status code or response body to expected result from user story to know that it pass or fail.
@@ -86,6 +103,7 @@ Sprint Planning
 Daily Scrum
 - The development team meets for 15 minutes (or less) every day of the sprint to inspect progress toward the sprint goal.
 - They describe for each other how their own work is going
+- Answer for 3 questions: What did you do yesterday?, What do you plan to do today?, Have any locker?
 Sprint Review
 - Sprint reviews focus on the product being developed, specifically on the potentially shippable product increment created during the sprint
 - During a sprint review, the scrum team invites stakeholders to discuss what was completed during the sprint
@@ -107,3 +125,10 @@ Sprint Retrospective
 29. What is API testing?
 => API testing is a software testing type that validates Application Programming Interfaces (APIs). The purpose of API Testing is to check the functionality, reliability, performance, and security of the programming interfaces. It mainly concentrates on the business logic layer of the software architecture.
 API stands for Application Programming Interface which acts as an interface between two software applications so that two software applications can communicate with each other and performs the required actions efficiently.
+
+30. What are the disadvantages of using the robot framework?
+=> I think that debugging capability is not included, I have to use some keywords to log the result to console or log file to view it
+
+31. What do you understand about test setup and teardown in the context of the robot framework?
+=> Test Setup will run before every test case, if the setup fails, the keywords are not executed; Test TearDown will run after every test case, it is executed regardless of the test status and also if test setup has failed.
+Suite Setup will run before test suite, if it fails, all the test cases the suite contain are marked failed; Suite TearDown will run after test suite, Suite teardowns are executed regardless of the test status and even if the suite setup fails
