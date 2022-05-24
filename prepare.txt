@@ -12,6 +12,7 @@ In previous project, I create, manage test cases and test scripts, perform funct
 => I worked with robot framework in previous project
 
 5. How many test cases have you automated in a day?
+=> The number depends on the complexity of the test cases. Sometimes, I was able to automate only one test case for complex scenarios. With easier scenarios, I can automate more, maybe 5 or 6 test cases per day or more
 
 6. How familiar are you with Selenium?
 => Selenium is the auto test the tool check for the web application
@@ -19,7 +20,7 @@ Selenium is used to automate tasks with the browser, or easier to understand, it
 For example: I can program it to automatically launch the browser, open a link, input data, or get info page, upload or download data from a web page.
 
 7. How do you write test cases?
-=> I will base on the user story or requirements to list the suitable test cases that cover all acceptance criterias in the user story. I can use boundary values and equalavence class technique to write some test cases
+=> I will base on the user story or requirements to list the suitable test cases that cover all acceptance criterias in the user story. I can use boundary values and equalavence class technique to write some test cases if possible
 
 8. How would you select a test case for automation?
 
@@ -51,6 +52,7 @@ I think User experience tests for usability (tests that require a user to respon
 
 12. What is Boundary Value Analysis?
 => Boundary Value Analysis (BVA) is used to check the errors at the boundaries of an input domain. It mainly focuses on testing both valid and invalid input parameters for a given range of a software component.
+Equivalence Partitioning or Equivalence Class Partitioning: it means input data units are divided into equivalent partitions that can be used to get test cases which reduces time required for testing because of small number of test cases.
 
 13. What is the Severity and Priority of a bug?
 => Bug severity is the measure of impact a defect (or bug) can have on the development or functioning of an application feature when it is being used.
@@ -132,3 +134,20 @@ API stands for Application Programming Interface which acts as an interface betw
 31. What do you understand about test setup and teardown in the context of the robot framework?
 => Test Setup will run before every test case, if the setup fails, the keywords are not executed; Test TearDown will run after every test case, it is executed regardless of the test status and also if test setup has failed.
 Suite Setup will run before test suite, if it fails, all the test cases the suite contain are marked failed; Suite TearDown will run after test suite, Suite teardowns are executed regardless of the test status and even if the suite setup fails
+
+32. What are the different types of variables in the context of the robot framework?
+=> 
+- Scalar variable: Contains any object, numbers, lists, dict; using $ symbol
+- List variable: its value is a list or list-like; using @ symbol
+- Dictionary variable: Variable containing a Python dictionary or a dictionary-like; using & symbol
+- Environment variable: Robot Framework allows using environment variables in the test data using % symbol. They are limited to string values.
+
+33. Differentiate between Robot Framework and Selenium.
+=>
+- Robot framework: is an open-source automation framework with a wide range of applications, it can use for API testing, web testing and database testing
+- Selenium: is a open-source Web automation testing framework. It's mostly a front-end component and functionality testing tool for browsers
+
+34. Differentiate between Robot Framework and Cucumber.
+=>
+- Robot framework: It is based on the Python programming language. It uses keyword-driven testing to write test cases
+- Cucumber: It is based on the Ruby programming language. It is a behaviour-driven development automation tool. The specifications are written in plain text English, making them understandable to testers, developers or BA.
