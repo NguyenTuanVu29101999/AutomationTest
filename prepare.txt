@@ -20,10 +20,8 @@ Selenium is used to automate tasks with the browser, or easier to understand, it
 For example: I can program it to automatically launch the browser, open a link, input data, or get info page, upload or download data from a web page.
 
 7. How do you write test cases?
-=> I will base on the user story or requirements to list the suitable test cases that cover all acceptance criterias in the user story. I can use boundary values and equalavence class technique to write some test cases if possible
-
 8. How would you select a test case for automation?
-=> I will write manual test cases firstly, after that I will select test cases which can automate and automate those test cases
+=> I will write manual test cases firstly base on the user story or requirements to list the suitable test cases that cover all acceptance criterias in the user story, after that I will select test cases which can automate and write test script then automate those test cases (I can use boundary values and equalavence class technique to write some test cases if possible).
 
 9. How do you decide which tools to use for automation testing?
 
@@ -88,7 +86,8 @@ What is Regressio
 
 21. When do you create bug report?
 => When I find difference between user story and the test result, I will create bug report.
-Bug report has a summary title of the bug, severity and priority, description - this is an overview of the bug and how and when it happened, test environment, precondition, steps to reproduce, actual result, expected result, and attachment document for the bug like pictures, videos for developers to identify the issue faster
+When I find a bug, I will report the bug in Jira, bug report includes title of the bug, severity and priority, description - this is an overview of the bug and how and when it happened, test environment, precondition, steps to reproduce, actual result, expected result, and attachment document for the bug like pictures, videos for developers to identify the issue faster.
+I think all of them are important, but the most important part is bug title, it helps the developer to know what the bug is and easy to identify the bug to fix
 
 22. How do you write test case for API?
 => First, I need to know which API it is.Then I will list the possible test cases for that API. Finally I will write test script to get response result and compare status code or response body to expected result from user story to know that it pass or fail.
@@ -103,23 +102,16 @@ Bug report has a summary title of the bug, severity and priority, description - 
 => It's easy to set up and use, and it allows you to create and run test cases. Any beginner may get started with the robot framework because it is simple and does not require much testing knowledge. All reports are generated automatically as well when we run test script without any further commands
 
 25. Scrum process
-=> In previous project I join some activities like sprint planning, daily meeting, sprint review, sprint retropective
+=> In previous project I join some activities like sprint planning, daily meeting, sprint review, sprint retrospective
 Sprint Planning
-- During sprint planning, the entire scrum team collaborates and discusses the desired high-priority work for the sprint and defines the sprint goal.
+- During sprint planning, the entire scrum team discusses the desired high-priority work for the sprint and defines the sprint goal.
 - Purpose describes the product goal and also answers questions from the development team about execution and acceptance criteria
-- After sprint planing, we create manual test case for defined story
 Daily Scrum
-- The development team meets for 15 minutes (or less) every day of the sprint to inspect progress toward the sprint goal.
-- They describe for each other how their own work is going
-- Answer for 3 questions: What did you do yesterday?, What do you plan to do today?, Have any locker?
+- The development team meets for 15 minutes (or less) every day of the sprint to inspect progress toward the sprint goal. And they answer for 3 questions: What did you do yesterday?, What do you plan to do today?, Have any blocker?
 Sprint Review
-- Sprint reviews focus on the product being developed, specifically on the potentially shippable product increment created during the sprint
 - During a sprint review, the scrum team invites stakeholders to discuss what was completed during the sprint
-- The product owner has the option to release any of the completed functionality. 
 Sprint Retrospective
-- Sprint retrospectives focus on the process
 - During a sprint retrospective, the scrum team discusses what start doing, keep doing, stop doing
-- They make tangible plan for how to improve their own process, tool, relationship
 
 26. Bug lifecycle
 => When tester detects a bug, its status is NEW, then tester report bug and developers agree to fix then switched to IN PROGRESS. When the bug is fixed, it will be switched to READY FOR TEST. After that, tester will check the bug again, if test fail, tester will report it again and its status will be REOPEN, else test pass its status will be DONE. In case developers don't agree that bug, its status will be NEED MORE INFORMATION. In case both tester and developer consider that it doesn't a bug, its status will be CLOSED.
@@ -157,3 +149,6 @@ Suite Setup will run before test suite, if it fails, all the test cases the suit
 =>
 - Robot framework: It is based on the Python programming language. It uses keyword-driven testing to write test cases
 - Cucumber: It is based on the Ruby programming language. It is a behaviour-driven development automation tool. The specifications are written in plain text English, making them understandable to testers, developers or BA.
+
+35. How do you write test script?
+=>
