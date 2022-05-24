@@ -23,6 +23,7 @@ For example: I can program it to automatically launch the browser, open a link, 
 => I will base on the user story or requirements to list the suitable test cases that cover all acceptance criterias in the user story. I can use boundary values and equalavence class technique to write some test cases if possible
 
 8. How would you select a test case for automation?
+=> I will write manual test cases firstly, after that I will select test cases which can automate and automate those test cases
 
 9. How do you decide which tools to use for automation testing?
 
@@ -71,6 +72,11 @@ Bug priority refers to how urgently a bug needs to be fixed and eliminated from 
 => Test plan is a document describing the scope, approach, resources and schedule of intended test activities.
 
 16. What is the difference between regression and retesting?
+=> Retesting: Testers find the bug while testing the software application and assign it to the developers to fix it. Then the developers fix the bug and assign it back to the testers for verification. This continuous process is called Retesting.
+Regression Testing is a type of software testing executed to check whether a code change has not disturbed current features & functions of an Application
+Regression testing is performed for passed test cases while Retesting is done only for failed test cases
+
+What is Regressio
 
 17. What is a defect?
 
@@ -122,7 +128,7 @@ Sprint Retrospective
 => I will replicate again to make sure that it is a bug, if it is really a bug, I will disucuss with BA about that bug and follow BA's instructions
 
 28. What is the most challenge in previous project?
-=> 
+=> I think it might not be the most challenging, when i have a difficult task I usually research on myself or get help from my colleagues to find the answer to my problem
 
 29. What is API testing?
 => API testing is a software testing type that validates Application Programming Interfaces (APIs). The purpose of API Testing is to check the functionality, reliability, performance, and security of the programming interfaces. It mainly concentrates on the business logic layer of the software architecture.
