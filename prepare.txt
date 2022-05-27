@@ -20,8 +20,9 @@ Selenium is used to automate tasks with the browser, or easier to understand, it
 For example: I can program it to automatically launch the browser, open a link, input data, or get info page, upload or download data from a web page.
 
 7. How do you write test cases?
+=> Firstly, I will write manual test cases base on the user story or requirements and make sure that cover all acceptance criterias in the user story and perform all those test cases, after the user story have done I will select test cases which can automate and write test script in robot framework then I will automate those test cases (I can use boundary values and equalavence class technique to write some test cases if possible).
 8. How would you select a test case for automation?
-=> Firstly, I will write manual test cases base on the user story or requirements and make sure that cover all acceptance criterias in the user story, after that I will select test cases which can automate and write test script then I will automate those test cases (I can use boundary values and equalavence class technique to write some test cases if possible).
+=> I will select test cases which is repetitive, tests that require different multiple data sets, tests that are performed on multiple software platforms and configurations, and tests that take a lot of manual testing time
 
 9. How do you decide which tools to use for automation testing?
 
@@ -98,7 +99,7 @@ Robot framework: is an open-source automation framework with a wide range of app
 - In BDD, test cases are written in a natural language that even non-programmers can read.
 
 24. What are the benefits of using the Robot Framework?
-=> It's easy to set up and use, and it allows to create and run test cases. Any beginner may get started with the robot framework because it is simple and does not require much testing knowledge. All reports are generated automatically as well when we run test script without any further commands
+=> It is a free and open-source framework, it's easy to set up and use, and it allows to create and run test cases. Any beginner may get started with the robot framework because it is simple and does not require much programming knowledge. All reports are generated automatically as well when we run test script without any further commands
 
 25. Scrum process
 => In previous project I join some activities like sprint planning, daily meeting, sprint review, sprint retrospective
