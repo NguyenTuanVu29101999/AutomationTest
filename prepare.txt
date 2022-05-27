@@ -1,12 +1,12 @@
 1. Introduce yourself
-=> My name is Nam, I graduated from HCMC University of Technology and Education with a major in information technology. Currently I am working at TMA company, and I have about 1 year of experience with automation testing using robot framework for API testing and functional testing. I am also familiar with some tools like Jira, Confluence. In previous project, I create, manage test cases and test scripts, perform functional testing following requirements, perform API testing, Web automation testing and communicate with developers on requirements and defects.
+=> Hello everyone, my name is Nam, I graduated from HCMC University of Technology and Education with a major in information technology. Currently I am working at TMA Solutions company with position QA Engineer, and I have about 1 year of experience with automation testing using robot framework for API testing, UI testing and functional testing. I am also familiar with some tools like Jira, Confluence. In previous project, I create, manage test cases and test scripts, perform functional testing following requirements, perform API testing, Web automation testing and communicate with developers on requirements and defects.
 
 2. Describe about previous project. What did you do?
 => Previous project is a web application which manages assets, departments, employees in organizations of finance, bank, and service.
 In previous project, I create, manage test cases and test scripts, perform functional testing following requirements, perform API testing and communicate with developers on requirements and defects.
 
 3. What do you think are some advantages of automation testing?
-=> There are some advantages like time-saving, the test cases with automation testing run faster than the manual testing, regression testing time is reduced, test cases can be run anytime, we can reuse test scripts, improves accuracy, repetitive tests can be performed with the same accuracy.
+=> There are some advantages like time-saving, the test cases with automation testing run faster than the manual testing, regression testing time is reduced, test cases can be run anytime, we can reuse test scripts for next time, improves accuracy, repetitive tests can be performed with the same accuracy.
 
 4. What kinds of frameworks have you worked with?
 => I worked with robot framework in previous project
@@ -21,7 +21,7 @@ For example: I can program it to automatically launch the browser, open a link, 
 
 7. How do you write test cases?
 8. How would you select a test case for automation?
-=> I will write manual test cases firstly base on the user story or requirements to list the suitable test cases that cover all acceptance criterias in the user story, after that I will select test cases which can automate and write test script then automate those test cases (I can use boundary values and equalavence class technique to write some test cases if possible).
+=> Firstly, I will write manual test cases base on the user story or requirements and make sure that cover all acceptance criterias in the user story, after that I will select test cases which can automate and write test script then I will automate those test cases (I can use boundary values and equalavence class technique to write some test cases if possible).
 
 9. How do you decide which tools to use for automation testing?
 
@@ -37,32 +37,32 @@ I think User experience tests for usability (tests that require a user to respon
  + Acceptance Testing is a method of software testing where a system is tested to evaluate the compliance of the system with the business requirements and evaluate whether it is acceptable for delivery or not.
  + Usability Testing is a type of testing, that is done from an end user’s perspective to determine if the system is easily usable
  + System Testing  is a type of software testing that is performed on a complete integrated system to evaluate the compliance of the system with the corresponding requirements.
- + Regression Testing is a type of software testing to make sure that the old code still works once the latest code changes are done.
+ + Regression Testing is a type of software testing to make sure that the old code still works once the latest code changes are done. Regression testing is performed at the end of every sprint to make sure the software is stable.
 - Non-functional testing is a type of software testing to check non-functional aspects of a software application. It is designed to test the readiness of a system as per nonfunctional parameters which are never addressed by functional testing.
  + Compatibility testing
  + Compliance testing
  + Endurance testing
- + Load testing is a type of Performance Testing which determines the behavior of the application when multiple users use it at the same time. It is the response of the system measured under varying load conditions. The load testing is carried out for normal and extreme load conditions.
- + Performance testing is a type of software testing that is carried out to test the speed, scalability, stability and reliability of the software product or application.
+ + Load testing is a type of Performance Testing which determines the behavior of the application when multiple users use it at the same time. It is the response of the system measured under varying load conditions. The load testing is carried out for normal and extreme load conditions. Load testing is performed to find out the upper limit of the system or application.
+ + Performance testing is a type of software testing that is carried out to test the speed (It determines whether the software product responds rapidly), scalability (It determines amount of load the software product can handle at a time), stability (It determines whether the software product is stable in case of varying workloads) and reliability (It determines whether the software product is secure or not) of the software product or application.
  + Recovery testing
  + Security testing
  + Scalability testing
- + Stress testing is a type of software testing that verifies the stability and reliability of the system. This test particularly determines the system on its robustness and error handling under extremely heavy load conditions. It even tests beyond the normal operating point and analyses how the system works under the extreme conditions.
+ + Stress testing is a type of software testing that verifies the stability and reliability of the system. This test particularly determines the system on its robustness and error handling under extremely heavy load conditions. It even tests beyond the normal operating point and analyses how the system works under the extreme conditions. Stress testing is performed to find the behavior of the system under pressure.
 
 12. What is Boundary Value Analysis?
 => Boundary Value Analysis (BVA) is used to check the errors at the boundaries of an input domain. It mainly focuses on testing both valid and invalid input parameters for a given range of a software component.
 Equivalence Partitioning or Equivalence Class Partitioning: it means input data units are divided into equivalent partitions that can be used to get test cases which reduces time required for testing because of small number of test cases.
 
 13. What is the Severity and Priority of a bug?
-=> Bug severity is the measure of impact a defect (or bug) can have on the development or functioning of an application feature when it is being used.
+=> Bug severity is the measure of impact a bug can have on the development or functioning of an application feature when it is being used.
 	+ Low: Bug won’t result in any noticeable breakdown of the system
-	+ Minor: Results in some unexpected or undesired behavior, but not enough to disrupt system function
-	+ Major: Bug capable of collapsing large parts of the system
+	+ Minor: Results in some unexpected behavior, but not enough to disrupt system function
+	+ Major: Bug capable of crash large parts of the system
 	+ Critical: Bug capable of triggering complete system shutdown
-Bug priority refers to how urgently a bug needs to be fixed and eliminated from the website or app in question.
+Bug priority refers to how urgently a bug needs to be fixed and removed from the website or app in question.
 	+ Low: Bug can be fixed at a later date. Other, more serious bugs take priority
 	+ Medium: Bug can be fixed in the normal course of development and testing.
-	+ High: Bug must be resolved at the earliest as it affects the system adversely and renders it unusable until it is resolved.
+	+ High: Bug must be resolved at the earliest because it affects the system adversely and it unusable until it is resolved.
 
 14. What are the different levels of testing?
 
@@ -71,10 +71,8 @@ Bug priority refers to how urgently a bug needs to be fixed and eliminated from 
 
 16. What is the difference between regression and retesting?
 => Retesting: Testers find the bug while testing the software application and assign it to the developers to fix it. Then the developers fix the bug and assign it back to the testers for verification. This continuous process is called Retesting.
-Regression Testing is a type of software testing executed to check whether a code change has not disturbed current features & functions of an Application
+Regression Testing is a type of software testing executed to make sure that current features work fine when we add new features to an application
 Regression testing is performed for passed test cases while Retesting is done only for failed test cases
-
-What is Regressio
 
 17. What is a defect?
 
@@ -93,19 +91,19 @@ I think all of them are important, but the most important part is bug title, it 
 => First, I need to know which API it is.Then I will list the possible test cases for that API. Finally I will write test script to get response result and compare status code or response body to expected result from user story to know that it pass or fail.
 
 23. What is robot framework?
-=> Robot Framework is an open-source acceptance testing and acceptance test-driven development framework. For writing test cases, it uses three test case styles: keyword-driven, behaviour-driven, and data-driven. So it really simple to understand
-- Data Driven Testing is a software testing method in which test data is stored in table or spreadsheet format. Data driven testing allows testers to input a single test script that can execute tests for all test data from a table and expect the test output in the same table
-- Keyword Driven Testing is a scripting technique that uses data files to contain the keywords related to the application being tested. These keywords describe the set of actions that is required to perform a specific step.
+=> (Robot Framework is an open-source acceptance testing and acceptance test-driven development framework. For writing test cases, it uses three test case styles: keyword-driven, behaviour-driven, and data-driven. So it really simple to understand)
+Robot framework: is an open-source automation framework with a wide range of applications, it can use for API testing, web testing and database testing
+- Data Driven Testing is test data is stored in table or spreadsheet format. Data driven testing allows testers to input a single test script that can execute tests for all test data from a table and expect the test output in the same table
+- Keyword Driven Testing uses the keywords from libraries that is imported into the test files to describe the set of actions that is required to perform a specific step.
 - In BDD, test cases are written in a natural language that even non-programmers can read.
 
 24. What are the benefits of using the Robot Framework?
-=> It's easy to set up and use, and it allows you to create and run test cases. Any beginner may get started with the robot framework because it is simple and does not require much testing knowledge. All reports are generated automatically as well when we run test script without any further commands
+=> It's easy to set up and use, and it allows to create and run test cases. Any beginner may get started with the robot framework because it is simple and does not require much testing knowledge. All reports are generated automatically as well when we run test script without any further commands
 
 25. Scrum process
 => In previous project I join some activities like sprint planning, daily meeting, sprint review, sprint retrospective
 Sprint Planning
-- During sprint planning, the entire scrum team discusses the desired high-priority work for the sprint and defines the sprint goal.
-- Purpose describes the product goal and also answers questions from the development team about execution and acceptance criteria
+- During sprint planning, the entire scrum team discusses the desired high-priority work for the sprint and defines the sprint goal, describes the product goal and also answers questions from the development team about execution and acceptance criteria
 Daily Scrum
 - The development team meets for 15 minutes (or less) every day of the sprint to inspect progress toward the sprint goal. And they answer for 3 questions: What did you do yesterday?, What do you plan to do today?, Have any blocker?
 Sprint Review
@@ -116,18 +114,18 @@ Sprint Retrospective
 26. Bug lifecycle
 => When tester detects a bug, its status is NEW, then tester report bug and developers agree to fix then switched to IN PROGRESS. When the bug is fixed, it will be switched to READY FOR TEST. After that, tester will check the bug again, if test fail, tester will report it again and its status will be REOPEN, else test pass its status will be DONE. In case developers don't agree that bug, its status will be NEED MORE INFORMATION. In case both tester and developer consider that it doesn't a bug, its status will be CLOSED.
 
-27.What do you do if developer said that it is not a bug?
+27. What do you do if developer said that it is not a bug?
 => I will replicate again to make sure that it is a bug, if it is really a bug, I will disucuss with BA about that bug and follow BA's instructions
 
 28. What is the most challenge in previous project?
-=> I think it might not be the most challenging, when i have a difficult task I usually research on myself or get help from my colleagues to find the answer to my problem
+=> I think it might not be the most challenging, when I have a difficult task I usually research on myself, if I do not find the answer, I will get help from my colleagues to find the solutions for my problem
 
 29. What is API testing?
 => API testing is a software testing type that validates Application Programming Interfaces (APIs). The purpose of API Testing is to check the functionality, reliability, performance, and security of the programming interfaces. It mainly concentrates on the business logic layer of the software architecture.
 API stands for Application Programming Interface which acts as an interface between two software applications so that two software applications can communicate with each other and performs the required actions efficiently.
 
 30. What are the disadvantages of using the robot framework?
-=> I think that debugging capability is not included, I have to use some keywords to log the result to console or log file to view it
+=> I think that debugging capability is not included, I have to use some keywords to log the result to console or log file to view the result, so it might take a long time to view the result
 
 31. What do you understand about test setup and teardown in the context of the robot framework?
 => Test Setup will run before every test case, if the setup fails, the keywords are not executed; Test TearDown will run after every test case, it is executed regardless of the test status and also if test setup has failed.
@@ -143,7 +141,7 @@ Suite Setup will run before test suite, if it fails, all the test cases the suit
 33. Differentiate between Robot Framework and Selenium.
 =>
 - Robot framework: is an open-source automation framework with a wide range of applications, it can use for API testing, web testing and database testing
-- Selenium: is a open-source Web automation testing framework. It's mostly a front-end component and functionality testing tool for browsers
+- Selenium: is an open-source Web automation testing framework. It's mostly a front-end component and functionality testing tool for browsers
 
 34. Differentiate between Robot Framework and Cucumber.
 =>
@@ -151,4 +149,12 @@ Suite Setup will run before test suite, if it fails, all the test cases the suit
 - Cucumber: It is based on the Ruby programming language. It is a behaviour-driven development automation tool. The specifications are written in plain text English, making them understandable to testers, developers or BA.
 
 35. How do you write test script?
-=>
+=> I use Pycharm to write test scripts and basically I create 4 folders
+- Libraries folder: where I will store custom libraries in case I going to create custom library for the application that I am testing
+- Results folder: where will be used for saving the Test execution logs and results
+- Resources folder: this will be used to write reusable codes. It would be mostly used for implementing Page Object Model
+- Tests folder: this will be used to write my test cases
+
+36. What is Jenkins?
+=> It allows developers to continuously check in their code and also analyze the post-build actions. The testers can use to run their automation tests as soon as the new code is added or code is modified.
+Jenkins freestyle projects allow users to automate simple jobs, such as running tests, creating and packaging applications, producing reports, or executing commands. Freestyle projects are repeatable and contain both build steps and post-build actions.
