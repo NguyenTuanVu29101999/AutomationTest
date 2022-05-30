@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a78c058-377a-44de-8069-ff3e4a3a0e65" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObjects/Locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PageObjects/Locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageObjects/OpenLearnHomePage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PageObjects/OpenLearnHomePage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/LoginKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/LoginKeywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/OpenLearnHomePageKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/OpenLearnHomePageKeywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/TC1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/TC1.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
