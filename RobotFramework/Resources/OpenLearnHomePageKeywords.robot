@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    ../PageObjects/OpenLearnHomePage.py
+Variables    ./PageObjects/OpenLearnHomePage.py
 
 *** Keywords ***
 Open my browser

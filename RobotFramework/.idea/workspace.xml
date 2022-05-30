@@ -3,36 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0a78c058-377a-44de-8069-ff3e4a3a0e65" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObjects/Locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PageObjects/Locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageObjects/OpenLearnHomePage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PageObjects/OpenLearnHomePage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/LoginKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/LoginKeywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/OpenLearnHomePageKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/OpenLearnHomePageKeywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/TC1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/TC1.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +31,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Nam/Autotest" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\AutomationTest\RobotFramework\Resources" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
