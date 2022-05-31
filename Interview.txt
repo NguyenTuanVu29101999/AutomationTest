@@ -2,8 +2,29 @@
 	=> In my opinion, before testing a certain feature or UI I have to define what to do and list test cases.
 	=> Automated testing will detect small or large defects and respond quickly,it can execute simple or complex test cases and shorten test case execution tim
 
+This is a system for innovative cash flow management seamlessly integrates with your cloud 
+accounting system to offer real-time insights into your cash flow, manage invoices, and much more. 
+The product includes a Web application and backend APIs integration with 3rd party service.
+
+
+
+
+
+	Create, manage and execute test cases
+	Perform functional and API testing.
+	Working on manual and automation testing.
+	Work with BA on clarifying requirements.
+	Work with developers on requirement and defects.
+
+
+	I need to know which API it is.Then I will list the possible test cases for that API. 
+	after that, I will write test script to get response result and compare status code or response body to expected result from user story to know that it pass or fail.
+
+
+
 2. How do you write test cases?
- =>I will base on the user story to list the suitable test cases for the feature
+	=> I will write manual test cases base on the user story or requirements to list the suitable test cases and perform all those test case, after the user story have done 
+		I will select test cases which can automate and write test script then automate those test cases 
 
 How familiar are you with Selenium?
 	=> Selenium is the auto test the tool check for the web application
@@ -25,7 +46,14 @@ How familiar are you with Selenium?
 
 7. How do you log the Bug Report ? 
 	 =>I will check if the error really occurs, then I will write the error on jira 
-	=> The bug report includes: the error summary title, the test environment, and the description of the error process.
+	=> The bug report includes: 
+		+ the error summary title
+		+ the test environment, 
+		+ step to process
+		+ actual result
+		+ expect result
+		+ attachment some pictures and video
+		+ the description of the error
 
 8. what do you do if developer said that it's not a bug ? 
 	=> I will replicate again to make sure that it is a bug, if it is really a bug, I will disucuss with BA about that bug and follow BA's instructions
@@ -41,10 +69,25 @@ How familiar are you with Selenium?
 
 11. What are testing type do u know ?
  	=> Test types I know:
-		Functional testing, Non functional 
-		Smoke, Intergation
-		System, Regression, Unit test
-
+- Functional testing is a type of testing which verifies that each function of the software application works in conformance with the requirement and specification. This testing focuses on checking of user interface, APIs, database, security, and functionality of the Application Under Test.
+ + Unit Testing is a type of software testing where individual units or components of a software are tested to validate that each unit of the software code performs as expected. A unit may be an individual function, method, procedure, module, or object.
+ + Integration Testing is the process of testing the interface between two software units or module to determine the correctness of the interface. Integration testing is performed after all modules have been unit tested.
+ + Smoke Testing is a software testing technique to verify that the important features of software are working fine. It is executed before any functional or regression tests are executed.
+ + Acceptance Testing is a method of software testing where a system is tested to evaluate the compliance of the system with the business requirements and evaluate whether it is acceptable for delivery or not.
+ + Usability Testing is a type of testing, that is done from an end user’s perspective to determine if the system is easily usable
+ + System Testing  is a type of software testing that is performed on a complete integrated system to evaluate the compliance of the system with the corresponding requirements.
+ + Regression Testing is a type of software testing to make sure that the old code still works once the latest code changes are done.
+- Non-functional testing is a type of software testing to check non-functional aspects of a software application. It is designed to test the readiness of a system as per nonfunctional parameters which are never addressed by functional testing.
+ + Compatibility testing
+ + Compliance testing
+ + Endurance testing
+ + Load testing is a type of Performance Testing which determines the behavior of the application when multiple users use it at the same time. It is the response of the system measured under varying load conditions. The load testing is carried out for normal and extreme load conditions.
+ + Performance testing is a type of software testing that is carried out to test the speed, scalability, stability and reliability of the software product or application.
+ + Recovery testing
+ + Security testing
+ + Scalability testing
+ + Stress testing is a type of software testing that verifies the stability and reliability of the system. T
+	his test particularly determines the system on its robustness and error handling under extremely heavy load conditions. It even tests beyond the normal operating point and analyses how the system works under the extreme conditions.
 
 
 12. Bug lifecycle
@@ -62,10 +105,15 @@ How familiar are you with Selenium?
 	Daily Scrum
 	- The development team meets for 15 minutes (or less) every day of the sprint to inspect progress toward the sprint goal.
 	- I have to answer three question: what did i do yesterday, what will i do to day, have any blocker (issue)
+
 	Sprint Review
 	- During a sprint review, the scrum team invites stakeholders to discuss what was completed during the sprint
+
 	Sprint Retrospective
 	- During a sprint retrospective, the scrum team discusses what start doing, keep doing, stop doing.
+
+	Daily meeting
+	 - I have answer three questions: what did i do, plan to do , any issue blocker.
 
 14. How do you test script ?
 	=> Pycharm is a tool for me to script and I create a file with extension .robot
@@ -73,8 +121,9 @@ How familiar are you with Selenium?
 
 15. What are the benefits of using the Robot Framework ?
  => Easy to set up and use, and it allows to create and run test cases.
- => Any beginner can get start with the robot framework because it is simple and does not require much testing knowledge.
- => All reports are also generated automatically when we run the test script without any other commands
+ => it's free
+ => Any beginner can get start with the robot framework because it is simple and does not require much develop skil
+
 
 16. What do you understand about test setup and teardown in the context of the robot framework?
 
@@ -82,6 +131,8 @@ How familiar are you with Selenium?
 	 => Robot Framework is an extensible testing framework to use for acceptance testing phase (AT), acceptance test driven development phase (ATDD) and can be used for automated testing
 
 18. What are the disadvantages of using the robot framework?
+	=> It's easy to set up and use, and it allows you to create and run test cases. Any beginner may get started with the robot framework because it is simple and does not require much testing knowledge.
+	 All reports are generated automatically as well when we run test script without any further commands
 
 19. Differentiate between Robot Framework and Selenium?
 	=> - Robot framework: is an open-source automation framework with a wide range of applications, it can use for API testing, web testing and database testing
