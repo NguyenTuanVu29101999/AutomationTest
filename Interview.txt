@@ -8,8 +8,6 @@ The product includes a Web application and backend APIs integration with 3rd par
 
 
 
-
-
 	Create, manage and execute test cases
 	Perform functional and API testing.
 	Working on manual and automation testing.
@@ -19,6 +17,40 @@ The product includes a Web application and backend APIs integration with 3rd par
 
 	I need to know which API it is.Then I will list the possible test cases for that API. 
 	after that, I will write test script to get response result and compare status code or response body to expected result from user story to know that it pass or fail.
+
+11. Những test case nên automate còn test case nào không automate
+
+=> Test cases that can be automated include:
+	- important test cases
+	- big data
+	- combination
+=> Test cases that do not need automation include:
+	- only happens once
+	- simple test cases
+
+
+Trường hợp kiểm thử cần thực hiện nhiều lần, thường xuyên phải thực hiện regression test, một số lượng test data lớn cần hoàn thành trong một thời gian ngắn.
+Kiểm thử cần thực hiện ở môi trường khác nhau
+Áp dụng với những project ổn định, đặc điểm kĩ thuật được xác định trước, chức năng không thay đổi trong tương lai
+Kiểm thử hoạt động cơ bản mà phải thực hiện lặp lại với lượng test data lớn
+Kiểm tra nhiều màn hình trong thời gian ngắn, liên tục
+Thực thi test performance test hoặc load test thì kiểm thử tự động gần như là lựa chọn duy nhất
+
+
+
+
+
+
+
+
+
+
+ 10. Viết test script như thế nào
+=> I use Pycharm to write test scripts and create 4 directories
+- Library folder: where to store the necessary libraries to help execute test scripts
+- Results directory: where the logs and execution results of test scripts
+- Resources folder: this folder stores reusable code files. It will mainly be used to implement the Page Object Model
+- Test folder: this folder contains files for writing test scripts
 
 
 
