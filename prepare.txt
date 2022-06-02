@@ -21,13 +21,14 @@ For example: I can program it to automatically launch the browser, open a link, 
 
 7. How do you write test cases?
 => Firstly, I will write manual test cases base on the user story or requirements and make sure that cover all acceptance criterias in the user story and perform all those test cases, after the user story have done I will select test cases which can automate and write test script in robot framework then I will automate those test cases (I can use boundary values and equalavence class technique to write some test cases if possible).
+
 8. How would you select a test case for automation?
-=> I will select test cases which is repetitive, tests that require different multiple data sets, tests that are performed on multiple software platforms and configurations, and tests that take a lot of manual testing time
+=> I will select test cases which are repetitive, data-driven tests, complex test cases, and tests that take a lot of time to do manual testing time for automation
 
 9. How do you decide which tools to use for automation testing?
 
 10. What types of tests would you not automate?
-I think User experience tests for usability (tests that require a user to respond as to how easy the app is to use). Tests that you will only run one time. Tests without predictable results. For automation validation, it needs to have predictable results in order to know that it pass or fail.
+=> I think tests have never been performed manual testing before, important tests, user experience tests for usability (tests that require a user to respond as to how easy the app is to use), tests are only run one time, tests without predictable results. They would not automate (For automation validation, it needs to have predictable results in order to know that it pass or fail.)
 
 11. What are the 2 main types of testing?
 => manual test and automation test
@@ -38,13 +39,13 @@ I think User experience tests for usability (tests that require a user to respon
  + Acceptance Testing is a method of software testing where a system is tested to evaluate the compliance of the system with the business requirements and evaluate whether it is acceptable for delivery or not.
  + Usability Testing is a type of testing, that is done from an end user’s perspective to determine if the system is easily usable
  + System Testing  is a type of software testing that is performed on a complete integrated system to evaluate the compliance of the system with the corresponding requirements.
- + Regression Testing is a type of software testing to make sure that the old code still works once the latest code changes are done. Regression testing is performed at the end of every sprint to make sure the software is stable.
+ + Regression Testing is executed to make sure that current features are working fine when some features are modified or we add new features to an application. Regression testing is performed at the end of every sprint to make sure the software is stable.
 - Non-functional testing is a type of software testing to check non-functional aspects of a software application. It is designed to test the readiness of a system as per nonfunctional parameters which are never addressed by functional testing.
  + Compatibility testing
  + Compliance testing
  + Endurance testing
  + Load testing is a type of Performance Testing which determines the behavior of the application when multiple users use it at the same time. It is the response of the system measured under varying load conditions. The load testing is carried out for normal and extreme load conditions. Load testing is performed to find out the upper limit of the system or application.
- + Performance testing is a type of software testing that is carried out to test the speed (It determines whether the software product responds rapidly), scalability (It determines amount of load the software product can handle at a time), stability (It determines whether the software product is stable in case of varying workloads) and reliability (It determines whether the software product is secure or not) of the software product or application.
+ + Performance testing is a type of software testing that is carried out to test the speed (It determines whether the software product responds quickly), scalability (It determines amount of load the software product can handle at a time), stability (It determines whether the software product is stable under varying loads) and reliability (It determines whether the software product is secure or not) of the software product or application.
  + Recovery testing
  + Security testing
  + Scalability testing
@@ -52,17 +53,17 @@ I think User experience tests for usability (tests that require a user to respon
 
 12. What is Boundary Value Analysis?
 => Boundary Value Analysis (BVA) is used to check the errors at the boundaries of an input domain. It mainly focuses on testing both valid and invalid input parameters for a given range of a software component.
-Equivalence Partitioning or Equivalence Class Partitioning: it means input data units are divided into equivalent partitions that can be used to get test cases which reduces time required for testing because of small number of test cases.
+Equivalence Partitioning or Equivalence Class Partitioning: is input data units are divided into equivalent partitions and we can get one value from each partition for a test case, so time for testing is reduced because of small number of test cases.
 
 13. What is the Severity and Priority of a bug?
-=> Bug severity is the measure of impact a bug can have on the development or functioning of an application feature when it is being used.
+=> Bug severity is a measure of how serious an issue is.
 	+ Low: Bug won’t result in any noticeable breakdown of the system
-	+ Minor: Results in some unexpected behavior, but not enough to disrupt system function
-	+ Major: Bug capable of crash large parts of the system
-	+ Critical: Bug capable of triggering complete system shutdown
+	+ Minor: The bug effects a minor feature or effects a major feature but can solve to not cause any major inconvenience
+	+ Major: The bug effects a major feature of an application
+	+ Critical: The bug makes the application unusable or cause serious data loss
 Bug priority refers to how urgently a bug needs to be fixed and removed from the website or app in question.
 	+ Low: Bug can be fixed at a later date. Other, more serious bugs take priority
-	+ Medium: Bug can be fixed in the normal course of development and testing.
+	+ Medium: Bug can be fixed in the normal process of development and testing.
 	+ High: Bug must be resolved at the earliest because it affects the system adversely and it unusable until it is resolved.
 
 14. What are the different levels of testing?
@@ -72,7 +73,7 @@ Bug priority refers to how urgently a bug needs to be fixed and removed from the
 
 16. What is the difference between regression and retesting?
 => Retesting: Testers find the bug while testing the software application and assign it to the developers to fix it. Then the developers fix the bug and assign it back to the testers for verification. This continuous process is called Retesting.
-Regression Testing is a type of software testing executed to make sure that current features work fine when we add new features to an application
+Regression Testing is executed to make sure that current features are working fine when some features are modified or we add new features to an application
 Regression testing is performed for passed test cases while Retesting is done only for failed test cases
 
 17. What is a defect?
@@ -85,11 +86,11 @@ Regression testing is performed for passed test cases while Retesting is done on
 
 21. When do you create bug report?
 => When I find difference between user story and the test result, I will create bug report.
-When I find a bug, I will report the bug in Jira, bug report includes title of the bug, severity and priority, description - this is an overview of the bug and how and when it happened, test environment, precondition, steps to reproduce, actual result, expected result, and attachment document for the bug like pictures, videos for developers to identify the issue faster.
+When I find a bug, I will report the bug in Jira, bug report includes title of the bug, severity and priority, description - this is an overview of the bug and how and when it happened, test environment, precondition, steps to reproduce, actual result, expected result, and attachment document for the bug like pictures, videos or log files for developers to identify the issue faster.
 I think all of them are important, but the most important part is bug title, it helps the developer to know what the bug is and easy to identify the bug to fix
 
 22. How do you write test case for API?
-=> First, I need to know which API it is.Then I will list the possible test cases for that API. Finally I will write test script to get response result and compare status code or response body to expected result from user story to know that it pass or fail.
+=> First, I need to know which API it is. Then I will list the possible test cases for that API. Finally I will write test script to get response result and compare status code or response body to expected result from user story to know that it pass or fail.
 
 23. What is robot framework?
 => (Robot Framework is an open-source acceptance testing and acceptance test-driven development framework. For writing test cases, it uses three test case styles: keyword-driven, behaviour-driven, and data-driven. So it really simple to understand)
@@ -104,7 +105,7 @@ Robot framework: is an open-source automation framework with a wide range of app
 25. Scrum process
 => In previous project I join some activities like sprint planning, daily meeting, sprint review, sprint retrospective
 Sprint Planning
-- During sprint planning, the entire scrum team discusses the desired high-priority work for the sprint and defines the sprint goal, describes the product goal and also answers questions from the development team about execution and acceptance criteria
+- During sprint planning, the team discusses the high-priority work for the sprint and defines the sprint goal, describes the product goal and also answers questions from the development team about acceptance criteria. After sprint planing, QC team will break task base on the user story and estimate time for task
 Daily Scrum
 - The development team meets for 15 minutes (or less) every day of the sprint to inspect progress toward the sprint goal. And they answer for 3 questions: What did you do yesterday?, What do you plan to do today?, Have any blocker?
 Sprint Review
@@ -113,7 +114,7 @@ Sprint Retrospective
 - During a sprint retrospective, the scrum team discusses what start doing, keep doing, stop doing
 
 26. Bug lifecycle
-=> When tester detects a bug, its status is NEW, then tester report bug and developers agree to fix then switched to IN PROGRESS. When the bug is fixed, it will be switched to READY FOR TEST. After that, tester will check the bug again, if test fail, tester will report it again and its status will be REOPEN, else test pass its status will be DONE. In case developers don't agree that bug, its status will be NEED MORE INFORMATION. In case both tester and developer consider that it doesn't a bug, its status will be CLOSED.
+=> When tester detects a bug, its status is NEW, then tester report bug and developers agree to fix then switched to IN PROGRESS. When the bug is fixed, it will be switched to READY FOR TEST. After that, tester will check the bug again, if test fail, tester will report it again and its status will be REOPEN, else test pass its status will be DONE. In case developers don't agree that bug, its status will be NEED MORE INFORMATION. In case both tester and developer consider that it is not a bug, its status will be CLOSED.
 
 27. What do you do if developer said that it is not a bug?
 => I will replicate again to make sure that it is a bug, if it is really a bug, I will disucuss with BA about that bug and follow BA's instructions
@@ -150,12 +151,15 @@ Suite Setup will run before test suite, if it fails, all the test cases the suit
 - Cucumber: It is based on the Ruby programming language. It is a behaviour-driven development automation tool. The specifications are written in plain text English, making them understandable to testers, developers or BA.
 
 35. How do you write test script?
-=> I use Pycharm to write test scripts and basically I create 4 folders
+=> I use Pycharm to write test scripts and I create 4 folders for my project
 - Libraries folder: where I will store custom libraries in case I going to create custom library for the application that I am testing
 - Results folder: where will be used for saving the Test execution logs and results
-- Resources folder: this will be used to write reusable codes. It would be mostly used for implementing Page Object Model
-- Tests folder: this will be used to write my test cases
+- Resources folder: it will be used to write reusable codes. It would be mostly used for implementing Page Object Model
+- Tests folder: it will be used to write my test cases
 
 36. What is Jenkins?
 => It allows developers to continuously check in their code and also analyze the post-build actions. The testers can use to run their automation tests as soon as the new code is added or code is modified.
-Jenkins freestyle projects allow users to automate simple jobs, such as running tests, creating and packaging applications, producing reports, or executing commands. Freestyle projects are repeatable and contain both build steps and post-build actions.
+Jenkins freestyle projects allow users to automate simple jobs, such as running tests, creating and packaging applications, producing reports, or executing commands. (Freestyle projects are repeatable and contain both build steps and post-build actions.)
+
+37. What is automation tetsing?
+=> Automation Testing is to use special automated testing tools and frameworks to execute a test case suite to minimize human intervention and maximize quality
