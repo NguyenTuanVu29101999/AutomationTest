@@ -23,7 +23,7 @@ For example: I can program it to automatically launch the browser, open a link, 
 => Firstly, I will write manual test cases base on the user story or requirements and make sure that cover all acceptance criterias in the user story and perform all those test cases, after the user story have done I will select test cases which can automate and write test script in robot framework then I will automate those test cases (I can use boundary values and equalavence class technique to write some test cases if possible).
 
 8. How would you select a test case for automation?
-=> I will select test cases which are repetitive, data-driven tests, complex test cases, and tests that take a lot of time to do manual testing time for automation
+=> I will select test cases which are repetitive, tests have been performed manual testing and passed, data-driven tests, complex test cases, and tests that take a lot of time to do manual testing for automation
 
 9. How do you decide which tools to use for automation testing?
 
@@ -32,24 +32,26 @@ For example: I can program it to automatically launch the browser, open a link, 
 
 11. What are the 2 main types of testing?
 => manual test and automation test
-- Functional testing is a type of testing which verifies that each function of the software application works in conformance with the requirement and specification. This testing focuses on checking of user interface, APIs, database, security, and functionality of the Application Under Test.
- + Unit Testing is a type of software testing where individual units or components of a software are tested to validate that each unit of the software code performs as expected. A unit may be an individual function, method, procedure, module, or object.
+- Functional testing checks an application, website, or system to ensure it’s doing exactly what it’s supposed to be doing
+ + Unit Testing is the process of checking small pieces of code to ensure that the individual parts of a program work properly on their own, speeding up testing strategies and reducing wasted tests
  + Integration Testing is the process of testing the interface between two software units or module to determine the correctness of the interface. Integration testing is performed after all modules have been unit tested.
- + Smoke Testing is a software testing technique to verify that the important features of software are working fine. It is executed before any functional or regression tests are executed.
+ + Smoke Testing validates the stability of a software application, it is performed on the initial software build to ensure that the critical functions of the program are working. It is executed before any functional or regression tests are executed.
  + Acceptance Testing is a method of software testing where a system is tested to evaluate the compliance of the system with the business requirements and evaluate whether it is acceptable for delivery or not.
  + Usability Testing is a type of testing, that is done from an end user’s perspective to determine if the system is easily usable
  + System Testing  is a type of software testing that is performed on a complete integrated system to evaluate the compliance of the system with the corresponding requirements.
  + Regression Testing is executed to make sure that current features are working fine when some features are modified or we add new features to an application. Regression testing is performed at the end of every sprint to make sure the software is stable.
-- Non-functional testing is a type of software testing to check non-functional aspects of a software application. It is designed to test the readiness of a system as per nonfunctional parameters which are never addressed by functional testing.
+- Non-functional testing verifies the readiness of a system according to nonfunctional parameters (performance, accessibility, UX, etc.) which are never addressed by functional testing
  + Compatibility testing
  + Compliance testing
  + Endurance testing
  + Load testing is a type of Performance Testing which determines the behavior of the application when multiple users use it at the same time. It is the response of the system measured under varying load conditions. The load testing is carried out for normal and extreme load conditions. Load testing is performed to find out the upper limit of the system or application.
  + Performance testing is a type of software testing that is carried out to test the speed (It determines whether the software product responds quickly), scalability (It determines amount of load the software product can handle at a time), stability (It determines whether the software product is stable under varying loads) and reliability (It determines whether the software product is secure or not) of the software product or application.
  + Recovery testing
- + Security testing
- + Scalability testing
+ + Security testing: is to identify all possible vulnerabilities and weaknesses of the software system which might result in a loss of information, revenue of the organization
+ + Scalability testing: It determines amount of load the software product can handle at a time
  + Stress testing is a type of software testing that verifies the stability and reliability of the system. This test particularly determines the system on its robustness and error handling under extremely heavy load conditions. It even tests beyond the normal operating point and analyses how the system works under the extreme conditions. Stress testing is performed to find the behavior of the system under pressure.
+- White box testing involves testing the product's underlying structure, architecture, and code to validate input-output flow and enhance design, usability, and security.
+- Black box testing involves testing against a system where the code and paths are invisible.
 
 12. What is Boundary Value Analysis?
 => Boundary Value Analysis (BVA) is used to check the errors at the boundaries of an input domain. It mainly focuses on testing both valid and invalid input parameters for a given range of a software component.
@@ -127,7 +129,7 @@ Sprint Retrospective
 API stands for Application Programming Interface which acts as an interface between two software applications so that two software applications can communicate with each other and performs the required actions efficiently.
 
 30. What are the disadvantages of using the robot framework?
-=> I think that debugging capability is not included, I have to use some keywords to log the result to console or log file to view the result, so it might take a long time to view the result
+=> I think some disadvantages of using the robot framework are Robot Framework does not support parallel test execution, debugging capability is not included, I have to use some keywords to log the result to console or log file to view the result, so it might take a long time to view the result
 
 31. What do you understand about test setup and teardown in the context of the robot framework?
 => Test Setup will run before every test case, if the setup fails, the keywords are not executed; Test TearDown will run after every test case, it is executed regardless of the test status and also if test setup has failed.
@@ -163,3 +165,6 @@ Jenkins freestyle projects allow users to automate simple jobs, such as running 
 
 37. What is automation tetsing?
 => Automation Testing is to use special automated testing tools and frameworks to execute a test case suite to minimize human intervention and maximize quality
+
+38. What are the disadvantages of automation testing?
+=> Some disadvantages of automation testing are not every task can be automated, some still need manual-testing. High initial costs. Programming knowledge is required. Not suitable for dynamically changing UI designs
