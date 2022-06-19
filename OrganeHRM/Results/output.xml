@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220619 00:51:03.651" rpa="false" schemaversion="3">
-<suite id="s1" name="InvalidLogin" source="D:\Data\AutomationTest\OrganeHRM\TestCases\InvalidLogin.robot">
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220619 17:43:19.659" rpa="false" schemaversion="3">
+<suite id="s1" name="Controller" source="D:\Data\AutomationTest\OrganeHRM\TestCases\Controller.robot">
+<test id="s1-t1" name="HO-43: Verify that all itmes at the header section display corectly" line="13">
 <kw name="Open my browser" library="LoginPage" type="SETUP">
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
@@ -8,473 +9,50 @@
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220619 00:51:04.339" level="INFO">Opening browser 'Edge' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220619 00:51:04.339" endtime="20220619 00:51:09.035"/>
+<msg timestamp="20220619 17:43:19.861" level="INFO">Opening browser 'Edge' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20220619 17:43:19.861" endtime="20220619 17:43:24.431"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>15</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220619 00:51:24.052" level="INFO">Slept 15 seconds</msg>
-<status status="PASS" starttime="20220619 00:51:09.036" endtime="20220619 00:51:24.052"/>
+<msg timestamp="20220619 17:43:39.436" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20220619 17:43:24.431" endtime="20220619 17:43:39.436"/>
 </kw>
-<status status="PASS" starttime="20220619 00:51:04.339" endtime="20220619 00:51:24.052"/>
+<status status="PASS" starttime="20220619 17:43:19.860" endtime="20220619 17:43:39.436"/>
 </kw>
-<test id="s1-t1" name="Invalid login" line="14">
-<kw name="Invalid login">
-<arg>Admin</arg>
-<arg>asd15wa</arg>
-<kw name="Enter UserName" library="LoginPage">
-<arg>${txt_UserName}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<arg>${UserName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:24.055" level="INFO">Typing text 'Admin' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220619 00:51:24.055" endtime="20220619 00:51:24.114"/>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Logo_Header}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220619 17:43:39.464" level="INFO">Element 'xpath://body/div[@id='wrapper']/div[@id='content']/div[@id='divLogin']/div[@id='divLogo']/img[1]' is displayed.</msg>
+<status status="PASS" starttime="20220619 17:43:39.437" endtime="20220619 17:43:39.465"/>
 </kw>
-<status status="PASS" starttime="20220619 00:51:24.054" endtime="20220619 00:51:24.114"/>
-</kw>
-<kw name="Enter Password" library="LoginPage">
-<arg>${txt_Password}</arg>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:24.115" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
-<msg timestamp="20220619 00:51:24.148" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220619 00:51:24.178" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220619 00:51:24.115" endtime="20220619 00:51:24.178"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:24.114" endtime="20220619 00:51:24.178"/>
-</kw>
-<kw name="Click Button Login" library="LoginPage">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${btn_login}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:24.179" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
-<status status="PASS" starttime="20220619 00:51:24.179" endtime="20220619 00:51:25.981"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220619 00:51:27.989" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220619 00:51:25.981" endtime="20220619 00:51:27.989"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:24.178" endtime="20220619 00:51:27.989"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:24.054" endtime="20220619 00:51:27.989"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:24.052" endtime="20220619 00:51:27.990"/>
-</test>
-<test id="s1-t2" name="Invalid login" line="14">
-<kw name="Invalid login">
-<arg>Adsminas </arg>
-<arg>admin123</arg>
-<kw name="Enter UserName" library="LoginPage">
-<arg>${txt_UserName}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<arg>${UserName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:27.993" level="INFO">Typing text 'Adsminas ' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220619 00:51:27.992" endtime="20220619 00:51:28.043"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:27.992" endtime="20220619 00:51:28.043"/>
-</kw>
-<kw name="Enter Password" library="LoginPage">
-<arg>${txt_Password}</arg>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:28.044" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
-<msg timestamp="20220619 00:51:28.071" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220619 00:51:28.100" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220619 00:51:28.044" endtime="20220619 00:51:28.101"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:28.043" endtime="20220619 00:51:28.101"/>
-</kw>
-<kw name="Click Button Login" library="LoginPage">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${btn_login}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:28.101" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
-<status status="PASS" starttime="20220619 00:51:28.101" endtime="20220619 00:51:29.380"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220619 00:51:31.395" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220619 00:51:29.380" endtime="20220619 00:51:31.395"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:28.101" endtime="20220619 00:51:31.395"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:27.992" endtime="20220619 00:51:31.395"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:27.991" endtime="20220619 00:51:31.396"/>
-</test>
-<test id="s1-t3" name="Invalid login" line="14">
-<kw name="Invalid login">
-<arg>Adsimins </arg>
-<arg>admins123s</arg>
-<kw name="Enter UserName" library="LoginPage">
-<arg>${txt_UserName}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<arg>${UserName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:31.403" level="INFO">Typing text 'Adsimins ' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220619 00:51:31.402" endtime="20220619 00:51:31.467"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:31.402" endtime="20220619 00:51:31.467"/>
-</kw>
-<kw name="Enter Password" library="LoginPage">
-<arg>${txt_Password}</arg>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:31.468" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
-<msg timestamp="20220619 00:51:31.490" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220619 00:51:31.516" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220619 00:51:31.468" endtime="20220619 00:51:31.516"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:31.468" endtime="20220619 00:51:31.516"/>
-</kw>
-<kw name="Click Button Login" library="LoginPage">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${btn_login}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:31.517" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
-<status status="PASS" starttime="20220619 00:51:31.517" endtime="20220619 00:51:32.817"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220619 00:51:34.830" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220619 00:51:32.817" endtime="20220619 00:51:34.830"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:31.516" endtime="20220619 00:51:34.830"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:31.401" endtime="20220619 00:51:34.830"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:31.399" endtime="20220619 00:51:34.831"/>
-</test>
-<test id="s1-t4" name="Invalid login" line="14">
-<kw name="Invalid login">
-<arg>Admin</arg>
-<arg>${EMPTY}</arg>
-<kw name="Enter UserName" library="LoginPage">
-<arg>${txt_UserName}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<arg>${UserName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:34.835" level="INFO">Typing text 'Admin' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220619 00:51:34.835" endtime="20220619 00:51:34.888"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:34.834" endtime="20220619 00:51:34.889"/>
-</kw>
-<kw name="Enter Password" library="LoginPage">
-<arg>${txt_Password}</arg>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:34.889" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
-<msg timestamp="20220619 00:51:34.911" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220619 00:51:34.932" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220619 00:51:34.889" endtime="20220619 00:51:34.932"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:34.889" endtime="20220619 00:51:34.932"/>
-</kw>
-<kw name="Click Button Login" library="LoginPage">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${btn_login}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:34.933" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
-<status status="PASS" starttime="20220619 00:51:34.933" endtime="20220619 00:51:34.965"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220619 00:51:36.979" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220619 00:51:34.965" endtime="20220619 00:51:36.979"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:34.932" endtime="20220619 00:51:36.979"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:34.834" endtime="20220619 00:51:36.979"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:34.833" endtime="20220619 00:51:36.979"/>
-</test>
-<test id="s1-t5" name="Invalid login" line="14">
-<kw name="Invalid login">
-<arg>Adsmins</arg>
-<arg>${EMPTY}</arg>
-<kw name="Enter UserName" library="LoginPage">
-<arg>${txt_UserName}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<arg>${UserName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:36.983" level="INFO">Typing text 'Adsmins' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220619 00:51:36.982" endtime="20220619 00:51:37.020"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:36.982" endtime="20220619 00:51:37.021"/>
-</kw>
-<kw name="Enter Password" library="LoginPage">
-<arg>${txt_Password}</arg>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:37.021" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
-<msg timestamp="20220619 00:51:37.036" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220619 00:51:37.050" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220619 00:51:37.021" endtime="20220619 00:51:37.050"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:37.021" endtime="20220619 00:51:37.051"/>
-</kw>
-<kw name="Click Button Login" library="LoginPage">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${btn_login}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:37.051" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
-<status status="PASS" starttime="20220619 00:51:37.051" endtime="20220619 00:51:37.071"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220619 00:51:39.083" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220619 00:51:37.071" endtime="20220619 00:51:39.083"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:37.051" endtime="20220619 00:51:39.084"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:36.981" endtime="20220619 00:51:39.084"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:36.980" endtime="20220619 00:51:39.086"/>
-</test>
-<test id="s1-t6" name="Invalid login" line="14">
-<kw name="Invalid login">
-<arg>${EMPTY}</arg>
-<arg>admin123</arg>
-<kw name="Enter UserName" library="LoginPage">
-<arg>${txt_UserName}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<arg>${UserName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:39.098" level="INFO">Typing text '' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220619 00:51:39.098" endtime="20220619 00:51:39.132"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:39.097" endtime="20220619 00:51:39.133"/>
-</kw>
-<kw name="Enter Password" library="LoginPage">
-<arg>${txt_Password}</arg>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:39.134" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
-<msg timestamp="20220619 00:51:39.147" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220619 00:51:39.167" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220619 00:51:39.133" endtime="20220619 00:51:39.167"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:39.133" endtime="20220619 00:51:39.167"/>
-</kw>
-<kw name="Click Button Login" library="LoginPage">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${btn_login}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:39.168" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
-<status status="PASS" starttime="20220619 00:51:39.168" endtime="20220619 00:51:39.191"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220619 00:51:41.199" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220619 00:51:39.191" endtime="20220619 00:51:41.199"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:39.167" endtime="20220619 00:51:41.199"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:39.096" endtime="20220619 00:51:41.199"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:39.090" endtime="20220619 00:51:41.200"/>
-</test>
-<test id="s1-t7" name="Invalid login" line="14">
-<kw name="Invalid login">
-<arg>${EMPTY}</arg>
-<arg>admin1s2s3</arg>
-<kw name="Enter UserName" library="LoginPage">
-<arg>${txt_UserName}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<arg>${UserName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:41.203" level="INFO">Typing text '' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220619 00:51:41.202" endtime="20220619 00:51:41.232"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:41.202" endtime="20220619 00:51:41.232"/>
-</kw>
-<kw name="Enter Password" library="LoginPage">
-<arg>${txt_Password}</arg>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:41.233" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
-<msg timestamp="20220619 00:51:41.250" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220619 00:51:41.275" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220619 00:51:41.233" endtime="20220619 00:51:41.275"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:41.232" endtime="20220619 00:51:41.276"/>
-</kw>
-<kw name="Click Button Login" library="LoginPage">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${btn_login}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:41.276" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
-<status status="PASS" starttime="20220619 00:51:41.276" endtime="20220619 00:51:41.297"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220619 00:51:43.307" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220619 00:51:41.297" endtime="20220619 00:51:43.307"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:41.276" endtime="20220619 00:51:43.308"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:41.202" endtime="20220619 00:51:43.308"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:41.200" endtime="20220619 00:51:43.309"/>
-</test>
-<test id="s1-t8" name="Invalid login" line="14">
-<kw name="Invalid login">
-<arg>${EMPTY}</arg>
-<arg>${EMPTY}</arg>
-<kw name="Enter UserName" library="LoginPage">
-<arg>${txt_UserName}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<arg>${UserName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:43.327" level="INFO">Typing text '' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220619 00:51:43.327" endtime="20220619 00:51:43.359"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:43.325" endtime="20220619 00:51:43.359"/>
-</kw>
-<kw name="Enter Password" library="LoginPage">
-<arg>${txt_Password}</arg>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:43.360" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
-<msg timestamp="20220619 00:51:43.376" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220619 00:51:43.392" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220619 00:51:43.360" endtime="20220619 00:51:43.392"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:43.360" endtime="20220619 00:51:43.392"/>
-</kw>
-<kw name="Click Button Login" library="LoginPage">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${btn_login}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:43.393" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
-<status status="PASS" starttime="20220619 00:51:43.393" endtime="20220619 00:51:43.412"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220619 00:51:45.413" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220619 00:51:43.412" endtime="20220619 00:51:45.413"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:43.393" endtime="20220619 00:51:45.413"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:43.320" endtime="20220619 00:51:45.413"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:43.314" endtime="20220619 00:51:45.413"/>
-</test>
-<test id="s1-t9" name="Invalid login" line="14">
-<kw name="Invalid login">
-<arg>Admin</arg>
-<arg>admin123</arg>
-<kw name="Enter UserName" library="LoginPage">
-<arg>${txt_UserName}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<arg>${UserName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:45.416" level="INFO">Typing text 'Admin' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220619 00:51:45.415" endtime="20220619 00:51:45.449"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:45.415" endtime="20220619 00:51:45.449"/>
-</kw>
-<kw name="Enter Password" library="LoginPage">
-<arg>${txt_Password}</arg>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:45.450" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
-<msg timestamp="20220619 00:51:45.463" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220619 00:51:45.483" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220619 00:51:45.449" endtime="20220619 00:51:45.484"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:45.449" endtime="20220619 00:51:45.484"/>
-</kw>
-<kw name="Click Button Login" library="LoginPage">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${btn_login}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220619 00:51:45.484" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
-<status status="PASS" starttime="20220619 00:51:45.484" endtime="20220619 00:51:48.975"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220619 00:51:50.983" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220619 00:51:48.976" endtime="20220619 00:51:50.983"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:45.484" endtime="20220619 00:51:50.983"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:45.415" endtime="20220619 00:51:50.983"/>
-</kw>
-<status status="PASS" starttime="20220619 00:51:45.414" endtime="20220619 00:51:50.983"/>
-</test>
 <kw name="Close my browser" library="LoginPage" type="TEARDOWN">
 <kw name="Sleep" library="BuiltIn">
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220619 00:52:00.991" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220619 00:51:50.984" endtime="20220619 00:52:00.991"/>
+<msg timestamp="20220619 17:43:49.468" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220619 17:43:39.466" endtime="20220619 17:43:49.468"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220619 00:52:00.991" endtime="20220619 00:52:03.221"/>
+<status status="PASS" starttime="20220619 17:43:49.468" endtime="20220619 17:43:51.726"/>
 </kw>
-<status status="PASS" starttime="20220619 00:51:50.984" endtime="20220619 00:52:03.221"/>
+<status status="PASS" starttime="20220619 17:43:39.465" endtime="20220619 17:43:51.727"/>
 </kw>
-<status status="PASS" starttime="20220619 00:51:03.652" endtime="20220619 00:52:03.221"/>
+<status status="PASS" starttime="20220619 17:43:19.858" endtime="20220619 17:43:51.727"/>
+</test>
+<status status="PASS" starttime="20220619 17:43:19.661" endtime="20220619 17:43:51.728"/>
 </suite>
 <statistics>
 <total>
-<stat pass="9" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="9" fail="0" skip="0" id="s1" name="InvalidLogin">InvalidLogin</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Controller">Controller</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220619 00:51:27.990" level="WARN">Multiple tests with name 'Invalid login' executed in suite 'InvalidLogin'.</msg>
-<msg timestamp="20220619 00:51:31.398" level="WARN">Multiple tests with name 'Invalid login' executed in suite 'InvalidLogin'.</msg>
-<msg timestamp="20220619 00:51:34.832" level="WARN">Multiple tests with name 'Invalid login' executed in suite 'InvalidLogin'.</msg>
-<msg timestamp="20220619 00:51:36.980" level="WARN">Multiple tests with name 'Invalid login' executed in suite 'InvalidLogin'.</msg>
-<msg timestamp="20220619 00:51:39.089" level="WARN">Multiple tests with name 'Invalid login' executed in suite 'InvalidLogin'.</msg>
-<msg timestamp="20220619 00:51:41.200" level="WARN">Multiple tests with name 'Invalid login' executed in suite 'InvalidLogin'.</msg>
-<msg timestamp="20220619 00:51:43.312" level="WARN">Multiple tests with name 'Invalid login' executed in suite 'InvalidLogin'.</msg>
-<msg timestamp="20220619 00:51:45.414" level="WARN">Multiple tests with name 'Invalid login' executed in suite 'InvalidLogin'.</msg>
 </errors>
 </robot>
