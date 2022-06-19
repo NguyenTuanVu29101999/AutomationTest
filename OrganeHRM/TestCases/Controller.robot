@@ -20,10 +20,16 @@ HO-44: Verify that all the items at the body section display corectly
     Verify password input
     Verify login button
     Verify 'forgot password' link
-    Verify 'OrangeHRM 4.10.1 © 2005 - 2022 OrangeHRM, Inc. All rights reserved.' text
-    Verify all button have icon at the end of page
     Click on the username box
     Click on the password box
-
+HO-44-1: Verify 'username' input and 'password' input
+    Enter the value of username input
+    Enter the value of password input
+HO-45: Verify that all links at the body of page can be clickable
+    Click on the 'Forgot your password' link
+HO-46: Verify that all the items at the footer section display corectly
+    Verify 'OrangeHRM 4.10.1 © 2005 - 2022 OrangeHRM, Inc. All rights reserved.' text
+HO-47: Verify that all links and logos at the footer of page can be clickable
+    Verify all button have icon at the end of page
 
 

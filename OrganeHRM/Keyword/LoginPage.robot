@@ -90,6 +90,25 @@ Click on the password box
     element should not be visible    ${span_password}
     #element should be visible    ${span_username}
 
+Click on the 'Forgot your password' link
+    click link    ${Forgot_your_password}
+
+Enter the value of username input
+    input text  ${txt_UserName}     Admin
+    textfield value should be       ${txt_UserName}     Admin
+    textfield value should be       ${txt_Password}     ${EMPTY}
+
+Enter the value of password input
+    input text  ${txt_Password}     admin123
+    textfield value should be       ${txt_Password}     admin123
+    textfield value should be       ${txt_UserName}     ${EMPTY}
+
+Delete entered data in username input and click outside the username input
+    element should be visible    ${span_username}
+
+
+
+
 
 
 
