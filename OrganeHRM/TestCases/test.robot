@@ -1,18 +1,17 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource    ../Keyword/LoginPage.robot
-Suite Setup    Open my browser    ${URL}  ${Browser}
-Suite Teardown     Close my browser
+Library      SeleniumLibrary
+Resource     ../Keyword/LoginPage.robot
+#Resource    ../Keyword/InvalidLogin.robot
+Test Setup    Open my browser    ${URL}  ${Browser}
+Test Teardown     Close my browser
+
 *** Variables ***
 ${URL}          https://opensource-demo.orangehrmlive.com/
 ${Browser}      Edge
+
 *** Test Cases ***
-HO-44: Verify that all the items at the body section display corectly
-     ${list}    create list    ${Link_Icon}   ${Facebook_Icon}    ${Twitter_Icon}     ${Youtube_Icon}
-     log to console    ${list}
+HO-44-1: Verify 'username' input
+    Verify 'OrangeHRM 4.10.1 © 2005 - 2022 OrangeHRM, Inc. All rights reserved.' text
 
-     FOR    ${i}    IN   ${list}
-        click element    ${i}
 
-        log to console    ${i}
-     END
+

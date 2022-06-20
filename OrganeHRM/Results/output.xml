@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220620 00:41:56.079" rpa="false" schemaversion="3">
-<suite id="s1" name="Controller" source="D:\Data\AutomationTest\OrganeHRM\TestCases\Controller.robot">
-<test id="s1-t1" name="HO-43: Verify that all itmes at the header section display corectly" line="13">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220620 19:46:37.426" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="D:\AutomationTest\OrganeHRM\TestCases\test.robot">
+<test id="s1-t1" name="HO-44-1: Verify 'username' input" line="13">
 <kw name="Open my browser" library="LoginPage" type="SETUP">
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
@@ -9,453 +9,34 @@
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220620 00:41:56.281" level="INFO">Opening browser 'Edge' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220620 00:41:56.281" endtime="20220620 00:42:06.456"/>
+<msg timestamp="20220620 19:46:37.774" level="INFO">Opening browser 'Edge' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20220620 19:46:37.773" endtime="20220620 19:46:48.291"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>15</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220620 00:42:21.471" level="INFO">Slept 15 seconds</msg>
-<status status="PASS" starttime="20220620 00:42:06.456" endtime="20220620 00:42:21.471"/>
+<msg timestamp="20220620 19:47:03.293" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20220620 19:46:48.291" endtime="20220620 19:47:03.293"/>
 </kw>
-<status status="PASS" starttime="20220620 00:41:56.280" endtime="20220620 00:42:21.471"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${Logo_Header}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220620 00:42:21.488" level="INFO">Element 'xpath://body/div[@id='wrapper']/div[@id='content']/div[@id='divLogin']/div[@id='divLogo']/img[1]' is displayed.</msg>
-<status status="PASS" starttime="20220620 00:42:21.471" endtime="20220620 00:42:21.488"/>
-</kw>
-<kw name="Close my browser" library="LoginPage" type="TEARDOWN">
-<kw name="Sleep" library="BuiltIn">
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220620 00:42:31.499" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220620 00:42:21.489" endtime="20220620 00:42:31.499"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220620 00:42:31.499" endtime="20220620 00:42:33.694"/>
-</kw>
-<status status="PASS" starttime="20220620 00:42:21.489" endtime="20220620 00:42:33.694"/>
-</kw>
-<status status="PASS" starttime="20220620 00:41:56.279" endtime="20220620 00:42:33.694"/>
-</test>
-<test id="s1-t2" name="HO-44: Verify that all the items at the body section display corectly" line="15">
-<kw name="Open my browser" library="LoginPage" type="SETUP">
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220620 00:42:33.697" level="INFO">Opening browser 'Edge' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220620 00:42:33.696" endtime="20220620 00:42:41.120"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>15</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220620 00:42:56.128" level="INFO">Slept 15 seconds</msg>
-<status status="PASS" starttime="20220620 00:42:41.120" endtime="20220620 00:42:56.128"/>
-</kw>
-<status status="PASS" starttime="20220620 00:42:33.696" endtime="20220620 00:42:56.128"/>
-</kw>
-<kw name="Verify image of header section" library="LoginPage">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${Background_Header_Form}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220620 00:42:56.145" level="INFO">Element 'xpath://*[name()='path' and contains(@fill,'url(#d)')]' is displayed.</msg>
-<status status="PASS" starttime="20220620 00:42:56.128" endtime="20220620 00:42:56.145"/>
-</kw>
-<status status="PASS" starttime="20220620 00:42:56.128" endtime="20220620 00:42:56.145"/>
-</kw>
-<kw name="Verify Circle_HRM_For_All logo display corectly" library="LoginPage">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${Circle_HRM_For_All}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220620 00:42:56.161" level="INFO">Element 'xpath://*[name()='circle' and contains(@fill,'url(#g)')]' is displayed.</msg>
-<status status="PASS" starttime="20220620 00:42:56.146" endtime="20220620 00:42:56.161"/>
-</kw>
-<status status="PASS" starttime="20220620 00:42:56.145" endtime="20220620 00:42:56.161"/>
-</kw>
-<kw name="Verify Text_LOGIN_Panel text display corectly" library="LoginPage">
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${txt_LoginPanel}</var>
-<arg>${Text_LOGIN_Panel}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220620 00:42:56.177" level="INFO">${txt_LoginPanel} = LOGIN Panel</msg>
-<status status="PASS" starttime="20220620 00:42:56.162" endtime="20220620 00:42:56.177"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${txt_LoginPanel}</arg>
-<arg>LOGIN Panel</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220620 00:42:56.177" endtime="20220620 00:42:56.177"/>
-</kw>
-<status status="PASS" starttime="20220620 00:42:56.162" endtime="20220620 00:42:56.177"/>
-</kw>
-<kw name="Verify username input" library="LoginPage">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220620 00:42:56.191" level="INFO">Element 'id:txtUsername' is displayed.</msg>
-<status status="PASS" starttime="20220620 00:42:56.178" endtime="20220620 00:42:56.191"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${Person_Icon}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220620 00:42:56.206" level="INFO">Element 'xpath://*[name()='g' and contains(@fill,'gray')]' is displayed.</msg>
-<status status="PASS" starttime="20220620 00:42:56.191" endtime="20220620 00:42:56.206"/>
-</kw>
-<status status="PASS" starttime="20220620 00:42:56.178" endtime="20220620 00:42:56.206"/>
-</kw>
-<kw name="Verify password input" library="LoginPage">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220620 00:42:56.220" level="INFO">Element 'id:txtPassword' is displayed.</msg>
-<status status="PASS" starttime="20220620 00:42:56.207" endtime="20220620 00:42:56.220"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${Lock_Icon}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220620 00:42:56.233" level="INFO">Element 'xpath://*[name()='path' and contains(@fill,'gray')]' is displayed.</msg>
-<status status="PASS" starttime="20220620 00:42:56.220" endtime="20220620 00:42:56.234"/>
-</kw>
-<status status="PASS" starttime="20220620 00:42:56.207" endtime="20220620 00:42:56.234"/>
-</kw>
-<kw name="Verify login button" library="LoginPage">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${btn_login}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220620 00:42:56.249" level="INFO">Element 'xpath://input[@id='btnLogin']' is displayed.</msg>
-<status status="PASS" starttime="20220620 00:42:56.235" endtime="20220620 00:42:56.250"/>
-</kw>
-<kw name="Get Value" library="SeleniumLibrary">
-<var>${text_button}</var>
-<arg>${btn_login}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<msg timestamp="20220620 00:42:56.265" level="INFO">${text_button} = LOGIN</msg>
-<status status="PASS" starttime="20220620 00:42:56.250" endtime="20220620 00:42:56.265"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${text_button}</arg>
-<arg>LOGIN</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220620 00:42:56.265" endtime="20220620 00:42:56.266"/>
-</kw>
-<kw name="Get CSS Property Value" library="Common">
-<var>${color_text_button}</var>
-<arg>${btn_login}</arg>
-<arg>color</arg>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${CSS}</var>
-<arg>${locator}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20220620 00:42:56.271" level="INFO">${CSS} = &lt;selenium.webdriver.remote.webelement.WebElement (session="3fffc2f17289f82970607362742ab79f", element="5339b105-9782-46cf-9649-0bf3d4a08741")&gt;</msg>
-<status status="PASS" starttime="20220620 00:42:56.266" endtime="20220620 00:42:56.271"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<var>${prop_val}</var>
-<arg>${css}</arg>
-<arg>value_of_css_property</arg>
-<arg>${attribute_name}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20220620 00:42:56.280" level="INFO">${prop_val} = rgba(255, 255, 255, 1)</msg>
-<status status="PASS" starttime="20220620 00:42:56.271" endtime="20220620 00:42:56.280"/>
-</kw>
-<msg timestamp="20220620 00:42:56.280" level="INFO">${color_text_button} = rgba(255, 255, 255, 1)</msg>
-<status status="PASS" starttime="20220620 00:42:56.266" endtime="20220620 00:42:56.280"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${color_text_button}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220620 00:42:56.281" endtime="20220620 00:42:56.281"/>
-</kw>
-<kw name="Rgb To Hex" library="Convert">
-<var>${convert_hex}</var>
-<arg>${color_text_button}</arg>
-<msg timestamp="20220620 00:42:56.281" level="INFO">rbg: 255,255,255,1</msg>
-<msg timestamp="20220620 00:42:56.282" level="INFO">${convert_hex} = #ffffff</msg>
-<status status="PASS" starttime="20220620 00:42:56.281" endtime="20220620 00:42:56.282"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${convert_hex}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220620 00:42:56.282" level="INFO">#ffffff</msg>
-<status status="PASS" starttime="20220620 00:42:56.282" endtime="20220620 00:42:56.282"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${convert_hex}</arg>
-<arg>\#ffffff</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220620 00:42:56.282" endtime="20220620 00:42:56.282"/>
-</kw>
-<status status="PASS" starttime="20220620 00:42:56.234" endtime="20220620 00:42:56.282"/>
-</kw>
-<kw name="Verify 'forgot password' link" library="LoginPage">
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text_link}</var>
-<arg>${Forgot_your_password}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220620 00:42:56.302" level="INFO">${text_link} = Forgot your password?</msg>
-<status status="PASS" starttime="20220620 00:42:56.283" endtime="20220620 00:42:56.302"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${text_link}</arg>
-<arg>Forgot your password?</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220620 00:42:56.302" endtime="20220620 00:42:56.302"/>
-</kw>
-<kw name="Get CSS Property Value" library="Common">
-<var>${underline_link}</var>
-<arg>${Forgot_your_password}</arg>
-<arg>text-decoration</arg>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${CSS}</var>
-<arg>${locator}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20220620 00:42:56.308" level="INFO">${CSS} = &lt;selenium.webdriver.remote.webelement.WebElement (session="3fffc2f17289f82970607362742ab79f", element="757acb19-0007-4ddf-9c68-8f3121091490")&gt;</msg>
-<status status="PASS" starttime="20220620 00:42:56.303" endtime="20220620 00:42:56.308"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<var>${prop_val}</var>
-<arg>${css}</arg>
-<arg>value_of_css_property</arg>
-<arg>${attribute_name}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20220620 00:42:56.314" level="INFO">${prop_val} = underline solid rgb(93, 93, 93)</msg>
-<status status="PASS" starttime="20220620 00:42:56.308" endtime="20220620 00:42:56.314"/>
-</kw>
-<msg timestamp="20220620 00:42:56.314" level="INFO">${underline_link} = underline solid rgb(93, 93, 93)</msg>
-<status status="PASS" starttime="20220620 00:42:56.303" endtime="20220620 00:42:56.314"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${underline_link}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220620 00:42:56.314" endtime="20220620 00:42:56.314"/>
-</kw>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${underline_link}</arg>
-<arg>underline</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220620 00:42:56.315" endtime="20220620 00:42:56.315"/>
-</kw>
-<status status="PASS" starttime="20220620 00:42:56.282" endtime="20220620 00:42:56.315"/>
-</kw>
-<kw name="Click on the username box" library="LoginPage">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220620 00:42:56.316" level="INFO">Clicking element 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220620 00:42:56.315" endtime="20220620 00:42:56.361"/>
-</kw>
-<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
-<arg>${span_username}</arg>
-<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<msg timestamp="20220620 00:42:56.380" level="INFO">Element 'xpath:(//span[normalize-space()='Username'])[1]' exists but is not displayed.</msg>
-<status status="PASS" starttime="20220620 00:42:56.362" endtime="20220620 00:42:56.380"/>
-</kw>
-<status status="PASS" starttime="20220620 00:42:56.315" endtime="20220620 00:42:56.381"/>
-</kw>
-<kw name="Click on the password box" library="LoginPage">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220620 00:42:56.382" level="INFO">Clicking element 'id:txtPassword'.</msg>
-<status status="PASS" starttime="20220620 00:42:56.382" endtime="20220620 00:42:56.411"/>
-</kw>
-<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
-<arg>${span_password}</arg>
-<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<msg timestamp="20220620 00:42:56.426" level="INFO">Element 'xpath:(//span[normalize-space()='Password'])[1]' exists but is not displayed.</msg>
-<status status="PASS" starttime="20220620 00:42:56.412" endtime="20220620 00:42:56.426"/>
-</kw>
-<status status="PASS" starttime="20220620 00:42:56.381" endtime="20220620 00:42:56.426"/>
-</kw>
-<kw name="Close my browser" library="LoginPage" type="TEARDOWN">
-<kw name="Sleep" library="BuiltIn">
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220620 00:43:06.440" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220620 00:42:56.427" endtime="20220620 00:43:06.440"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220620 00:43:06.440" endtime="20220620 00:43:08.657"/>
-</kw>
-<status status="PASS" starttime="20220620 00:42:56.427" endtime="20220620 00:43:08.657"/>
-</kw>
-<status status="PASS" starttime="20220620 00:42:33.695" endtime="20220620 00:43:08.657"/>
-</test>
-<test id="s1-t3" name="HO-44-1: Verify 'username' input and 'password' input" line="25">
-<kw name="Open my browser" library="LoginPage" type="SETUP">
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220620 00:43:08.659" level="INFO">Opening browser 'Edge' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220620 00:43:08.659" endtime="20220620 00:43:17.260"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>15</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220620 00:43:32.280" level="INFO">Slept 15 seconds</msg>
-<status status="PASS" starttime="20220620 00:43:17.260" endtime="20220620 00:43:32.280"/>
-</kw>
-<status status="PASS" starttime="20220620 00:43:08.659" endtime="20220620 00:43:32.281"/>
-</kw>
-<kw name="Enter the value of username input" library="LoginPage">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<arg>Admin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220620 00:43:32.282" level="INFO">Typing text 'Admin' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220620 00:43:32.282" endtime="20220620 00:43:32.340"/>
-</kw>
-<kw name="Textfield Value Should Be" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<arg>Admin</arg>
-<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
-<msg timestamp="20220620 00:43:32.363" level="INFO">Content of text field 'id:txtUsername' is 'Admin'.</msg>
-<status status="PASS" starttime="20220620 00:43:32.340" endtime="20220620 00:43:32.363"/>
-</kw>
-<kw name="Textfield Value Should Be" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<arg>${EMPTY}</arg>
-<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
-<msg timestamp="20220620 00:43:32.385" level="INFO">Content of text field 'id:txtPassword' is ''.</msg>
-<status status="PASS" starttime="20220620 00:43:32.363" endtime="20220620 00:43:32.385"/>
-</kw>
-<status status="PASS" starttime="20220620 00:43:32.281" endtime="20220620 00:43:32.385"/>
-</kw>
-<kw name="Enter the value of password input" library="LoginPage">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<arg>admin123</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220620 00:43:32.386" level="INFO">Typing text 'admin123' into text field 'id:txtPassword'.</msg>
-<status status="PASS" starttime="20220620 00:43:32.386" endtime="20220620 00:43:32.438"/>
-</kw>
-<kw name="Textfield Value Should Be" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<arg>admin123</arg>
-<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
-<msg timestamp="20220620 00:43:32.456" level="INFO">Content of text field 'id:txtPassword' is 'admin123'.</msg>
-<status status="PASS" starttime="20220620 00:43:32.439" endtime="20220620 00:43:32.456"/>
-</kw>
-<kw name="Textfield Value Should Be" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<arg>${EMPTY}</arg>
-<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
-<msg timestamp="20220620 00:43:32.603" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220620 00:43:32.604" level="FAIL">Value of text field 'id:txtUsername' should have been '' but was 'Admin'.</msg>
-<status status="FAIL" starttime="20220620 00:43:32.456" endtime="20220620 00:43:32.605"/>
-</kw>
-<status status="FAIL" starttime="20220620 00:43:32.385" endtime="20220620 00:43:32.605"/>
-</kw>
-<kw name="Close my browser" library="LoginPage" type="TEARDOWN">
-<kw name="Sleep" library="BuiltIn">
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220620 00:43:42.613" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220620 00:43:32.606" endtime="20220620 00:43:42.613"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220620 00:43:42.613" endtime="20220620 00:43:44.788"/>
-</kw>
-<status status="PASS" starttime="20220620 00:43:32.606" endtime="20220620 00:43:44.788"/>
-</kw>
-<status status="FAIL" starttime="20220620 00:43:08.658" endtime="20220620 00:43:44.789">Value of text field 'id:txtUsername' should have been '' but was 'Admin'.</status>
-</test>
-<test id="s1-t4" name="HO-45: Verify that all links at the body of page can be clickable" line="28">
-<kw name="Open my browser" library="LoginPage" type="SETUP">
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220620 00:43:44.791" level="INFO">Opening browser 'Edge' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220620 00:43:44.791" endtime="20220620 00:43:54.018"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>15</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220620 00:44:09.024" level="INFO">Slept 15 seconds</msg>
-<status status="PASS" starttime="20220620 00:43:54.018" endtime="20220620 00:44:09.024"/>
-</kw>
-<status status="PASS" starttime="20220620 00:43:44.790" endtime="20220620 00:44:09.024"/>
-</kw>
-<kw name="Click on the 'Forgot your password' link" library="LoginPage">
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>${Forgot_your_password}</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20220620 00:44:09.025" level="INFO">Clicking link 'xpath://a[contains(text(),'Forgot your password?')]'.</msg>
-<status status="PASS" starttime="20220620 00:44:09.025" endtime="20220620 00:44:10.208"/>
-</kw>
-<status status="PASS" starttime="20220620 00:44:09.024" endtime="20220620 00:44:10.208"/>
-</kw>
-<kw name="Close my browser" library="LoginPage" type="TEARDOWN">
-<kw name="Sleep" library="BuiltIn">
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220620 00:44:20.214" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220620 00:44:10.209" endtime="20220620 00:44:20.214"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220620 00:44:20.214" endtime="20220620 00:44:22.442"/>
-</kw>
-<status status="PASS" starttime="20220620 00:44:10.209" endtime="20220620 00:44:22.442"/>
-</kw>
-<status status="PASS" starttime="20220620 00:43:44.790" endtime="20220620 00:44:22.442"/>
-</test>
-<test id="s1-t5" name="HO-46: Verify that all the items at the footer section display corectly" line="30">
-<kw name="Open my browser" library="LoginPage" type="SETUP">
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220620 00:44:22.444" level="INFO">Opening browser 'Edge' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220620 00:44:22.444" endtime="20220620 00:44:30.780"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>15</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220620 00:44:45.791" level="INFO">Slept 15 seconds</msg>
-<status status="PASS" starttime="20220620 00:44:30.780" endtime="20220620 00:44:45.791"/>
-</kw>
-<status status="PASS" starttime="20220620 00:44:22.443" endtime="20220620 00:44:45.791"/>
+<status status="PASS" starttime="20220620 19:46:37.773" endtime="20220620 19:47:03.293"/>
 </kw>
 <kw name="Verify 'OrangeHRM 4.10.1 © 2005 - 2022 OrangeHRM, Inc. All rights reserved.' text" library="LoginPage">
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${text_footer}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220620 00:44:45.808" level="INFO">Element 'xpath://body/div[@id='wrapper']/div[@id='content']/div[@id='footer']/div[1]' is displayed.</msg>
-<status status="PASS" starttime="20220620 00:44:45.792" endtime="20220620 00:44:45.809"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${OrangeHRM_Inc}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220620 00:44:45.824" level="INFO">Element 'xpath://a[contains(text(),'OrangeHRM, Inc')]' is displayed.</msg>
-<status status="PASS" starttime="20220620 00:44:45.809" endtime="20220620 00:44:45.824"/>
+<msg timestamp="20220620 19:47:03.325" level="INFO">Element 'xpath://body/div[@id='wrapper']/div[@id='content']/div[@id='footer']/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20220620 19:47:03.294" endtime="20220620 19:47:03.325"/>
 </kw>
 <kw name="Get CSS Property Value" library="Common">
-<var>${underline}</var>
-<arg>${OrangeHRM_Inc}</arg>
-<arg>text-decoration</arg>
+<var>${color_text_footer}</var>
+<arg>${text_footer}</arg>
+<arg>color</arg>
 <kw name="Get WebElement" library="SeleniumLibrary">
 <var>${CSS}</var>
 <arg>${locator}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20220620 00:44:45.828" level="INFO">${CSS} = &lt;selenium.webdriver.remote.webelement.WebElement (session="12258c1dfd06dccf934929b5fc6e39b2", element="08ca1ec5-9769-4ffa-89d7-b1360861771e")&gt;</msg>
-<status status="PASS" starttime="20220620 00:44:45.824" endtime="20220620 00:44:45.829"/>
+<msg timestamp="20220620 19:47:03.331" level="INFO">${CSS} = &lt;selenium.webdriver.remote.webelement.WebElement (session="8b8352fcda1516f9972410d0e2c279d4", element="921d9f83-66f0-4e96-a2d0-70bfca9a9ae0")&gt;</msg>
+<status status="PASS" starttime="20220620 19:47:03.326" endtime="20220620 19:47:03.331"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <var>${prop_val}</var>
@@ -463,106 +44,106 @@
 <arg>value_of_css_property</arg>
 <arg>${attribute_name}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20220620 00:44:45.834" level="INFO">${prop_val} = underline solid rgb(93, 93, 93)</msg>
-<status status="PASS" starttime="20220620 00:44:45.829" endtime="20220620 00:44:45.834"/>
+<msg timestamp="20220620 19:47:03.337" level="INFO">${prop_val} = rgba(119, 119, 119, 1)</msg>
+<status status="PASS" starttime="20220620 19:47:03.331" endtime="20220620 19:47:03.337"/>
 </kw>
-<msg timestamp="20220620 00:44:45.834" level="INFO">${underline} = underline solid rgb(93, 93, 93)</msg>
-<status status="PASS" starttime="20220620 00:44:45.824" endtime="20220620 00:44:45.834"/>
+<msg timestamp="20220620 19:47:03.337" level="INFO">${color_text_footer} = rgba(119, 119, 119, 1)</msg>
+<status status="PASS" starttime="20220620 19:47:03.326" endtime="20220620 19:47:03.337"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${color_text_footer}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220620 19:47:03.337" endtime="20220620 19:47:03.338"/>
+</kw>
+<kw name="Rgb To Hex" library="Convert">
+<var>${convert_hex}</var>
+<arg>${color_text_footer}</arg>
+<msg timestamp="20220620 19:47:03.338" level="INFO">rbg: 119,119,119,1</msg>
+<msg timestamp="20220620 19:47:03.338" level="INFO">${convert_hex} = #777777</msg>
+<status status="PASS" starttime="20220620 19:47:03.338" endtime="20220620 19:47:03.338"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${convert_hex}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220620 19:47:03.338" level="INFO">#777777</msg>
+<status status="PASS" starttime="20220620 19:47:03.338" endtime="20220620 19:47:03.338"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${convert_hex}</arg>
+<arg>\#777</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20220620 19:47:03.339" level="FAIL">#777777 != #777</msg>
+<status status="FAIL" starttime="20220620 19:47:03.338" endtime="20220620 19:47:03.339"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${OrangeHRM_Inc}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220620 19:47:03.339" endtime="20220620 19:47:03.339"/>
+</kw>
+<kw name="Get CSS Property Value" library="Common">
+<var>${underline}</var>
+<arg>${OrangeHRM_Inc}</arg>
+<arg>text-decoration</arg>
+<status status="NOT RUN" starttime="20220620 19:47:03.339" endtime="20220620 19:47:03.340"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${underline}</arg>
 <arg>underline</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20220620 00:44:45.834" endtime="20220620 00:44:45.834"/>
-</kw>
-<status status="PASS" starttime="20220620 00:44:45.791" endtime="20220620 00:44:45.835"/>
-</kw>
-<kw name="Close my browser" library="LoginPage" type="TEARDOWN">
-<kw name="Sleep" library="BuiltIn">
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220620 00:44:55.849" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220620 00:44:45.835" endtime="20220620 00:44:55.849"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220620 00:44:55.849" endtime="20220620 00:44:58.094"/>
-</kw>
-<status status="PASS" starttime="20220620 00:44:45.835" endtime="20220620 00:44:58.094"/>
-</kw>
-<status status="PASS" starttime="20220620 00:44:22.443" endtime="20220620 00:44:58.095"/>
-</test>
-<test id="s1-t6" name="HO-47: Verify that all links and logos at the footer of page can be clickable" line="32">
-<kw name="Open my browser" library="LoginPage" type="SETUP">
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220620 00:44:58.096" level="INFO">Opening browser 'Edge' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220620 00:44:58.096" endtime="20220620 00:45:09.183"/>
+<status status="NOT RUN" starttime="20220620 19:47:03.340" endtime="20220620 19:47:03.340"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>15</arg>
+<arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220620 00:45:24.189" level="INFO">Slept 15 seconds</msg>
-<status status="PASS" starttime="20220620 00:45:09.184" endtime="20220620 00:45:24.189"/>
+<status status="NOT RUN" starttime="20220620 19:47:03.340" endtime="20220620 19:47:03.340"/>
 </kw>
-<status status="PASS" starttime="20220620 00:44:58.096" endtime="20220620 00:45:24.189"/>
-</kw>
-<kw name="Verify all button have icon at the end of page" library="LoginPage">
-<kw name="Click Element" library="SeleniumLibrary">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${Link_Icon}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220620 00:45:24.190" level="INFO">Clicking element 'xpath://img[@alt='LinkedIn OrangeHRM group']'.</msg>
-<status status="PASS" starttime="20220620 00:45:24.190" endtime="20220620 00:45:24.307"/>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220620 19:47:03.340" endtime="20220620 19:47:03.340"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${Facebook_Icon}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220620 00:45:24.309" level="INFO">Clicking element 'xpath://img[@alt='OrangeHRM on Facebook']'.</msg>
-<status status="PASS" starttime="20220620 00:45:24.308" endtime="20220620 00:45:24.385"/>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220620 19:47:03.340" endtime="20220620 19:47:03.340"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${Twitter_Icon}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220620 00:45:24.386" level="INFO">Clicking element 'xpath://img[@alt='OrangeHRM on twitter']'.</msg>
-<status status="PASS" starttime="20220620 00:45:24.385" endtime="20220620 00:45:24.437"/>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220620 19:47:03.340" endtime="20220620 19:47:03.340"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${Youtube_Icon}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220620 00:45:24.438" level="INFO">Clicking element 'xpath://img[@alt='OrangeHRM on youtube']'.</msg>
-<status status="PASS" starttime="20220620 00:45:24.437" endtime="20220620 00:45:24.500"/>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220620 19:47:03.340" endtime="20220620 19:47:03.340"/>
 </kw>
-<status status="PASS" starttime="20220620 00:45:24.189" endtime="20220620 00:45:24.500"/>
+<status status="FAIL" starttime="20220620 19:47:03.294" endtime="20220620 19:47:03.340"/>
 </kw>
 <kw name="Close my browser" library="LoginPage" type="TEARDOWN">
 <kw name="Sleep" library="BuiltIn">
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220620 00:45:34.505" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220620 00:45:24.502" endtime="20220620 00:45:34.505"/>
+<msg timestamp="20220620 19:47:13.342" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220620 19:47:03.341" endtime="20220620 19:47:13.342"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220620 00:45:34.505" endtime="20220620 00:45:36.743"/>
+<status status="PASS" starttime="20220620 19:47:13.342" endtime="20220620 19:47:16.407"/>
 </kw>
-<status status="PASS" starttime="20220620 00:45:24.501" endtime="20220620 00:45:36.743"/>
+<status status="PASS" starttime="20220620 19:47:03.341" endtime="20220620 19:47:16.407"/>
 </kw>
-<status status="PASS" starttime="20220620 00:44:58.095" endtime="20220620 00:45:36.743"/>
+<status status="FAIL" starttime="20220620 19:46:37.772" endtime="20220620 19:47:16.407">#777777 != #777</status>
 </test>
-<status status="FAIL" starttime="20220620 00:41:56.080" endtime="20220620 00:45:36.744"/>
+<status status="FAIL" starttime="20220620 19:46:37.428" endtime="20220620 19:47:16.409"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="1" skip="0" id="s1" name="Controller">Controller</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test">Test</stat>
 </suite>
 </statistics>
 <errors>

@@ -70,41 +70,77 @@ Verify 'forgot password' link
 
 Verify 'OrangeHRM 4.10.1 © 2005 - 2022 OrangeHRM, Inc. All rights reserved.' text
     element should be visible    ${text_footer}
+
+    ${color_text_footer}    Get CSS Property Value    ${text_footer}  color
+    log to console    ${color_text_footer}
+    ${convert_hex}      rgb_to_hex   ${color_text_footer}
+    log    ${convert_hex}
+    should be equal    ${convert_hex}    \#777
+
     element should be visible    ${OrangeHRM_Inc}
     ${underline}    Get CSS Property Value    ${OrangeHRM_Inc}      text-decoration
     should contain    ${underline}     underline
 
-Verify all button have icon at the end of page
+    sleep    10s
+
+    element should be visible    ${Link_Icon}
+    element should be visible    ${Facebook_Icon}
+    element should be visible    ${Twitter_Icon}
+    element should be visible    ${Youtube_Icon}
+
+Verify all buttons have icon at the end of page
    click element    ${Link_Icon}
    click element    ${Facebook_Icon}
    click element    ${Twitter_Icon}
    click element    ${Youtube_Icon}
 
-Click on the username box
+Click on the 'Forgot your password' link
+    click link    ${Forgot_your_password}
+
+Click on the username input and click outside the username input
+    #Click on the username input
     click element       ${txt_UserName}
     element should not be visible    ${span_username}
     #element should be visible    ${span_password}
 
-Click on the password box
-    click element    ${txt_Password}
-    element should not be visible    ${span_password}
+    #Click outside the username input
+    click element    ${Div_Login}
     #element should be visible    ${span_username}
-
-Click on the 'Forgot your password' link
-    click link    ${Forgot_your_password}
+    #element should be visible    ${span_password}
 
 Enter the value of username input
     input text  ${txt_UserName}     Admin
+    Sleep   10s
     textfield value should be       ${txt_UserName}     Admin
     textfield value should be       ${txt_Password}     ${EMPTY}
 
+Delete entered data in username input and click outside the username input
+    clear element text    ${txt_UserName}
+    Click All Elements    ${Div_Login}
+    #element should be visible    ${span_username}
+
+Click on the password input and click outside the password input
+    #Click on
+    click element    ${txt_Password}
+    element should not be visible    ${span_password}
+    #element should be visible    ${span_username}
+    Sleep   10s
+    #Click outside
+    click element    ${Div_Login}
+    #element should be visible    ${span_password}
+    #element should be visible    ${span_username}
+
 Enter the value of password input
-    input text  ${txt_Password}     admin123
+    input password    ${txt_Password}     admin123
+    Sleep   10s
     textfield value should be       ${txt_Password}     admin123
     textfield value should be       ${txt_UserName}     ${EMPTY}
 
-Delete entered data in username input and click outside the username input
-    element should be visible    ${span_username}
+Delete entered data in password input and click outside the password input
+    clear element text    ${txt_Password}
+    click element          ${Div_Login}
+    #element should be visible    ${span_password}
+
 
 
 
