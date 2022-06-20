@@ -34,6 +34,7 @@ Verify '( Username : Admin | Password : admin123 )' text display corectly
     should be equal       ${text_color}       ( Username : Admin | Password : admin123 )
     ${color}    get element attribute         ${Text_Username_Password}    style
     log to console    ${color}
+    should contain any     ${color}    red
 
 Verify Circle_HRM_For_All logo display corectly
     element should be visible         ${Circle_HRM_For_All}
@@ -42,13 +43,34 @@ Verify Text_LOGIN_Panel text display corectly
     ${txt_LoginPanel}     get text            ${Text_LOGIN_Panel}
     should be equal       ${txt_LoginPanel}   LOGIN Panel
 
+    ${color_text_button}    Get CSS Property Value    ${Text_LOGIN_Panel}  color
+    log to console    ${color_text_button}
+    ${convert_hex}      rgb_to_hex   ${color_text_button}
+    log    ${convert_hex}
+    should be equal    ${convert_hex}    \#000000
+
+
 Verify username input
     element should be visible    ${txt_UserName}
+    element should be visible    ${span_username}
     element should be visible    ${Person_Icon}
+
+    ${color_input}    Get CSS Property Value    ${txt_UserName}  color
+    log to console    ${color_input}
+    ${convert_hex}      rgb_to_hex    ${color_input}
+    log    ${convert_hex}
+    should be equal    ${convert_hex}    \#666666
 
 Verify password input
     element should be visible    ${txt_Password}
+    element should be visible    ${span_password}
     element should be visible    ${Lock_Icon}
+
+    ${color_input}    Get CSS Property Value    ${txt_UserName}  color
+    log to console    ${color_input}
+    ${convert_hex}      rgb_to_hex    ${color_input}
+    log    ${convert_hex}
+    should be equal    ${convert_hex}    \#666666
 
 Verify login button
     element should be visible    ${btn_login}
@@ -68,6 +90,12 @@ Verify 'forgot password' link
     log to console    ${underline_link}
     should contain    ${underline_link}     underline
 
+    ${color_text_link}    Get CSS Property Value    ${Forgot_your_password}  color
+    log to console    ${color_text_link}
+    ${convert_hex}      rgb_to_hex   ${color_text_link}
+    log    ${convert_hex}
+    should be equal    ${convert_hex}    \#5d5d5d
+
 Verify 'OrangeHRM 4.10.1 © 2005 - 2022 OrangeHRM, Inc. All rights reserved.' text
     element should be visible    ${text_footer}
 
@@ -75,7 +103,7 @@ Verify 'OrangeHRM 4.10.1 © 2005 - 2022 OrangeHRM, Inc. All rights reserved.' te
     log to console    ${color_text_footer}
     ${convert_hex}      rgb_to_hex   ${color_text_footer}
     log    ${convert_hex}
-    should be equal    ${convert_hex}    \#777
+    should contain any    ${convert_hex}    \#777
 
     element should be visible    ${OrangeHRM_Inc}
     ${underline}    Get CSS Property Value    ${OrangeHRM_Inc}      text-decoration
@@ -98,12 +126,12 @@ Click on the 'Forgot your password' link
     click link    ${Forgot_your_password}
 
 Click on the username input and click outside the username input
-    #Click on the username input
+    #Click on
     click element       ${txt_UserName}
     element should not be visible    ${span_username}
     #element should be visible    ${span_password}
 
-    #Click outside the username input
+    #Click outside
     click element    ${Div_Login}
     #element should be visible    ${span_username}
     #element should be visible    ${span_password}
