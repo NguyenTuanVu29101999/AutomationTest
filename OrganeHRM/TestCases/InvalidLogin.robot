@@ -11,11 +11,12 @@ ${URL}          https://opensource-demo.orangehrmlive.com/
 ${Browser}      Edge
 
 *** Test Cases ***
-Invalid login   ${txt_UserName}     ${txt_Password}
+Invalid login
 
 *** Keywords ***
 Invalid login
-    [Arguments]         ${txt_UserName}    ${txt_Password}
+    [Arguments]         ${txt_UserName}    ${txt_Password}      ${Message}
     Enter UserName      ${txt_UserName}
     Enter Password      ${txt_Password}
     Click Button Login
+    Verify Unsuccessful Login    ${Message}

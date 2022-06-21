@@ -23,3 +23,9 @@ def rgb_to_hex(rgb_color):
 
     hex_color = '#' + r + g + b
     return hex_color
+
+
+def transform_RGBA_to_HEX(rgba):
+    rgba = eval(rgba[4:])
+    color_hex = "#{:02x}{:02x}{:02x}".format(*rgba)
+    return color_hex

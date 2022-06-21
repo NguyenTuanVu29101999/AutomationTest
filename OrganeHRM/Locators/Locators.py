@@ -10,6 +10,7 @@ Person_Icon = "xpath://*[name()='g' and contains(@fill,'gray')]"
 txt_Password = "id:txtPassword"
 Lock_Icon = "xpath://*[name()='path' and contains(@fill,'gray')]"
 btn_login = "xpath://input[@id='btnLogin']"
+Background_Of_Button = "xpath://*[name()='path' and contains(@fill,'url(#l)')]"
 Forgot_your_password = "xpath://a[contains(text(),'Forgot your password?')]"
 
 span_username = "xpath:(//span[normalize-space()='Username'])[1]"
@@ -23,3 +24,8 @@ Twitter_Icon = "xpath://img[@alt='OrangeHRM on twitter']"
 Youtube_Icon = "xpath://img[@alt='OrangeHRM on youtube']"
 Div_Login = "//div[@id='divLogin']"
 text_footer = "xpath://div[contains(text(),'OrangeHRM 4.10.1')]"
+txt_errorMessage = "id:spanMessage"
+
+#Valid Login
+user_name = "Admin"
+password = "admin123"

@@ -2,10 +2,6 @@
 Library    SeleniumLibrary
 
 *** Keywords ***
-Click All Elements
-    [Arguments]         ${locator}
-    click element       ${locator}
-
 Get CSS Property Value
     [Documentation]
     [Arguments]         ${locator}        ${attribute_name}

@@ -53,6 +53,8 @@ Verify Text_LOGIN_Panel text display corectly
 Verify username input
     element should be visible    ${txt_UserName}
     element should be visible    ${span_username}
+    ${text_span_username}   get text    ${span_username}
+    should be equal    ${text_span_username}    Username
     element should be visible    ${Person_Icon}
 
     ${color_input}    Get CSS Property Value    ${txt_UserName}  color
@@ -64,6 +66,8 @@ Verify username input
 Verify password input
     element should be visible    ${txt_Password}
     element should be visible    ${span_password}
+    ${text_span_password}   get text    ${span_password}
+    should be equal    ${text_span_password}    Password
     element should be visible    ${Lock_Icon}
 
     ${color_input}    Get CSS Property Value    ${txt_UserName}  color
@@ -76,6 +80,7 @@ Verify login button
     element should be visible    ${btn_login}
     ${text_button}  get value    ${btn_login}
     should be equal     ${text_button}  LOGIN
+    element should be visible    ${Background_Of_Button}
 
     ${color_text_button}    Get CSS Property Value    ${btn_login}  color
     log to console    ${color_text_button}
@@ -98,6 +103,8 @@ Verify 'forgot password' link
 
 Verify 'OrangeHRM 4.10.1 © 2005 - 2022 OrangeHRM, Inc. All rights reserved.' text
     element should be visible    ${text_footer}
+    ${text}     get text     ${text_footer}
+    should be equal     ${text}   OrangeHRM 4.10.1\n© 2005 - 2022 OrangeHRM, Inc. All rights reserved.
 
     ${color_text_footer}    Get CSS Property Value    ${text_footer}  color
     log to console    ${color_text_footer}
@@ -117,13 +124,39 @@ Verify 'OrangeHRM 4.10.1 © 2005 - 2022 OrangeHRM, Inc. All rights reserved.' te
     element should be visible    ${Youtube_Icon}
 
 Verify all buttons have icon at the end of page
+   click element    ${OrangeHRM_Inc}
+   switch window    new
+   location should be      https://www.orangehrm.com/
+   close window
+
+   switch window    main
    click element    ${Link_Icon}
+   switch window    new
+   location should be       http://www.linkedin.com/groups?home=&gid=891077
+   close window
+
+   switch window    main
    click element    ${Facebook_Icon}
+   switch window    new
+   location should be  	    https://www.facebook.com/OrangeHRM
+   close window
+
+   switch window    main
    click element    ${Twitter_Icon}
+   switch window    new
+   location should be    	https://twitter.com/orangehrm
+   close window
+
+   switch window    main
    click element    ${Youtube_Icon}
+   switch window    new
+   location should be        https://www.youtube.com/orangehrm
+   close window
+   switch window    main
 
 Click on the 'Forgot your password' link
     click link    ${Forgot_your_password}
+    location should be    https://opensource-demo.orangehrmlive.com/index.php/auth/requestPasswordResetCode
 
 Click on the username input and click outside the username input
     #Click on
@@ -144,7 +177,7 @@ Enter the value of username input
 
 Delete entered data in username input and click outside the username input
     clear element text    ${txt_UserName}
-    Click All Elements    ${Div_Login}
+    click element    ${Div_Login}
     #element should be visible    ${span_username}
 
 Click on the password input and click outside the password input
@@ -168,6 +201,17 @@ Delete entered data in password input and click outside the password input
     clear element text    ${txt_Password}
     click element          ${Div_Login}
     #element should be visible    ${span_password}
+
+Verify Successful Login
+    location should be     https://opensource-demo.orangehrmlive.com/index.php/dashboard
+    page should contain    Welcome
+
+Verify Unsuccessful Login
+    [Arguments]    ${error_message}
+    ${message} =    get text        ${txt_errorMessage}
+    log to console    ${message}
+    should be equal    ${message}    ${error_message}
+
 
 
 
