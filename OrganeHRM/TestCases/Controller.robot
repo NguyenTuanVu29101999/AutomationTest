@@ -2,8 +2,8 @@
 Library      SeleniumLibrary
 Resource     ../Keyword/LoginPage.robot
 #Resource    ../Keyword/InvalidLogin.robot
-Test Setup    Open my browser    ${URL}  ${Browser}
-Test Teardown     Close my browser
+Suite Setup    Open my browser    ${URL}  ${Browser}
+Suite Teardown     Close my browser
 
 *** Variables ***
 ${URL}          https://opensource-demo.orangehrmlive.com/

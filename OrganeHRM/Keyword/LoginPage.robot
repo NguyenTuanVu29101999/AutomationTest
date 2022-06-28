@@ -162,12 +162,12 @@ Click on the username input and click outside the username input
     #Click on
     click element       ${txt_UserName}
     element should not be visible    ${span_username}
-    #element should be visible    ${span_password}
+    element should be visible    ${span_password}
 
     #Click outside
     click element    ${Div_Login}
-    #element should be visible    ${span_username}
-    #element should be visible    ${span_password}
+    element should be visible    ${span_username}
+    element should be visible    ${span_password}
 
 Enter the value of username input
     input text  ${txt_UserName}     Admin
@@ -178,18 +178,18 @@ Enter the value of username input
 Delete entered data in username input and click outside the username input
     clear element text    ${txt_UserName}
     click element    ${Div_Login}
-    #element should be visible    ${span_username}
+    element should be visible    ${span_username}
 
 Click on the password input and click outside the password input
     #Click on
     click element    ${txt_Password}
     element should not be visible    ${span_password}
-    #element should be visible    ${span_username}
+    element should be visible    ${span_username}
     Sleep   10s
     #Click outside
     click element    ${Div_Login}
-    #element should be visible    ${span_password}
-    #element should be visible    ${span_username}
+    element should be visible    ${span_password}
+    element should be visible    ${span_username}
 
 Enter the value of password input
     input password    ${txt_Password}     admin123
@@ -200,17 +200,25 @@ Enter the value of password input
 Delete entered data in password input and click outside the password input
     clear element text    ${txt_Password}
     click element          ${Div_Login}
-    #element should be visible    ${span_password}
+    element should be visible    ${span_password}
 
 Verify Successful Login
     location should be     https://opensource-demo.orangehrmlive.com/index.php/dashboard
     page should contain    Welcome
+
 
 Verify Unsuccessful Login
     [Arguments]    ${error_message}
     ${message} =    get text        ${txt_errorMessage}
     log to console    ${message}
     should be equal    ${message}    ${error_message}
+
+Login ESS
+    [Arguments]         ${txt_UserName}    ${txt_Password}
+    Enter UserName      ${txt_UserName}
+    Enter Password      ${txt_Password}
+    Click Button Login
+    Verify Successful Login
 
 
 

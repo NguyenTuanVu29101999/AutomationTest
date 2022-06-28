@@ -2,7 +2,7 @@
 Library     SeleniumLibrary
 Resource    ../Keyword/LoginPage.robot
 Test Setup          Open my browser     ${URL}  ${Browser}
-Test Teardown      Close my browser
+Test Teardown       Close my browser
 
 *** Variables ***
 ${URL}          https://opensource-demo.orangehrmlive.com/
