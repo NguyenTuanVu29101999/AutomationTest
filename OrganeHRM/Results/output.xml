@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220628 17:40:38.806" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220630 16:22:01.774" rpa="false" schemaversion="3">
 <suite id="s1" name="MyInfo" source="D:\AutomationTest\OrganeHRM\TestCases\MyInfo\MyInfo.robot">
-<test id="s1-t1" name="HR-119: Verify that all the items of My Info module display correctly" line="13">
+<test id="s1-t1" name="HR-133: Verify that be able to edit and save the Personal Details successfully" line="16">
 <kw name="Open my browser" library="LoginPage" type="SETUP">
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
@@ -9,215 +9,154 @@
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220628 17:40:39.041" level="INFO">Opening browser 'Edge' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220628 17:40:39.041" endtime="20220628 17:40:50.917"/>
+<msg timestamp="20220630 16:22:02.013" level="INFO">Opening browser 'Edge' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<msg timestamp="20220630 16:28:03.794" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: MicrosoftEdge=103.0.1264.37)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperties::unpack [0x00007FF61BC26292+24642]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB799E2+334098]
+	Ordinal0 [0x00007FF61B717915+620821]
+	Ordinal0 [0x00007FF61B704F2E+544558]
+	Ordinal0 [0x00007FF61B703BB0+539568]
+	Ordinal0 [0x00007FF61B704133+540979]
+	Ordinal0 [0x00007FF61B7208E7+657639]
+	Ordinal0 [0x00007FF61B791BA7+1121191]
+	Ordinal0 [0x00007FF61B76EE9A+978586]
+	Ordinal0 [0x00007FF61B78306F+1060975]
+	Ordinal0 [0x00007FF61B76ECB3+978099]
+	Ordinal0 [0x00007FF61B745F00+810752]
+	Ordinal0 [0x00007FF61B747508+816392]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61B9DD478+135480]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61B9C4B77+34871]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61B9C7BFC+47292]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61B8211B6+23222]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB80EEB+364059]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB85924+383060]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB85A7D+383405]
+	Microsoft::Applications::Events::time_ticks_t::time_ticks_t [0x00007FF61BB9038E+39918]
+	BaseThreadInitThunk [0x00007FFEBCA77C24+20]
+	RtlUserThreadStart [0x00007FFEBDFED721+33]
+</msg>
+<msg timestamp="20220630 16:28:03.796" level="FAIL">TimeoutException: Message: timeout: Timed out receiving message from renderer: 296.045
+  (Session info: MicrosoftEdge=103.0.1264.37)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperties::unpack [0x00007FF61BC26292+24642]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB799E2+334098]
+	Ordinal0 [0x00007FF61B717915+620821]
+	Ordinal0 [0x00007FF61B704F2E+544558]
+	Ordinal0 [0x00007FF61B703BB0+539568]
+	Ordinal0 [0x00007FF61B704133+540979]
+	Ordinal0 [0x00007FF61B70FAE6+588518]
+	Ordinal0 [0x00007FF61B720492+656530]
+	Ordinal0 [0x00007FF61B724AA9+674473]
+	Ordinal0 [0x00007FF61B7044D5+541909]
+	Ordinal0 [0x00007FF61B720190+655760]
+	Ordinal0 [0x00007FF61B783516+1062166]
+	Ordinal0 [0x00007FF61B76ECB3+978099]
+	Ordinal0 [0x00007FF61B745F00+810752]
+	Ordinal0 [0x00007FF61B747508+816392]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61B9DD478+135480]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61B9C4B77+34871]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61B9C7BFC+47292]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61B8211B6+23222]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB80EEB+364059]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB85924+383060]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB85A7D+383405]
+	Microsoft::Applications::Events::time_ticks_t::time_ticks_t [0x00007FF61BB9038E+39918]
+	BaseThreadInitThunk [0x00007FFEBCA77C24+20]
+	RtlUserThreadStart [0x00007FFEBDFED721+33]
+</msg>
+<status status="FAIL" starttime="20220630 16:22:02.013" endtime="20220630 16:28:03.811"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>15</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220628 17:41:05.919" level="INFO">Slept 15 seconds</msg>
-<status status="PASS" starttime="20220628 17:40:50.917" endtime="20220628 17:41:05.919"/>
-</kw>
-<status status="PASS" starttime="20220628 17:40:39.040" endtime="20220628 17:41:05.919"/>
-</kw>
-<kw name="Login ESS" library="LoginPage">
-<arg>adash</arg>
-<arg>adash123</arg>
-<kw name="Enter UserName" library="LoginPage">
-<arg>${txt_UserName}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txt_UserName}</arg>
-<arg>${UserName}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220628 17:41:05.920" level="INFO">Typing text 'adash' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220628 17:41:05.920" endtime="20220628 17:41:05.976"/>
-</kw>
-<status status="PASS" starttime="20220628 17:41:05.920" endtime="20220628 17:41:05.976"/>
-</kw>
-<kw name="Enter Password" library="LoginPage">
-<arg>${txt_Password}</arg>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${txt_Password}</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220628 17:41:05.977" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
-<msg timestamp="20220628 17:41:06.001" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220628 17:41:06.025" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220628 17:41:05.977" endtime="20220628 17:41:06.025"/>
-</kw>
-<status status="PASS" starttime="20220628 17:41:05.977" endtime="20220628 17:41:06.025"/>
-</kw>
-<kw name="Click Button Login" library="LoginPage">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${btn_login}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220628 17:41:06.025" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
-<status status="PASS" starttime="20220628 17:41:06.025" endtime="20220628 17:41:09.275"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220628 17:41:11.277" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220628 17:41:09.275" endtime="20220628 17:41:11.277"/>
-</kw>
-<status status="PASS" starttime="20220628 17:41:06.025" endtime="20220628 17:41:11.277"/>
-</kw>
-<kw name="Verify Successful Login" library="LoginPage">
-<kw name="Location Should Be" library="SeleniumLibrary">
-<arg>https://opensource-demo.orangehrmlive.com/index.php/dashboard</arg>
-<doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20220628 17:41:11.281" level="INFO">Current location is 'https://opensource-demo.orangehrmlive.com/index.php/dashboard'.</msg>
-<status status="PASS" starttime="20220628 17:41:11.277" endtime="20220628 17:41:11.281"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Welcome</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220628 17:41:11.291" level="INFO">Current page contains text 'Welcome'.</msg>
-<status status="PASS" starttime="20220628 17:41:11.281" endtime="20220628 17:41:11.291"/>
-</kw>
-<status status="PASS" starttime="20220628 17:41:11.277" endtime="20220628 17:41:11.291"/>
-</kw>
-<status status="PASS" starttime="20220628 17:41:05.919" endtime="20220628 17:41:11.291"/>
-</kw>
-<kw name="Click &quot;My Info&quot; link" library="MyInfo">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${MyInfo_Link}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220628 17:41:11.292" level="INFO">Clicking element 'xpath://b[contains(text(),'My Info')]'.</msg>
-<status status="PASS" starttime="20220628 17:41:11.292" endtime="20220628 17:41:12.786"/>
-</kw>
-<status status="PASS" starttime="20220628 17:41:11.292" endtime="20220628 17:41:12.786"/>
-</kw>
-<kw name="Verify that Personal Details section on the right of the image and sidebar includes the following items with input boxes are disabled" library="MyInfo">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${txt_FullName}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220628 17:41:12.806" level="INFO">Element 'xpath://label[contains(text(),'Full Name')]' is displayed.</msg>
-<status status="PASS" starttime="20220628 17:41:12.787" endtime="20220628 17:41:12.806"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${txt_FullName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220628 17:41:12.819" level="INFO">${text} = Full Name</msg>
-<status status="PASS" starttime="20220628 17:41:12.806" endtime="20220628 17:41:12.819"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220628 17:41:12.819" level="INFO">Full Name</msg>
-<status status="PASS" starttime="20220628 17:41:12.819" endtime="20220628 17:41:12.819"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${text}</arg>
-<arg>Full Name</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220628 17:41:12.819" endtime="20220628 17:41:12.819"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${txt_FirstName}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220628 17:41:12.835" level="INFO">Element 'xpath:(//div[@class='fieldDescription'])[1]' is displayed.</msg>
-<status status="PASS" starttime="20220628 17:41:12.819" endtime="20220628 17:41:12.836"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${txt_FirstName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220628 17:41:12.849" level="INFO">${text} = * First Name</msg>
-<status status="PASS" starttime="20220628 17:41:12.836" endtime="20220628 17:41:12.849"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220628 17:41:12.850" level="INFO">* First Name</msg>
-<status status="PASS" starttime="20220628 17:41:12.850" endtime="20220628 17:41:12.850"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${text}</arg>
-<arg>* First Name</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220628 17:41:12.850" endtime="20220628 17:41:12.850"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${txt_MiddleName}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220628 17:41:12.864" level="INFO">Element 'xpath://div[contains(text(),'Middle Name')]' is displayed.</msg>
-<status status="PASS" starttime="20220628 17:41:12.850" endtime="20220628 17:41:12.864"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${txt_MiddleName}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220628 17:41:12.877" level="INFO">${text} = Middle Name</msg>
-<status status="PASS" starttime="20220628 17:41:12.864" endtime="20220628 17:41:12.877"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220628 17:41:12.877" level="INFO">Middle Name</msg>
-<status status="PASS" starttime="20220628 17:41:12.877" endtime="20220628 17:41:12.877"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${text}</arg>
-<arg>Middle Name</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220628 17:41:12.877" endtime="20220628 17:41:12.877"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${txt_Lastname}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220628 17:41:12.891" level="INFO">Element 'xpath:(//div[@class='fieldDescription'])[3]' is displayed.</msg>
-<status status="PASS" starttime="20220628 17:41:12.878" endtime="20220628 17:41:12.891"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${txt_Lastname}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220628 17:41:12.904" level="INFO">${text} = * Last Name</msg>
-<status status="PASS" starttime="20220628 17:41:12.891" endtime="20220628 17:41:12.904"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220628 17:41:12.904" level="INFO">* Last Name</msg>
-<status status="PASS" starttime="20220628 17:41:12.904" endtime="20220628 17:41:12.904"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${text}</arg>
-<arg>* Last Name</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220628 17:41:12.904" endtime="20220628 17:41:12.905"/>
-</kw>
-<status status="PASS" starttime="20220628 17:41:12.787" endtime="20220628 17:41:12.905"/>
+<status status="FAIL" starttime="20220630 16:22:02.013" endtime="20220630 16:28:03.812"/>
 </kw>
 <kw name="Close my browser" library="LoginPage" type="TEARDOWN">
 <kw name="Sleep" library="BuiltIn">
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220628 17:41:22.906" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220628 17:41:12.905" endtime="20220628 17:41:22.906"/>
+<msg timestamp="20220630 16:28:13.814" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220630 16:28:03.813" endtime="20220630 16:28:13.814"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220628 17:41:22.906" endtime="20220628 17:41:25.158"/>
+<status status="PASS" starttime="20220630 16:28:13.814" endtime="20220630 16:28:16.049"/>
 </kw>
-<status status="PASS" starttime="20220628 17:41:12.905" endtime="20220628 17:41:25.158"/>
+<status status="PASS" starttime="20220630 16:28:03.812" endtime="20220630 16:28:16.049"/>
 </kw>
-<status status="PASS" starttime="20220628 17:40:39.039" endtime="20220628 17:41:25.158"/>
+<status status="FAIL" starttime="20220630 16:22:02.012" endtime="20220630 16:28:16.049">Setup failed:
+TimeoutException: Message: timeout: Timed out receiving message from renderer: 296.045
+  (Session info: MicrosoftEdge=103.0.1264.37)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperties::unpack [0x00007FF61BC26292+24642]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB799E2+334098]
+	Ordinal0 [0x00007FF61B717915+620821]
+	Ordinal0 [0x00007FF61B704F2E+544558]
+	Ordinal0 [0x00007FF61B703BB0+539568]
+	Ordinal0 [0x00007FF61B704133+540979]
+	Ordinal0 [0x00007FF61B70FAE6+588518]
+	Ordinal0 [0x00007FF61B720492+656530]
+	Ordinal0 [0x00007FF61B724AA9+674473]
+	Ordinal0 [0x00007FF61B7044D5+541909]
+	Ordinal0 [0x00007FF61B720190+655760]
+	Ordinal0 [0x00007FF61B783516+1062166]
+	Ordinal0 [0x00007FF61B76ECB3+978099]
+	Ordinal0 [0x00007FF61B745F00+810752]
+	Ordinal0 [0x00007FF61B747508+816392]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61B9DD478+135480]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61B9C4B77+34871]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61B9C7BFC+47292]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61B8211B6+23222]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB80EEB+364059]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB85924+383060]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB85A7D+383405]
+	Microsoft::Applications::Events::time_ticks_t::time_ticks_t [0x00007FF61BB9038E+39918]
+	BaseThreadInitThunk [0x00007FFEBCA77C24+20]
+	RtlUserThreadStart [0x00007FFEBDFED721+33]
+</status>
 </test>
-<status status="PASS" starttime="20220628 17:40:38.808" endtime="20220628 17:41:25.159"/>
+<status status="FAIL" starttime="20220630 16:22:01.775" endtime="20220630 16:28:16.051"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="MyInfo">MyInfo</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="MyInfo">MyInfo</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220630 16:28:03.794" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: MicrosoftEdge=103.0.1264.37)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperties::unpack [0x00007FF61BC26292+24642]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB799E2+334098]
+	Ordinal0 [0x00007FF61B717915+620821]
+	Ordinal0 [0x00007FF61B704F2E+544558]
+	Ordinal0 [0x00007FF61B703BB0+539568]
+	Ordinal0 [0x00007FF61B704133+540979]
+	Ordinal0 [0x00007FF61B7208E7+657639]
+	Ordinal0 [0x00007FF61B791BA7+1121191]
+	Ordinal0 [0x00007FF61B76EE9A+978586]
+	Ordinal0 [0x00007FF61B78306F+1060975]
+	Ordinal0 [0x00007FF61B76ECB3+978099]
+	Ordinal0 [0x00007FF61B745F00+810752]
+	Ordinal0 [0x00007FF61B747508+816392]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61B9DD478+135480]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61B9C4B77+34871]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF61B9C7BFC+47292]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF61B8211B6+23222]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB80EEB+364059]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB85924+383060]
+	Microsoft::Applications::Events::GUID_t::GUID_t [0x00007FF61BB85A7D+383405]
+	Microsoft::Applications::Events::time_ticks_t::time_ticks_t [0x00007FF61BB9038E+39918]
+	BaseThreadInitThunk [0x00007FFEBCA77C24+20]
+	RtlUserThreadStart [0x00007FFEBDFED721+33]
+</msg>
 </errors>
 </robot>

@@ -8,7 +8,6 @@ Resource    ../Keyword/Common.robot
 Open my browser
     [Arguments]     ${URL}      ${Browser}
     open browser    ${URL}      ${Browser}
-    Sleep   15
 
 Close my browser
     Sleep   10
