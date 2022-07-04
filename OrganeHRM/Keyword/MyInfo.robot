@@ -492,15 +492,186 @@ Click "Edit" button in Custom Fields section       #134
     ${save}  get value    ${btn_EditCustomFields}
     should be equal as strings    ${save}    Save
 
-Click "Save" button in Custom Fields section and Save data in Custom Fields section
+Click on the Blood Type ComboBox and Select blood type in the Blood Type ComboBox   # 134
+   click element    ${dropdown_BloodType}
 
-    # Click on the Blood Type ComboBox
-    ${lists}=   create list     --Select--  A+  A-   AB+   AB-   B+  B-  O+  O-
-    log     ${lists}
-    FOR    ${item}    IN    @{lists}
-        log    ${item}
-    END
-    select from list by value    ${dropdown_BloodType}  A+
+   # ${lists}=   create list     --Select--  A+  A-   AB+   AB-   B+  B-  O+  O-
+   # log     ${lists}
+   # FOR    ${item}    IN    @{lists}
+   #     log ${item}
+   # END
+   # ${text}     get text    ${dropdown_BloodType}
+
+   select from list by value    ${dropdown_BloodType}   A+
+
+Click "Save" button in Custom Fields section    #134
+    click element    ${btn_EditCustomFields}
+
+    #element should be visible    ${dropdown_BloodType}
+    ${txt}      get element attribute    ${dropdown_BloodType}      value
+    log    ${txt}
+
+    element should be visible     ${txt_SuccessfullySaved}
+    ${text_saved}   get text      ${txt_SuccessfullySaved}
+    should be equal as strings    ${text_saved}     Successfully Updated
+
+    element should be disabled    ${dropdown_BloodType}
+
+    ${edit}     get value    ${btn_EditCustomFields}
+    should be equal as strings    ${edit}   Edit
+
+Click "Add" button in Attachments section   # 138, 139, 148
+    click element                 ${btn_AddAttachment}
+    element should be visible     ${txt_SelectFile}
+    ${SelectFile}     get text    ${txt_SelectFile}
+    should be equal as strings    ${SelectFile}   Select File
+    element should be visible     ${input_SelectFile}
+
+    element should be visible     ${txt_Accept}
+    ${Accept}    get text         ${txt_Accept}
+    #should be equal               ${txt_Accept}     Accepts up to 1MB
+
+    element should be visible    ${txt_Comment}
+    ${comment}     get text      ${txt_Comment}
+    should be equal as strings   ${comment}  Comment
+    element should be visible    ${input_Comment}
+
+    element should be visible    ${txt_RequiredFile_Attachments}
+    ${txt}      get text         ${txt_RequiredFile_Attachments}
+    should be equal as strings   ${txt}     * Required field
+
+    element should be visible    ${btn_SaveAttachments}
+    element should be visible    ${btn_Cancel}
+    sleep    10
+
+Click "Upload" button in Attachments section    # 138
+    click element    ${btn_SaveAttachments}
+    element should be visible    ${message_required}
+    ${text}     get text    ${message_required}
+    should be equal as strings    ${text}   This field is required
+
+Click "Cancel" button in Attachments section    # 138
+    click element    ${btn_Cancel}
+    element should be visible    ${btn_AddAttachment}
+    ${value}    get value    ${btn_AddAttachment}
+    should be equal as strings    ${value}  Add
+
+Click on the "Choose File" button and select file (Test1.01MB.docx)   #139
+    choose file      ${input_SelectFile}         D:/Test1.01MB.docx
+    sleep    30
+    #click element    ${btn_SaveAttachments}
+    #sleep    30
+
+Click on the "Choose File" button and select file (Test1.0MB.png)   #147
+    choose file      ${input_SelectFile}         D:/Test1MB.png
+    click element    ${btn_SaveAttachments}
+    sleep    30
+
+Click on the "Choose File" button and select file (Test0.96MB.docx)     #148
+    choose file      ${input_SelectFile}         D:/Test0.96MB.docx
+    click element    ${btn_SaveAttachments}
+    sleep    30
+
+Click on the "Choose File" button and select file (Test_0.01MB.docx)    #148
+    choose file      ${input_SelectFile}         D:/Test_0.01MB.docx
+    click element    ${btn_SaveAttachments}
+    sleep    30
+
+Click on the "Upload" button    # 147, 148, 150
+    #element should be visible    ${txt_SuccessfullySaved}
+    #${saved}    get text         ${txt_SuccessfullySaved}
+    #should be equal as strings   ${saved}   Successfully Saved
+
+    element should be visible     ${btn_AddAttachment}
+    ${Add}     get value          ${btn_AddAttachment}
+    should be equal as strings    ${Add}   Add
+
+    element should be visible     ${btn_DeleteAttachments}
+    ${Delete}     get value       ${btn_DeleteAttachments}
+    should be equal as strings    ${Delete}   Delete
+
+    element should be visible    ${checkall_Column}
+
+    element should be visible    ${fileName_Column}
+    ${fn}   get text             ${fileName_Column}
+    should be equal as strings   ${fn}  File Name
+
+    element should be visible    ${description_Column}
+    ${dsp}   get text            ${description_Column}
+    should be equal as strings   ${dsp}  Description
+
+    element should be visible    ${size_Column}
+    ${size}   get text           ${size_Column}
+    should be equal as strings   ${size}  Size
+
+    element should be visible    ${type_Column}
+    ${type}   get text           ${type_Column}
+    should be equal as strings   ${type}  Type
+
+    element should be visible    ${dateAdded_Column}
+    ${dadded}   get text         ${dateAdded_Column}
+    should be equal as strings   ${dadded}  Date Added
+
+    element should be visible    ${addedBy_Column}
+    ${addedby}   get text        ${addedBy_Column}
+    should be equal as strings   ${addedby}  Added By
+
+    element should be visible    ${actionEdit_Column}
+
+    #Verify information of table
+    element should be visible    ${data_FileName}
+    #${dtFN}   get text           ${data_FileName}
+    #should be equal as strings   ${dtFN}  Test_0.01MB.docx
+
+Click "Edit" link in the record want to edit in Attachments section     #150
+    click element                ${btnEdit_AttachmentItem}
+    sleep    10
+    element should be visible    ${txt_CurrentFile}
+    element should be visible    ${input_CurrentFile}
+    ${value}    get text         ${input_CurrentFile}
+    should be equal as strings   ${value}   Test_0.01MB.docx
+
+    element should be visible    ${txt_ReplaceWith}
+    element should be visible    ${input_SelectFile}
+
+    element should be visible    ${txt_Comment}
+    element should be visible    ${input_Comment}
+
+    element should be visible    ${btn_SaveAttachments}
+    ${upload}   get value        ${btn_SaveAttachments}
+    should be equal as strings   ${upload}  Upload
+
+    element should be visible    ${btn_CommentOnly}
+    ${commentOnly}  get value    ${btn_CommentOnly}
+    should be equal as strings   ${commentOnly}     Save Comment Only
+
+    element should be visible    ${btn_Cancel}
+    ${cancel}   get value        ${btn_Cancel}
+    should be equal as strings   ${cancel}  Cancel
+
+Click on the "Choose File" button and Select a file with a file size within the limit and different from the current file and click "Open" button    #150
+    choose file      ${input_SelectFile}          D:/Test_0.01MB.docx
+    click element    ${btn_SaveAttachments}
+    sleep    30
+
+
+Select the check box of the data to be deleted      # 151
+
+
+Click " Delete" button
+    click element    ${btn_DeleteAttachments}
+    element should be visible    ${txt_SuccessfullyDeleted}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

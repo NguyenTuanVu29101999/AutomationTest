@@ -8,6 +8,7 @@ Resource    ../Keyword/Common.robot
 Open my browser
     [Arguments]     ${URL}      ${Browser}
     open browser    ${URL}      ${Browser}
+    maximize browser window
 
 Close my browser
     Sleep   10

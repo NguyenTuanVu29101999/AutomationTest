@@ -10,13 +10,18 @@ Test Teardown      Close my browser
 
 *** Variables ***
 ${URL}          https://opensource-demo.orangehrmlive.com/
-${Browser}      Edge
+${Browser}      Chrome
 
 *** Test Cases ***
-HR-134: Verify that be able to edit and save “Custom Fields“
+HR-150: Verify that be able to delete attachments at “Attachments“
     Login ESS    adash   adash123
     Click "My Info" link
-    Click "Edit" button in Custom Fields section
-    Click "Save" button in Custom Fields section and Save data in Custom Fields section
+    Select the check box of the data to be deleted
+    Click "Delete" button
+
+
+
+
+
 
 
