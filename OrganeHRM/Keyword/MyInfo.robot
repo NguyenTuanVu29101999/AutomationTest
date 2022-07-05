@@ -1,5 +1,6 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library      SeleniumLibrary
+Library      OperatingSystem
 Resource    ../Keyword/LoginPage.robot
 Library    ../FunctionConvert/Convert.py
 Variables    ../Locators/DashBoard.py
@@ -289,6 +290,9 @@ Verify that the "This field is required" message is displayed   #(132)
     #should be equal as strings    ${message_2}    This field is required
 
     click element    ${btn_Save}
+
+# Enter data for "License Expiration Date" input box
+
 
 Enter data in the FirstName field and automatically truncated if the maximum size is reached    #(136)
     # Enter a text has 29 characters into the "First Name" input box
@@ -654,13 +658,54 @@ Click on the "Choose File" button and Select a file with a file size within the 
     click element    ${btn_SaveAttachments}
     sleep    30
 
-
 Select the check box of the data to be deleted      # 151
+    select checkbox    xpath://input[@class='checkboxAtch'and@value='16']
+    sleep    30
 
-
-Click " Delete" button
+Click "Delete" button
     click element    ${btn_DeleteAttachments}
-    element should be visible    ${txt_SuccessfullyDeleted}
+    #element should be visible    ${txt_SuccessfullyDeleted}
+    wait until element is visible    ${txt_SuccessfullyDeleted}     timeout=10s
+
+Get element table
+    ${elements}     get webelements     ${table}
+    FOR   ${elem}   IN   @{elements}
+      #${text}    Get Text    ${elem}
+      #log       ${text}
+      element should be visible    ${elem}
+    END
+
+Click on file name link
+    # create unique folder
+    ${now}    Get Time    epoch
+    log    ${now}
+    ${download directory}    Join Path    ${OUTPUT DIR}    downloads
+    log    ${download directory}
+    Create Directory    ${download directory}
+    ${chrome options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+
+    # list of plugins to disable. disabling PDF Viewer is necessary so that PDFs are saved rather than displayed
+    ${disabled}    Create List    Chrome PDF Viewer
+    ${prefs}    Create Dictionary    download.default_directory=${download directory}    plugins.plugins_disabled=${disabled}
+    Call Method    ${chrome options}    add_experimental_option    prefs    ${prefs}
+    Create Webdriver    Chrome    chrome_options=${chrome options}
+    Goto    https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/pim/viewMyDetails
+    Click Link    css:[href="/symfony/web/index.php/pim/viewAttachment/empNumber/1/attachId/1"]
+    # wait for download to finish
+    ${file}    Wait Until Keyword Succeeds    1 min    2 sec    Download should be done    ${download directory}
+
+Download should be done
+    [Arguments]    ${directory}
+    ${files}    List Files In Directory    ${directory}
+    Length Should Be    ${files}    1    Should be only one file in the download folder
+    Should Not Match Regexp    ${files[0]}    (?i).*\\.tmp    Chrome is still downloading a file
+    ${file}    Join Path    ${directory}    ${files[0]}
+    Log    File was successfully downloaded to ${file}
+    [Return]    ${file}
+    sleep    30
+
+
+
 
 
 

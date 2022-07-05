@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220704 17:50:44.977" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220705 16:04:35.037" rpa="false" schemaversion="3">
 <suite id="s1" name="MyInfo" source="D:\AutomationTest\OrganeHRM\TestCases\MyInfo\MyInfo.robot">
-<test id="s1-t1" name="HR-150: Verify that be able to edit attachments at “Attachments“" line="16">
+<test id="s1-t1" name="HR-151: Verify that be able to download attachments at “Attachments“" line="17">
 <kw name="Open my browser" library="LoginPage" type="SETUP">
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
@@ -9,28 +9,28 @@
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220704 17:50:45.253" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220704 17:50:45.253" endtime="20220704 17:51:35.686"/>
+<msg timestamp="20220705 16:04:35.353" level="INFO">Opening browser 'Chrome' to base url 'https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20220705 16:04:35.353" endtime="20220705 16:04:47.989"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220704 17:51:35.686" endtime="20220704 17:51:35.795"/>
+<status status="PASS" starttime="20220705 16:04:47.989" endtime="20220705 16:04:48.101"/>
 </kw>
-<status status="PASS" starttime="20220704 17:50:45.252" endtime="20220704 17:51:35.795"/>
+<status status="PASS" starttime="20220705 16:04:35.352" endtime="20220705 16:04:48.101"/>
 </kw>
 <kw name="Login ESS" library="LoginPage">
 <arg>adash</arg>
-<arg>adash123</arg>
+<arg>4w@hOc@K@1AH</arg>
 <kw name="Enter UserName" library="LoginPage">
 <arg>${txt_UserName}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txt_UserName}</arg>
 <arg>${UserName}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220704 17:51:35.796" level="INFO">Typing text 'adash' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220704 17:51:35.796" endtime="20220704 17:51:35.862"/>
+<msg timestamp="20220705 16:04:48.102" level="INFO">Typing text 'adash' into text field 'id:txtUsername'.</msg>
+<status status="PASS" starttime="20220705 16:04:48.102" endtime="20220705 16:04:48.167"/>
 </kw>
-<status status="PASS" starttime="20220704 17:51:35.796" endtime="20220704 17:51:35.863"/>
+<status status="PASS" starttime="20220705 16:04:48.101" endtime="20220705 16:04:48.167"/>
 </kw>
 <kw name="Enter Password" library="LoginPage">
 <arg>${txt_Password}</arg>
@@ -38,395 +38,176 @@
 <arg>${txt_Password}</arg>
 <arg>${Password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220704 17:51:35.863" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
-<msg timestamp="20220704 17:51:35.893" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220704 17:51:35.926" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220704 17:51:35.863" endtime="20220704 17:51:35.926"/>
+<msg timestamp="20220705 16:04:48.168" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
+<msg timestamp="20220705 16:04:48.194" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220705 16:04:48.226" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220705 16:04:48.168" endtime="20220705 16:04:48.227"/>
 </kw>
-<status status="PASS" starttime="20220704 17:51:35.863" endtime="20220704 17:51:35.926"/>
+<status status="PASS" starttime="20220705 16:04:48.167" endtime="20220705 16:04:48.227"/>
 </kw>
 <kw name="Click Button Login" library="LoginPage">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${btn_login}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220704 17:51:35.926" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
-<status status="PASS" starttime="20220704 17:51:35.926" endtime="20220704 17:51:41.878"/>
+<msg timestamp="20220705 16:04:48.227" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
+<status status="PASS" starttime="20220705 16:04:48.227" endtime="20220705 16:04:54.881"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220704 17:51:43.878" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220704 17:51:41.878" endtime="20220704 17:51:43.878"/>
+<msg timestamp="20220705 16:04:56.883" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220705 16:04:54.882" endtime="20220705 16:04:56.883"/>
 </kw>
-<status status="PASS" starttime="20220704 17:51:35.926" endtime="20220704 17:51:43.878"/>
+<status status="PASS" starttime="20220705 16:04:48.227" endtime="20220705 16:04:56.883"/>
 </kw>
 <kw name="Verify Successful Login" library="LoginPage">
 <kw name="Location Should Be" library="SeleniumLibrary">
-<arg>https://opensource-demo.orangehrmlive.com/index.php/dashboard</arg>
+<arg>https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/dashboard</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20220704 17:51:43.882" level="INFO">Current location is 'https://opensource-demo.orangehrmlive.com/index.php/dashboard'.</msg>
-<status status="PASS" starttime="20220704 17:51:43.878" endtime="20220704 17:51:43.882"/>
+<msg timestamp="20220705 16:04:56.887" level="INFO">Current location is 'https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/dashboard'.</msg>
+<status status="PASS" starttime="20220705 16:04:56.883" endtime="20220705 16:04:56.887"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Welcome</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220704 17:51:43.892" level="INFO">Current page contains text 'Welcome'.</msg>
-<status status="PASS" starttime="20220704 17:51:43.882" endtime="20220704 17:51:43.892"/>
+<msg timestamp="20220705 16:04:56.897" level="INFO">Current page contains text 'Welcome'.</msg>
+<status status="PASS" starttime="20220705 16:04:56.887" endtime="20220705 16:04:56.897"/>
 </kw>
-<status status="PASS" starttime="20220704 17:51:43.878" endtime="20220704 17:51:43.892"/>
+<status status="PASS" starttime="20220705 16:04:56.883" endtime="20220705 16:04:56.897"/>
 </kw>
-<status status="PASS" starttime="20220704 17:51:35.795" endtime="20220704 17:51:43.892"/>
+<status status="PASS" starttime="20220705 16:04:48.101" endtime="20220705 16:04:56.897"/>
 </kw>
 <kw name="Click &quot;My Info&quot; link" library="MyInfo">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MyInfo_Link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:51:43.893" level="INFO">Clicking element 'xpath://b[contains(text(),'My Info')]'.</msg>
-<status status="PASS" starttime="20220704 17:51:43.893" endtime="20220704 17:51:46.578"/>
+<msg timestamp="20220705 16:04:56.898" level="INFO">Clicking element 'xpath://b[contains(text(),'My Info')]'.</msg>
+<status status="PASS" starttime="20220705 16:04:56.898" endtime="20220705 16:05:01.100"/>
 </kw>
-<status status="PASS" starttime="20220704 17:51:43.893" endtime="20220704 17:51:46.578"/>
+<status status="PASS" starttime="20220705 16:04:56.898" endtime="20220705 16:05:01.100"/>
 </kw>
-<kw name="Click &quot;Edit&quot; link in the record want to edit in Attachments section" library="MyInfo">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${btnEdit_AttachmentItem}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:51:46.579" level="INFO">Clicking element 'xpath://a[contains(text(),'Edit')]'.</msg>
-<status status="PASS" starttime="20220704 17:51:46.579" endtime="20220704 17:51:46.618"/>
+<kw name="Click on file name link" library="MyInfo">
+<kw name="Get Time" library="BuiltIn">
+<var>${now}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<msg timestamp="20220705 16:05:01.101" level="INFO">${now} = 1657011901</msg>
+<status status="PASS" starttime="20220705 16:05:01.101" endtime="20220705 16:05:01.101"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220704 17:51:56.621" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220704 17:51:46.619" endtime="20220704 17:51:56.621"/>
+<kw name="Log" library="BuiltIn">
+<arg>${now}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220705 16:05:01.101" level="INFO">1657011901</msg>
+<status status="PASS" starttime="20220705 16:05:01.101" endtime="20220705 16:05:01.101"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${txt_CurrentFile}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:51:56.641" level="INFO">Element 'xpath://label[contains(text(),'Current File')]' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:51:56.621" endtime="20220704 17:51:56.641"/>
+<kw name="Join Path" library="OperatingSystem">
+<var>${download directory}</var>
+<arg>${OUTPUT DIR}</arg>
+<arg>downloads</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20220705 16:05:01.102" level="INFO">${download directory} = D:\AutomationTest\OrganeHRM\Results\downloads</msg>
+<status status="PASS" starttime="20220705 16:05:01.102" endtime="20220705 16:05:01.102"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${input_CurrentFile}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:51:56.658" level="INFO">Element 'xpath://span[@id='currentFileSpan']' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:51:56.641" endtime="20220704 17:51:56.659"/>
+<kw name="Log" library="BuiltIn">
+<arg>${download directory}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220705 16:05:01.102" level="INFO">D:\AutomationTest\OrganeHRM\Results\downloads</msg>
+<status status="PASS" starttime="20220705 16:05:01.102" endtime="20220705 16:05:01.102"/>
 </kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${value}</var>
-<arg>${input_CurrentFile}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:51:56.671" level="INFO">${value} = Test_0.01MB.docx</msg>
-<status status="PASS" starttime="20220704 17:51:56.659" endtime="20220704 17:51:56.671"/>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${download directory}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20220705 16:05:01.102" level="INFO" html="true">Directory '&lt;a href="file://D:\AutomationTest\OrganeHRM\Results\downloads"&gt;D:\AutomationTest\OrganeHRM\Results\downloads&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20220705 16:05:01.102" endtime="20220705 16:05:01.102"/>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${value}</arg>
-<arg>Test_0.01MB.docx</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220704 17:51:56.671" endtime="20220704 17:51:56.671"/>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220705 16:05:01.103" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000243300DF5E0&gt;</msg>
+<status status="PASS" starttime="20220705 16:05:01.103" endtime="20220705 16:05:01.103"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${txt_ReplaceWith}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:51:56.685" level="INFO">Element 'xpath://label[@id='selectFileSpan']' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:51:56.671" endtime="20220704 17:51:56.685"/>
+<kw name="Create List" library="BuiltIn">
+<var>${disabled}</var>
+<arg>Chrome PDF Viewer</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220705 16:05:01.103" level="INFO">${disabled} = ['Chrome PDF Viewer']</msg>
+<status status="PASS" starttime="20220705 16:05:01.103" endtime="20220705 16:05:01.103"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${input_SelectFile}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:51:56.698" level="INFO">Element 'xpath://input[@id='ufile']' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:51:56.685" endtime="20220704 17:51:56.699"/>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${prefs}</var>
+<arg>download.default_directory=${download directory}</arg>
+<arg>plugins.plugins_disabled=${disabled}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220705 16:05:01.103" level="INFO">${prefs} = {'download.default_directory': 'D:\\AutomationTest\\OrganeHRM\\Results\\downloads', 'plugins.plugins_disabled': ['Chrome PDF Viewer']}</msg>
+<status status="PASS" starttime="20220705 16:05:01.103" endtime="20220705 16:05:01.103"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${txt_Comment}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:51:56.711" level="INFO">Element 'xpath://label[contains(text(),'Comment')]' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:51:56.699" endtime="20220704 17:51:56.711"/>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20220705 16:05:01.104" endtime="20220705 16:05:01.104"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${input_Comment}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:51:56.725" level="INFO">Element 'xpath://textarea[@id='txtAttDesc']' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:51:56.711" endtime="20220704 17:51:56.725"/>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${chrome options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220705 16:05:01.104" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220705 16:05:01.104" endtime="20220705 16:05:04.332"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${btn_SaveAttachments}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:51:56.739" level="INFO">Element 'xpath://input[@id='btnSaveAttachment']' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:51:56.725" endtime="20220704 17:51:56.739"/>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/pim/viewMyDetails</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220705 16:05:04.332" level="INFO">Opening url 'https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/pim/viewMyDetails'</msg>
+<status status="PASS" starttime="20220705 16:05:04.332" endtime="20220705 16:05:22.029"/>
 </kw>
-<kw name="Get Value" library="SeleniumLibrary">
-<var>${upload}</var>
-<arg>${btn_SaveAttachments}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:51:56.752" level="INFO">${upload} = Upload</msg>
-<status status="PASS" starttime="20220704 17:51:56.740" endtime="20220704 17:51:56.752"/>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:[href="/symfony/web/index.php/pim/viewAttachment/empNumber/1/attachId/1"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220705 16:05:22.029" level="INFO">Clicking link 'css:[href="/symfony/web/index.php/pim/viewAttachment/empNumber/1/attachId/1"]'.</msg>
+<msg timestamp="20220705 16:05:26.233" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220705 16:05:26.234" level="FAIL">Link with locator 'css:[href="/symfony/web/index.php/pim/viewAttachment/empNumber/1/attachId/1"]' not found.</msg>
+<status status="FAIL" starttime="20220705 16:05:22.029" endtime="20220705 16:05:26.236"/>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${upload}</arg>
-<arg>Upload</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220704 17:51:56.753" endtime="20220704 17:51:56.753"/>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<var>${file}</var>
+<arg>1 min</arg>
+<arg>2 sec</arg>
+<arg>Download should be done</arg>
+<arg>${download directory}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="NOT RUN" starttime="20220705 16:05:26.236" endtime="20220705 16:05:26.236"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${btn_CommentOnly}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:51:56.767" level="INFO">Element 'xpath://input[@id='btnCommentOnly']' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:51:56.753" endtime="20220704 17:51:56.767"/>
-</kw>
-<kw name="Get Value" library="SeleniumLibrary">
-<var>${commentOnly}</var>
-<arg>${btn_CommentOnly}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:51:56.778" level="INFO">${commentOnly} = Save Comment Only</msg>
-<status status="PASS" starttime="20220704 17:51:56.767" endtime="20220704 17:51:56.779"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${commentOnly}</arg>
-<arg>Save Comment Only</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220704 17:51:56.779" endtime="20220704 17:51:56.779"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${btn_Cancel}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:51:56.791" level="INFO">Element 'xpath://input[@id='cancelButton']' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:51:56.779" endtime="20220704 17:51:56.791"/>
-</kw>
-<kw name="Get Value" library="SeleniumLibrary">
-<var>${cancel}</var>
-<arg>${btn_Cancel}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:51:56.800" level="INFO">${cancel} = Cancel</msg>
-<status status="PASS" starttime="20220704 17:51:56.791" endtime="20220704 17:51:56.800"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${cancel}</arg>
-<arg>Cancel</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220704 17:51:56.800" endtime="20220704 17:51:56.801"/>
-</kw>
-<status status="PASS" starttime="20220704 17:51:46.578" endtime="20220704 17:51:56.801"/>
-</kw>
-<kw name="Click on the &quot;Choose File&quot; button and Select a file with a file size within the limit and different from the current file and click &quot;Open&quot; button" library="MyInfo">
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>${input_SelectFile}</arg>
-<arg>D:/Test_0.01MB.docx</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220704 17:51:56.801" level="INFO">Sending D:\Test_0.01MB.docx to browser.</msg>
-<status status="PASS" starttime="20220704 17:51:56.801" endtime="20220704 17:51:56.820"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${btn_SaveAttachments}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:51:56.821" level="INFO">Clicking element 'xpath://input[@id='btnSaveAttachment']'.</msg>
-<status status="PASS" starttime="20220704 17:51:56.820" endtime="20220704 17:52:02.316"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>30</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220704 17:52:32.316" level="INFO">Slept 30 seconds</msg>
-<status status="PASS" starttime="20220704 17:52:02.316" endtime="20220704 17:52:32.316"/>
-</kw>
-<status status="PASS" starttime="20220704 17:51:56.801" endtime="20220704 17:52:32.316"/>
-</kw>
-<kw name="Click on the &quot;Upload&quot; button" library="MyInfo">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${btn_AddAttachment}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:52:32.336" level="INFO">Element 'xpath://input[@id='btnAddAttachment']' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:52:32.317" endtime="20220704 17:52:32.336"/>
-</kw>
-<kw name="Get Value" library="SeleniumLibrary">
-<var>${Add}</var>
-<arg>${btn_AddAttachment}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:52:32.350" level="INFO">${Add} = Add</msg>
-<status status="PASS" starttime="20220704 17:52:32.336" endtime="20220704 17:52:32.350"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${Add}</arg>
-<arg>Add</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220704 17:52:32.350" endtime="20220704 17:52:32.350"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${btn_DeleteAttachments}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:52:32.367" level="INFO">Element 'xpath://input[@id='btnDeleteAttachment']' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:52:32.350" endtime="20220704 17:52:32.367"/>
-</kw>
-<kw name="Get Value" library="SeleniumLibrary">
-<var>${Delete}</var>
-<arg>${btn_DeleteAttachments}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:52:32.381" level="INFO">${Delete} = Delete</msg>
-<status status="PASS" starttime="20220704 17:52:32.367" endtime="20220704 17:52:32.381"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${Delete}</arg>
-<arg>Delete</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220704 17:52:32.381" endtime="20220704 17:52:32.382"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${checkall_Column}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:52:32.396" level="INFO">Element 'xpath://input[@id='attachmentsCheckAll']' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:52:32.382" endtime="20220704 17:52:32.396"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${fileName_Column}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:52:32.410" level="INFO">Element 'xpath://th[contains(text(),'File Name')]' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:52:32.396" endtime="20220704 17:52:32.410"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${fn}</var>
-<arg>${fileName_Column}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:52:32.422" level="INFO">${fn} = File Name</msg>
-<status status="PASS" starttime="20220704 17:52:32.410" endtime="20220704 17:52:32.422"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${fn}</arg>
-<arg>File Name</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220704 17:52:32.422" endtime="20220704 17:52:32.422"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${description_Column}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:52:32.435" level="INFO">Element 'xpath://th[contains(text(),'Description')]' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:52:32.422" endtime="20220704 17:52:32.435"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${dsp}</var>
-<arg>${description_Column}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:52:32.448" level="INFO">${dsp} = Description</msg>
-<status status="PASS" starttime="20220704 17:52:32.435" endtime="20220704 17:52:32.448"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${dsp}</arg>
-<arg>Description</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220704 17:52:32.448" endtime="20220704 17:52:32.448"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${size_Column}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:52:32.463" level="INFO">Element 'xpath://th[contains(text(),'Size')]' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:52:32.448" endtime="20220704 17:52:32.463"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${size}</var>
-<arg>${size_Column}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:52:32.475" level="INFO">${size} = Size</msg>
-<status status="PASS" starttime="20220704 17:52:32.463" endtime="20220704 17:52:32.475"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${size}</arg>
-<arg>Size</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220704 17:52:32.475" endtime="20220704 17:52:32.475"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${type_Column}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:52:32.488" level="INFO">Element 'xpath://th[contains(text(),'Type')]' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:52:32.475" endtime="20220704 17:52:32.488"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${type}</var>
-<arg>${type_Column}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:52:32.501" level="INFO">${type} = Type</msg>
-<status status="PASS" starttime="20220704 17:52:32.488" endtime="20220704 17:52:32.501"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${type}</arg>
-<arg>Type</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220704 17:52:32.501" endtime="20220704 17:52:32.501"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${dateAdded_Column}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:52:32.514" level="INFO">Element 'xpath://th[contains(text(),'Date Added')]' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:52:32.501" endtime="20220704 17:52:32.514"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${dadded}</var>
-<arg>${dateAdded_Column}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:52:32.527" level="INFO">${dadded} = Date Added</msg>
-<status status="PASS" starttime="20220704 17:52:32.515" endtime="20220704 17:52:32.527"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${dadded}</arg>
-<arg>Date Added</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220704 17:52:32.528" endtime="20220704 17:52:32.528"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${addedBy_Column}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:52:32.541" level="INFO">Element 'xpath://th[contains(text(),'Added By')]' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:52:32.528" endtime="20220704 17:52:32.541"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${addedby}</var>
-<arg>${addedBy_Column}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220704 17:52:32.554" level="INFO">${addedby} = Added By</msg>
-<status status="PASS" starttime="20220704 17:52:32.541" endtime="20220704 17:52:32.554"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${addedby}</arg>
-<arg>Added By</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20220704 17:52:32.554" endtime="20220704 17:52:32.555"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${actionEdit_Column}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:52:32.567" level="INFO">Element 'xpath://thead/tr[1]/th[8]' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:52:32.555" endtime="20220704 17:52:32.568"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${data_FileName}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220704 17:52:32.581" level="INFO">Element 'xpath://a[contains(text(),'Test_0.01MB.docx')]' is displayed.</msg>
-<status status="PASS" starttime="20220704 17:52:32.568" endtime="20220704 17:52:32.581"/>
-</kw>
-<status status="PASS" starttime="20220704 17:52:32.316" endtime="20220704 17:52:32.581"/>
+<status status="FAIL" starttime="20220705 16:05:01.101" endtime="20220705 16:05:26.237"/>
 </kw>
 <kw name="Close my browser" library="LoginPage" type="TEARDOWN">
 <kw name="Sleep" library="BuiltIn">
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220704 17:52:42.584" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220704 17:52:32.582" endtime="20220704 17:52:42.584"/>
+<msg timestamp="20220705 16:05:36.240" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220705 16:05:26.238" endtime="20220705 16:05:36.240"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220704 17:52:42.584" endtime="20220704 17:52:44.799"/>
+<status status="PASS" starttime="20220705 16:05:36.240" endtime="20220705 16:05:38.481"/>
 </kw>
-<status status="PASS" starttime="20220704 17:52:32.582" endtime="20220704 17:52:44.799"/>
+<status status="PASS" starttime="20220705 16:05:26.237" endtime="20220705 16:05:38.481"/>
 </kw>
-<status status="PASS" starttime="20220704 17:50:45.252" endtime="20220704 17:52:44.799"/>
+<status status="FAIL" starttime="20220705 16:04:35.351" endtime="20220705 16:05:38.482">Link with locator 'css:[href="/symfony/web/index.php/pim/viewAttachment/empNumber/1/attachId/1"]' not found.</status>
 </test>
-<status status="PASS" starttime="20220704 17:50:44.979" endtime="20220704 17:52:44.801"/>
+<status status="FAIL" starttime="20220705 16:04:35.039" endtime="20220705 16:05:38.483"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="MyInfo">MyInfo</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="MyInfo">MyInfo</stat>
 </suite>
 </statistics>
 <errors>

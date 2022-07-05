@@ -98,6 +98,10 @@ txt_Comment = "xpath://label[contains(text(),'Comment')]"
 btn_CommentOnly = "xpath://input[@id='btnCommentOnly']"
 
 # Message success
+txt_success = "xpath://div[@class='mb-heading ac_over']"
 txt_SuccessfullySaved = "xpath://div[@id='successBodyEdit']"
 txt_SuccessfullyShared = "xpath://div[@id='successBodyShare']"
 txt_SuccessfullyDeleted = "xpath://div[@id='successBodyDelete']"
+
+table = "id:tblAttachments"
+click_Download = "xpath://div[@id='tiptip_content']"
