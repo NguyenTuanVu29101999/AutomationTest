@@ -9,17 +9,15 @@ Test Teardown      Close my browser
 
 
 *** Variables ***
-${URL}          https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/auth/login
+${URL}         https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/auth/login
 
 ${Browser}      Chrome
 
 *** Test Cases ***
-HR-151: Verify that be able to delete attachments at “Attachments“
-    Login ESS    adash   adash123
+HR-135: Verify that the message "Should be a valid date in yyyy-mm-dd format" is displayed when the incorrect format
+    Login ESS    adash   4w@hOc@K@1AH
     Click "My Info" link
-    Get element table
-    Select the check box of the data to be deleted
-    Click "Delete" button
+    Enter data for "License Expiration Date" input box
 
 
 

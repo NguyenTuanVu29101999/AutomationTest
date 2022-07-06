@@ -4,31 +4,21 @@ Library           SeleniumLibrary
 Library           OperatingSystem
 
 *** Test Cases ***
-Download PDF
-    # create unique folder
-    ${now}    Get Time    epoch
-    log    ${now}
-    ${download directory}    Join Path    ${OUTPUT DIR}    downloads_${now}
-    log    ${download directory}
-    Create Directory    ${download directory}
-    ${chrome options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    # list of plugins to disable. disabling PDF Viewer is necessary so that PDFs are saved rather than displayed
-    ${disabled}    Create List    Chrome PDF Viewer
-    ${prefs}    Create Dictionary    download.default_directory=${download directory}    plugins.plugins_disabled=${disabled}
-    Call Method    ${chrome options}    add_experimental_option    prefs    ${prefs}
-    Create Webdriver    Chrome    chrome_options=${chrome options}
-    Go to    https://the-internet.herokuapp.com/download
-    Click Link    css:[href="download/Zwrot Seargin.PNG"]
-    # wait for download to finish
-    ${file}    Wait Until Keyword Succeeds    1 min    2 sec    Download should be done    ${download directory}
+Select Datepicker Date
+    [Documentation]     Select given day from datepicker
+    [Arguments]     ${dateElem}     ${expectedMonthYear}    ${clickElement}
+    Input Text      ${dateElem}    ${Empty}    # open the datepicker
+    ${monthyear}=   Get Datepicker MonthYear
+    FOR    ${Index}    IN RANGE    1   31
+       Run Keyword If  '${monthyear}' == '${expectedMonthYear}'   Exit For Loop
+       Click Link    //*/div[@id='ui-datepicker-div']//*/a[contains(@class, 'ui-datepicker-prev')]
+       ${monthyear}=   Get Datepicker MonthYear
+    END
+    Click Link    ${clickElement}
 
-*** Keywords ***
-Download should be done
-    [Arguments]    ${directory}
-    ${files}    List Files In Directory    ${directory}
-    Length Should Be    ${files}    1    Should be only one file in the download folder
-    Should Not Match Regexp    ${files[0]}    (?i).*\\.tmp    Chrome is still downloading a file
-    ${file}    Join Path    ${directory}    ${files[0]}
-    Log    File was successfully downloaded to ${file}
-    [Return]    ${file}
-    sleep    30
+Get Datepicker MonthYear
+    [Documentation]     Return current month + year from datepicker
+    [Return]    ${monthyear}
+    ${month}=   Get Element Text  //select[@class='ui-datepicker-month']
+    ${year}=    Get Element Text  //select[@class='ui-datepicker-year']
+    ${monthyear}=   Catenate    ${month}  ${year}

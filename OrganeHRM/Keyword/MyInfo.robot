@@ -704,6 +704,44 @@ Download should be done
     [Return]    ${file}
     sleep    30
 
+Enter data for "License Expiration Date" input box
+    click element    ${btn_Save}
+    click element    ${img_Calender_License}
+    sleep    3
+    Select Datepicker Date    ${datetimepicker_LicenseExpiryDate}         july 2022          //a[normalize-space()='6']
+
+Click next month
+    wait until element is visible    ${select_datetime}
+    click element                    ${next_month}
+
+Click back month
+    wait until element is visible    ${select_datetime}
+    click element                    ${back_month}
+
+Select Datepicker Date
+    [Documentation]     Select given day from datepicker
+    [Arguments]     ${dateElem}     ${expectedMonthYear}    ${clickElement}
+    Input Text      ${dateElem}    ${Empty}    # open the datepicker
+    ${monthyear}=   Get Datepicker MonthYear
+    log    ${monthyear}
+    FOR    ${Index}    IN RANGE    1   31
+       Run Keyword If  '${monthyear}' == '${expectedMonthYear}'
+       Click Link    //span[contains(text(),'Prev')]
+       ${monthyear}=   Get Datepicker MonthYear
+    END
+    Click Link    ${clickElement}
+
+Get Datepicker MonthYear
+    [Documentation]     Return current month + year from datepicker
+    [Return]    ${monthyear}
+    ${month}=   Get Text  //select[@class='ui-datepicker-month']
+    ${year}=    Get Text  //select[@class='ui-datepicker-year']
+    ${monthyear}=   Catenate    ${month}  ${year}
+    log    ${monthyear}
+
+
+
+
 
 
 

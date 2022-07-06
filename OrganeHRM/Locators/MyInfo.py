@@ -105,3 +105,9 @@ txt_SuccessfullyDeleted = "xpath://div[@id='successBodyDelete']"
 
 table = "id:tblAttachments"
 click_Download = "xpath://div[@id='tiptip_content']"
+
+Month = "xpath://select[@class='ui-datepicker-month']"
+Year = "xpath://select[@class='ui-datepicker-year']"
+back_month = "xpath://span[contains(text(),'Prev')]"
+next_month = "xpath:////span[contains(text(),'Next')]"
+select_datetime = "xapth://div[@id='ui-datepicker-div']"
