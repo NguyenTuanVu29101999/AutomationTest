@@ -9,15 +9,20 @@ Test Teardown      Close my browser
 
 
 *** Variables ***
-${URL}         https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/auth/login
+${URL}         https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/auth/login               #TMA
 
+#${URL}          https://opensource-demo.orangehrmlive.com/index.php/auth/login                              # ORANGE
 ${Browser}      Chrome
 
 *** Test Cases ***
-HR-135: Verify that the message "Should be a valid date in yyyy-mm-dd format" is displayed when the incorrect format
-    Login ESS    adash   4w@hOc@K@1AH
-    Click "My Info" link
-    Enter data for "License Expiration Date" input box
+HR-157: Verify that Admin can populate restricted fields when editing personal details for ESS-User
+    Login with admin account
+    Click "PIM" link and find account ESS
+    Click on the id_value
+    Click "Edit" button In "Personal Details" section
+    #Enter valid values into Employee Id, Other Id, SSN Number, SIN Number, Driver's License Number, Date of Birth
+    #Click "Save" button to save data
+
 
 
 

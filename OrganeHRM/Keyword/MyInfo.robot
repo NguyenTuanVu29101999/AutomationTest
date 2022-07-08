@@ -1,11 +1,14 @@
 *** Settings ***
 Library      SeleniumLibrary
 Library      OperatingSystem
+Library      DateTime
 Resource    ../Keyword/LoginPage.robot
 Library    ../FunctionConvert/Convert.py
 Variables    ../Locators/DashBoard.py
 Variables    ../Locators/MyInfo.py
 Resource    ../Keyword/Common.robot
+Resource    ./LoginPage.robot
+
 *** Keywords ***
 Shoule Be Equal
     [Arguments]    ${locator}   ${I}
@@ -704,40 +707,165 @@ Download should be done
     [Return]    ${file}
     sleep    30
 
-Enter data for "License Expiration Date" input box
+Enter data for valid "License Expiration Date" input box    #135
     click element    ${btn_Save}
-    click element    ${img_Calender_License}
     sleep    3
-    Select Datepicker Date    ${datetimepicker_LicenseExpiryDate}         july 2022          //a[normalize-space()='6']
+    click element    ${img_Calender_License}
+    wait until element is visible   ${table}
+    sleep    3
+    Select Date  2022   12    19
 
-Click next month
-    wait until element is visible    ${select_datetime}
-    click element                    ${next_month}
+    click element    ${btn_Save}
 
-Click back month
-    wait until element is visible    ${select_datetime}
-    click element                    ${back_month}
+Enter data for invalid "License Expiration Date" input box    #135
+    click element    ${btn_Save}
+    sleep    3
+    input text    ${datetimepicker_LicenseExpiryDate}   29-10-2026
+    ${value}    get value    ${datetimepicker_LicenseExpiryDate}
+    should be equal          ${value}   29-10-2026
 
-Select Datepicker Date
-    [Documentation]     Select given day from datepicker
-    [Arguments]     ${dateElem}     ${expectedMonthYear}    ${clickElement}
-    Input Text      ${dateElem}    ${Empty}    # open the datepicker
-    ${monthyear}=   Get Datepicker MonthYear
-    log    ${monthyear}
-    FOR    ${Index}    IN RANGE    1   31
-       Run Keyword If  '${monthyear}' == '${expectedMonthYear}'
-       Click Link    //span[contains(text(),'Prev')]
-       ${monthyear}=   Get Datepicker MonthYear
+    element should be visible       ${message_verify_datetime}
+    ${text_dtp}     get text        ${message_verify_datetime}
+    log    ${text_dtp}
+    should be equal as strings      ${text_dtp}     Should be a valid date in yyyy-mm-dd format
+
+    sleep  3
+
+Click "Save" button for invalid "License Expiration Date" input box     #135
+    click element    ${btn_Save}
+    element should be visible       ${message_verify_datetime}
+    ${text_dtp}     get text        ${message_verify_datetime}
+    log    ${text_dtp}
+    should be equal as strings      ${text_dtp}     Should be a valid date in yyyy-mm-dd format
+
+Select Date
+    [Arguments]  ${year}  ${month}  ${date}
+
+    ${currentDate} =     Get Current Date    result_format=datetime
+    log    ${currentDate}
+    Convert To Integer  ${year}
+    Convert To Integer  ${month}
+    Convert To Integer  ${date}
+    ${month-diff}  Evaluate  ${month}-${currentDate.month}
+    log      ${month-diff}
+
+    ${year-diff}  Evaluate  ${year}-${currentDate.year}
+    log      ${year-diff}
+
+    ${move}  Evaluate  ${year-diff}*12+${month-diff}
+    log      ${move}
+
+
+    IF    ${move} > 0
+        ${shiftForward} =    convert to integer    1
+    ELSE IF    ${move} < 0
+        ${shiftForward} =    convert to integer    0
+        ${move} =    evaluate    ${move}*${-1}
     END
-    Click Link    ${clickElement}
 
-Get Datepicker MonthYear
-    [Documentation]     Return current month + year from datepicker
-    [Return]    ${monthyear}
-    ${month}=   Get Text  //select[@class='ui-datepicker-month']
-    ${year}=    Get Text  //select[@class='ui-datepicker-year']
-    ${monthyear}=   Catenate    ${month}  ${year}
-    log    ${monthyear}
+    sleep    3
+
+    FOR     ${var}  IN RANGE    ${move}
+        IF    ${shiftForward} == 0
+            Click Element  xpath://span[@class='ui-icon ui-icon-circle-triangle-w']
+        ELSE IF    ${shiftForward} == 1
+            Click Element  xpath://span[@class='ui-icon ui-icon-circle-triangle-e']
+        END
+    END
+
+    sleep    3
+
+    Wait Until Element Is Enabled  xpath://a[normalize-space()='${date}']
+    Click Element   xpath://a[normalize-space()='${date}']
+
+Login with admin account    #157
+    #LoginAdmin    Admin   4w@hOc@K@1AH
+    LoginAdmin    Admin     admin123
+
+Click "PIM" link and find account ESS   #157
+    click element    ${link_PIM}
+
+    # find account with Id
+    input text      ${input_Id}       0256
+    sleep    2
+    click element   ${btn_search}
+
+    # result
+    element should be visible   ${check_id}
+    element should be visible   ${id_value}
+    ${value}     get text        ${id_value}
+    should be equal as strings    ${value}   0256
+    sleep    3
+
+Click on the id_value   #157
+    click element    ${id_value}
+    location should be     https://opensource-demo.orangehrmlive.com/index.php/pim/viewEmployee/empNumber/43
+    page should contain    DilshadS S
+    sleep    2
+
+Click "Edit" button In "Personal Details" section   #157
+    # All input boxes are enabled
+    ${edit}     get value    ${btn_Save}
+    should be equal as strings    ${edit}   Edit
+    click element    ${btn_Save}
+
+   sleep    5
+
+    element should be enabled    ${input_FirstName}
+    element should be enabled    ${input_MiddleName}
+    element should be enabled    ${input_LastName}
+    element should be enabled    ${input_EmployeeId}
+    element should be enabled    ${input_OtherId}
+    element should be enabled    ${input_DriverLicenseNumber}
+    element should be enabled    ${datetimepicker_LicenseExpiryDate}
+    element should be enabled    ${img_Calender_License}
+    element should be enabled    ${input_SSN_Number}
+    element should be enabled    ${input_SSIN_Number}
+    element should be enabled    ${radiobutton_Male}
+    element should be enabled    ${radiobutton_Female}
+    element should be enabled    ${dropdown_MaritalStatus}
+    element should be enabled    ${dropdown_Nationality}
+    element should be enabled    ${input_DateOfBirth}
+    element should be enabled    ${img_Calender}
+    element should be enabled    ${input_NickName}
+    element should be enabled    ${input_MilitaryService}
+    element should be enabled    ${checkbox_Smoker}
+
+Enter valid values into Employee Id, Other Id, SSN Number, SIN Number, Driver's License Number, Date of Birth   # 157
+    input text    ${input_EmployeeId}               0999
+    input text    ${input_OtherId}                  1001
+    input text    ${input_SSN_Number}               123456789
+    input text    ${input_SSIN_Number}              123456789
+    input text    ${input_DriverLicenseNumber}      268997
+    input text    ${input_DateOfBirth}              1999-10-29
+
+Click "Save" button to save data      #157
+    # Click "Edit button" change into the "Save" button
+    ${save}     get value    ${btn_save}
+    should be equal as strings    ${save}   Save
+    click element    ${btn_Save}
+
+    sleep    5
+
+    element should be visible    ${txt_SuccessfullySaved}
+    ${scuccess}     get text     ${txt_SuccessfullySaved}
+    should be equal as strings   ${scuccess}    Successfully Saved
+
+    ${Edit}     get value    ${btn_Save}
+    should be equal as strings    ${Edit}   Edit
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

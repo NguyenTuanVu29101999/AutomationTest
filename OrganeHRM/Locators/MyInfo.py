@@ -58,6 +58,7 @@ btn_Save = "xpath://input[@id='btnSave']"
 
 message_required_FN = "xpath://li[@class='line nameContainer']//li[1]//span[1]"
 message_required_LN = "xpath://li[3]//span[1]"
+message_verify_datetime = "xpath://span[contains(text(),'Should be a valid date in yyyy-mm-dd format')]"
 
 # Custom Fields
 txt_CustomFields = "xpath://h1[normalize-space()='Custom Fields']"
@@ -103,11 +104,18 @@ txt_SuccessfullySaved = "xpath://div[@id='successBodyEdit']"
 txt_SuccessfullyShared = "xpath://div[@id='successBodyShare']"
 txt_SuccessfullyDeleted = "xpath://div[@id='successBodyDelete']"
 
-table = "id:tblAttachments"
+table = "xpath://table[@class='ui-datepicker-calendar']"
 click_Download = "xpath://div[@id='tiptip_content']"
 
-Month = "xpath://select[@class='ui-datepicker-month']"
-Year = "xpath://select[@class='ui-datepicker-year']"
+ele_Month = "xpath://select[@class='ui-datepicker-month']"
+ele_Year = "xpath://select[@class='ui-datepicker-year']"
 back_month = "xpath://span[contains(text(),'Prev')]"
 next_month = "xpath:////span[contains(text(),'Next')]"
 select_datetime = "xapth://div[@id='ui-datepicker-div']"
+
+# PIM
+link_PIM = "id:menu_pim_viewPimModule"
+input_Id = "id:empsearch_id"
+btn_search = "id:searchBtn"
+id_value = "xpath://a[contains(text(),'0256')]"
+check_id = "id:ohrmList_chkSelectRecord_43"

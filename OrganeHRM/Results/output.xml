@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220706 17:40:26.164" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220708 16:46:20.863" rpa="false" schemaversion="3">
 <suite id="s1" name="MyInfo" source="D:\AutomationTest\OrganeHRM\TestCases\MyInfo\MyInfo.robot">
-<test id="s1-t1" name="HR-135: Verify that the message &quot;Should be a valid date in yyyy-mm-dd format&quot; is displayed when the incorrect format" line="17">
+<test id="s1-t1" name="HR-157: Verify that Admin can populate restricted fields when editing personal details for ESS-User" line="18">
 <kw name="Open my browser" library="LoginPage" type="SETUP">
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
@@ -9,126 +9,102 @@
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220706 17:40:26.448" level="INFO">Opening browser 'Chrome' to base url 'https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/auth/login'.</msg>
-<status status="PASS" starttime="20220706 17:40:26.447" endtime="20220706 17:40:39.995"/>
+<msg timestamp="20220708 16:46:21.156" level="INFO">Opening browser 'Chrome' to base url 'https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20220708 16:46:21.155" endtime="20220708 16:46:34.070"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220706 17:40:39.995" endtime="20220706 17:40:40.107"/>
+<status status="PASS" starttime="20220708 16:46:34.071" endtime="20220708 16:46:34.184"/>
 </kw>
-<status status="PASS" starttime="20220706 17:40:26.447" endtime="20220706 17:40:40.108"/>
+<status status="PASS" starttime="20220708 16:46:21.155" endtime="20220708 16:46:34.184"/>
 </kw>
-<kw name="Login ESS" library="LoginPage">
-<arg>adash</arg>
-<arg>4w@hOc@K@1AH</arg>
+<kw name="Login with admin account" library="MyInfo">
+<kw name="LoginAdmin" library="LoginPage">
+<arg>Admin</arg>
+<arg>admin123</arg>
 <kw name="Enter UserName" library="LoginPage">
-<arg>${txt_UserName}</arg>
+<arg>${user_name}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${txt_UserName}</arg>
 <arg>${UserName}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220706 17:40:40.109" level="INFO">Typing text 'adash' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220706 17:40:40.109" endtime="20220706 17:40:40.171"/>
+<msg timestamp="20220708 16:46:34.186" level="INFO">Typing text 'Admin' into text field 'id:txtUsername'.</msg>
+<status status="PASS" starttime="20220708 16:46:34.186" endtime="20220708 16:46:34.247"/>
 </kw>
-<status status="PASS" starttime="20220706 17:40:40.108" endtime="20220706 17:40:40.171"/>
+<status status="PASS" starttime="20220708 16:46:34.185" endtime="20220708 16:46:34.247"/>
 </kw>
 <kw name="Enter Password" library="LoginPage">
-<arg>${txt_Password}</arg>
+<arg>${password}</arg>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>${txt_Password}</arg>
 <arg>${Password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220706 17:40:40.174" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
-<msg timestamp="20220706 17:40:40.203" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220706 17:40:40.233" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220706 17:40:40.173" endtime="20220706 17:40:40.233"/>
+<msg timestamp="20220708 16:46:34.248" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
+<msg timestamp="20220708 16:46:34.275" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220708 16:46:34.304" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220708 16:46:34.247" endtime="20220708 16:46:34.304"/>
 </kw>
-<status status="PASS" starttime="20220706 17:40:40.172" endtime="20220706 17:40:40.234"/>
+<status status="PASS" starttime="20220708 16:46:34.247" endtime="20220708 16:46:34.304"/>
 </kw>
 <kw name="Click Button Login" library="LoginPage">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${btn_login}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220706 17:40:40.234" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
-<status status="PASS" starttime="20220706 17:40:40.234" endtime="20220706 17:40:45.274"/>
+<msg timestamp="20220708 16:46:34.305" level="INFO">Clicking button 'xpath://input[@id='btnLogin']'.</msg>
+<status status="PASS" starttime="20220708 16:46:34.304" endtime="20220708 16:46:36.433"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220706 17:40:47.276" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220706 17:40:45.274" endtime="20220706 17:40:47.276"/>
+<msg timestamp="20220708 16:46:38.435" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220708 16:46:36.433" endtime="20220708 16:46:38.435"/>
 </kw>
-<status status="PASS" starttime="20220706 17:40:40.234" endtime="20220706 17:40:47.276"/>
+<status status="PASS" starttime="20220708 16:46:34.304" endtime="20220708 16:46:38.435"/>
 </kw>
 <kw name="Verify Successful Login" library="LoginPage">
 <kw name="Location Should Be" library="SeleniumLibrary">
-<arg>https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/dashboard</arg>
+<arg>https://opensource-demo.orangehrmlive.com/index.php/dashboard</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20220706 17:40:47.280" level="INFO">Current location is 'https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/dashboard'.</msg>
-<status status="PASS" starttime="20220706 17:40:47.276" endtime="20220706 17:40:47.280"/>
+<msg timestamp="20220708 16:46:38.589" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220708 16:46:38.590" level="FAIL">Location should have been 'https://opensource-demo.orangehrmlive.com/index.php/dashboard' but was 'https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/auth/validateCredentials'.</msg>
+<status status="FAIL" starttime="20220708 16:46:38.435" endtime="20220708 16:46:38.827"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Welcome</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220706 17:40:47.290" level="INFO">Current page contains text 'Welcome'.</msg>
-<status status="PASS" starttime="20220706 17:40:47.280" endtime="20220706 17:40:47.290"/>
+<status status="NOT RUN" starttime="20220708 16:46:38.828" endtime="20220708 16:46:38.828"/>
 </kw>
-<status status="PASS" starttime="20220706 17:40:47.276" endtime="20220706 17:40:47.290"/>
+<status status="FAIL" starttime="20220708 16:46:38.435" endtime="20220708 16:46:38.828"/>
 </kw>
-<status status="PASS" starttime="20220706 17:40:40.108" endtime="20220706 17:40:47.290"/>
+<status status="FAIL" starttime="20220708 16:46:34.185" endtime="20220708 16:46:38.829"/>
 </kw>
-<kw name="Click &quot;My Info&quot; link" library="MyInfo">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${MyInfo_Link}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220706 17:40:47.291" level="INFO">Clicking element 'xpath://b[contains(text(),'My Info')]'.</msg>
-<status status="PASS" starttime="20220706 17:40:47.291" endtime="20220706 17:40:50.421"/>
+<status status="FAIL" starttime="20220708 16:46:34.185" endtime="20220708 16:46:38.829"/>
 </kw>
-<status status="PASS" starttime="20220706 17:40:47.291" endtime="20220706 17:40:50.422"/>
+<kw name="Click &quot;PIM&quot; link and find account ESS" library="MyInfo">
+<status status="NOT RUN" starttime="20220708 16:46:38.830" endtime="20220708 16:46:38.830"/>
 </kw>
-<kw name="Enter data for &quot;License Expiration Date&quot; input box" library="MyInfo">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${btn_Save}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220706 17:40:50.422" level="INFO">Clicking element 'xpath://input[@id='btnSave']'.</msg>
-<status status="PASS" starttime="20220706 17:40:50.422" endtime="20220706 17:40:50.468"/>
+<kw name="Click on the id_value" library="MyInfo">
+<status status="NOT RUN" starttime="20220708 16:46:38.830" endtime="20220708 16:46:38.830"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${img_Calender_License}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220706 17:40:50.469" level="INFO">Clicking element 'xpath://ol[2]//li[4]//img[1]'.</msg>
-<status status="PASS" starttime="20220706 17:40:50.468" endtime="20220706 17:40:50.513"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220706 17:40:53.515" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220706 17:40:50.514" endtime="20220706 17:40:53.515"/>
-</kw>
-<kw name="Get Datepicker MonthYear" library="MyInfo">
-<arg>july 2022</arg>
-<doc>Return current month + year from datepicker</doc>
-<msg timestamp="20220706 17:40:53.515" level="FAIL">Keyword 'MyInfo.Get Datepicker MonthYear' expected 2 arguments, got 1.</msg>
-<status status="FAIL" starttime="20220706 17:40:53.515" endtime="20220706 17:40:53.515"/>
-</kw>
-<status status="FAIL" starttime="20220706 17:40:50.422" endtime="20220706 17:40:53.515"/>
+<kw name="Click &quot;Edit&quot; button In &quot;Personal Details&quot; section" library="MyInfo">
+<status status="NOT RUN" starttime="20220708 16:46:38.830" endtime="20220708 16:46:38.830"/>
 </kw>
 <kw name="Close my browser" library="LoginPage" type="TEARDOWN">
 <kw name="Sleep" library="BuiltIn">
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220706 17:41:03.517" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220706 17:40:53.516" endtime="20220706 17:41:03.517"/>
+<msg timestamp="20220708 16:46:48.832" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220708 16:46:38.831" endtime="20220708 16:46:48.832"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220706 17:41:03.517" endtime="20220706 17:41:05.766"/>
+<status status="PASS" starttime="20220708 16:46:48.832" endtime="20220708 16:46:51.111"/>
 </kw>
-<status status="PASS" starttime="20220706 17:40:53.516" endtime="20220706 17:41:05.766"/>
+<status status="PASS" starttime="20220708 16:46:38.831" endtime="20220708 16:46:51.111"/>
 </kw>
-<status status="FAIL" starttime="20220706 17:40:26.446" endtime="20220706 17:41:05.766">Keyword 'MyInfo.Get Datepicker MonthYear' expected 2 arguments, got 1.</status>
+<status status="FAIL" starttime="20220708 16:46:21.154" endtime="20220708 16:46:51.111">Location should have been 'https://opensource-demo.orangehrmlive.com/index.php/dashboard' but was 'https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/auth/validateCredentials'.</status>
 </test>
-<status status="FAIL" starttime="20220706 17:40:26.165" endtime="20220706 17:41:05.768"/>
+<status status="FAIL" starttime="20220708 16:46:20.864" endtime="20220708 16:46:51.113"/>
 </suite>
 <statistics>
 <total>

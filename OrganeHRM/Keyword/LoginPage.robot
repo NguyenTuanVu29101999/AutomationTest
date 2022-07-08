@@ -203,8 +203,8 @@ Delete entered data in password input and click outside the password input
     element should be visible    ${span_password}
 
 Verify Successful Login
-    location should be    https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/dashboard
-    #location should be      https://opensource-demo.orangehrmlive.com/index.php/dashboard
+    #location should be    https://tmasolutions-osondemand.orangehrm.com/symfony/web/index.php/dashboard
+    location should be      https://opensource-demo.orangehrmlive.com/index.php/dashboard
     page should contain    Welcome
 
 
@@ -220,6 +220,16 @@ Login ESS
     Enter Password      ${txt_Password}
     Click Button Login
     Verify Successful Login
+
+LoginAdmin
+    [Arguments]         ${txt_UserName}    ${txt_Password}
+    Enter UserName      ${user_name}
+    Enter Password      ${password}
+    Click Button Login
+    Verify Successful Login
+
+
+
 
 
 
